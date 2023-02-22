@@ -1,10 +1,31 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 module.exports = {
   extends: [
-    "next/core-web-vitals",
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
+    'next/core-web-vitals',
+    'eslint-config-tc',
+    'eslint-config-typescript-tc',
+    'eslint-config-react-tc',
   ],
-  parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint"],
+  rules: {
+    'jest/no-deprecated-functions': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'max-lines-per-function': 'off',
+    'prettier/prettier': [
+      'error',
+      {
+        bracketSpacing: true,
+        printWidth: 80,
+        singleQuote: true,
+      },
+    ],
+  },
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 2020,
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  plugins: ['@typescript-eslint'],
   root: true,
-}
+};
