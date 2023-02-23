@@ -16,21 +16,6 @@ Then, once you have `npm`, run the following command to install yarn if you don'
 npm install --global yarn
 ```
 
-We also need to install some development dependencies. First, we need a package called `install-peerdeps`:
-
-```bash
-yarn global add install-peerdeps
-```
-
-Now we can install the dependencies:
-
-```bash
-cd project-directory
-install-peerdeps --dev eslint-config-tc
-install-peerdeps --dev eslint-config-typescript-tc
-install-peerdeps --dev eslint-config-react-tc
-```
-
 ESLint allows us to keep our code consistent and adherent to a certain code style. It can also format our code on save in VSCode. To enable this (and please do), open the command palette in VSCode and open **Preferences: Open Workspace Settings (JSON)**. Now add the following settings into the JSON file:
 
 ```json
