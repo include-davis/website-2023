@@ -1,28 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# #include Website 2023
 
-## Getting Started
+## Getting started
 
-First, run the development server:
+### Initial setup
+
+First, make sure you have the following installed:
+
+- Visual Studio Code
+- Node.js - v14.0.0+
+- npm - v6.0.0+
+
+Then, once you have `npm`, run the following command to install yarn if you don't already have it:
 
 ```bash
-npm run dev
-# or
+npm install --global yarn
+```
+
+We also need to install some development dependencies. First, we need a package called `install-peerdeps`:
+
+```bash
+yarn global add install-peerdeps
+```
+
+Now we can install the dependencies:
+
+```bash
+cd project-directory
+install-peerdeps --dev eslint-config-tc
+install-peerdeps --dev eslint-config-typescript-tc
+install-peerdeps --dev eslint-config-react-tc
+```
+
+ESLint allows us to keep our code consistent and adherent to a certain code style. It can also format our code on save in VSCode. To enable this (and please do), open the command palette in VSCode and open **Preferences: Open Workspace Settings (JSON)**. Now add the following settings into the JSON file:
+
+```json
+"editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+},
+"eslint.validate": ["javascript"]
+```
+
+Now when you save a file, VSCode will format it to adhere to our ESLint configuration.
+
+### Recommended VSCode extensions (all optional unless stated otherwise)
+
+- Auto Rename Tag — useful for JSX
+- ESLint — **required**
+- Error Lens — **highly recommended**
+- GitLens — see who edited any line of code while you're editing
+
+## Running the codebase locally
+
+Make sure you have all the necessary packages installed:
+
+```bash
+yarn # or yarn install
+```
+
+Then, you can run the development server:
+
+```bash
 yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
+## Learn more about Next.js
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -30,9 +73,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
