@@ -1,5 +1,9 @@
 name: CD
 
+concurrency:
+  group: production
+  cancel-in-progress: true
+
 on:
   workflow_dispatch:
   push:
@@ -7,7 +11,9 @@ on:
 
 jobs:
   deploy:
-    environment: staging
+    environment:
+      name: staging
+      url: https://staging.includedavis.com
     runs-on: ubuntu-latest
     steps: 
       - name: Checkout code
@@ -28,9 +34,8 @@ jobs:
         run: yarn build
 
       - name: Publish to Netlify
-        uses: netlify/actions/cli@master
         with:
-          args: deploy --build
+          args: netlify deploy --build --prod
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
