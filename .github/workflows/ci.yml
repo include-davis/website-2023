@@ -8,10 +8,20 @@ jobs:
   test_pull_request:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Use Node.js 16
+        uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: yarn install --immutable --immutable-cache --check-cache
-      - run: yarn lint
-      - run: yarn build
+          cache: "yarn"
+
+      - name: Install dependencies
+        run: yarn install --immutable --immutable-cache --check-cache
+
+      - name: Line code
+        run: yarn lint
+
+      - name: Build
+        run: yarn build
