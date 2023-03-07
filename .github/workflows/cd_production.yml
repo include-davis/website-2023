@@ -13,7 +13,6 @@ jobs:
   deploy:
     environment:
       name: production
-      # url: https://staging.includedavis.com
     runs-on: ubuntu-latest
     steps: 
       - name: Checkout code
