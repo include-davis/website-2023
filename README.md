@@ -7,8 +7,8 @@
 First, make sure you have the following installed:
 
 - Visual Studio Code
-- Node.js - v14.0.0+
-- npm - v6.0.0+
+- Node.js - v16.x.x
+- npm - v8.x.x
 
 Then, once you have `npm`, run the following command to install yarn if you don't already have it:
 
