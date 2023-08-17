@@ -1,4 +1,4 @@
-name: CD
+name: CD — Staging
 
 concurrency:
   group: staging
@@ -10,7 +10,8 @@ on:
     branches: [main]
 
 jobs:
-  deploy:
+  lint_build_deploy:
+    name: Lint and build code, then publish to Netlify
     environment:
       name: staging
       url: https://staging.includedavis.com
@@ -27,13 +28,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable --immutable-cache --check-cache
 
-      - name: Lint code
-        run: yarn lint
-        
-      - name: Build
-        run: yarn build
-
-      - name: Publish to Netlify
+      - name: Lint and build code, then publish to Netlify
         run: netlify deploy --build --prod
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
