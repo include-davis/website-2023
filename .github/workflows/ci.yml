@@ -6,6 +6,8 @@ on:
 
 jobs:
   test_pull_request:
+    name: Lint, build, and deploy PR
+    environment: preview
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
