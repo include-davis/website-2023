@@ -10,9 +10,11 @@ on:
     types: [published]
 
 jobs:
-  deploy:
+  lint_build_deploy:
+    name: Lint and build code, then publish to Netlify
     environment:
       name: production
+      url: https://includedavis.com
     runs-on: ubuntu-latest
     steps: 
       - name: Checkout code
@@ -26,10 +28,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable --immutable-cache --check-cache
 
-      - name: Lint code
-        run: yarn lint
-
-      - name: Publish to Netlify
+      - name: Lint and build code, then publish to Netlify
         run: netlify deploy --build --prod
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
