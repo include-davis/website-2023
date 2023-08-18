@@ -27,7 +27,7 @@ jobs:
 
   test_pull_request_user:
     name: Lint, build, and deploy PR
-    if: if: ${{ github.actor != 'dependabot[bot]' }}
+    if: ${{ github.actor != 'dependabot[bot]' }}
     environment: preview
     runs-on: ubuntu-latest
     steps:
