@@ -6,7 +6,7 @@ on:
 
 jobs:
   test_pull_request_dependabot:
-    name: Lint code and build project
+    name: Lint code and build project (dependabot only)
     if: ${{ github.actor == 'dependabot[bot]' }}
     environment: preview
     runs-on: ubuntu-latest
