@@ -1,7 +1,11 @@
 :root {
+
+  // colors
   --include-purple: #3C257E;
   --purple-gradient: linear-gradient(46deg, #332950 0%, #3C257E 48.96%, #322D41 100%);
 
+  // spacers
+  --spacer: 48px;
 }
 
 * {
