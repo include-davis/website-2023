@@ -3681,7 +3681,7 @@ eslint-config-next@13.4.16:
     eslint-plugin-react "^7.31.7"
     eslint-plugin-react-hooks "5.0.0-canary-7118f5dd7-20230705"
 
-eslint-config-prettier@^8.5.0, eslint-config-prettier@^8.8.0:
+eslint-config-prettier@^8.8.0:
   version "8.10.0"
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.10.0.tgz#3a06a662130807e2502fc3ff8b4143d8a0658e11"
   integrity sha512-SM8AMJdeQqRYT9O9zguiruQZaN7+z+E4eAP9oiLNGKMtomwaB1E9dcgUD6ZAn/eQAb52USbvezbiljfZUhbJcg==
@@ -3691,13 +3691,13 @@ eslint-config-react-tc@10.0.1:
   resolved "https://registry.yarnpkg.com/eslint-config-react-tc/-/eslint-config-react-tc-10.0.1.tgz#e8ccdb43ec66603fec42df2234d8b71daf738446"
   integrity sha512-MkQC+CQ7iYLiX4f7FoLcLR0AKaw9QEC358iAocaVJchOlDjazziOGftpwhK3wL3sWSpeT9Jsyyb2gwgYUk7DLQ==
 
-eslint-config-tc@22.2.0:
-  version "22.2.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-tc/-/eslint-config-tc-22.2.0.tgz#374bb9e6a90937e3820b81a2a21c8616cd648a19"
-  integrity sha512-ra67R2+RN8DYfiL3EL0/bynwoRNyWDG0jlSd6RvRkev1POG9DX/yTYYLxmoIWo1e8b1Dp2HQoU8asp9/cFyIKA==
+eslint-config-tc@23.0.0:
+  version "23.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-tc/-/eslint-config-tc-23.0.0.tgz#d29aec17a06a615f508757038595727a8dc5a8e3"
+  integrity sha512-00oTY07nQ+wiLXaQOM0QtBBoAZYK4JcP51YawlTUW6lmkMhb9K+LxPaaGzRSvRPC9MeTLiIyBqHXVVrzVhc7pw==
   dependencies:
     eslint-config-airbnb-base "^15.0.0"
-    eslint-config-prettier "^8.5.0"
+    eslint-config-prettier "^8.8.0"
 
 eslint-config-typescript-tc@7.0.0:
   version "7.0.0"
