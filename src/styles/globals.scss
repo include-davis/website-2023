@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-
 :root {
 
   // colors
@@ -14,52 +12,41 @@
   --spacer: 48px;
 }
 
-h1 {
-  font-family: 'Inter';
-  font-size: 7.5rem;
+h1, h1, h3, h4, p, .p-small, .p-details {
+  font-family: var(--font-inter);
   font-style: normal;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 7.5rem;
   font-weight: 400;
 }
 
 h2 {
-  font-family: 'Inter';
   font-size: 3.875rem;
-  font-style: normal;
-  font-weight: 700;
 }
 
 h3 {
-  font-family: 'Inter';
   font-size: 3.25rem;
-  font-style: normal;
-  font-weight: 700;
 }
 
 h4 {
-  font-family: 'Inter';
   font-size: 2.625rem;
-  font-style: normal;
-  font-weight: 700;
 }
 
 p {
-  font-family: 'Inter';
   font-size: 2rem;
-  font-style: normal;
   font-weight: 400;
 }
 
 .p-small {
-  font-family: 'Inter';
   font-size: 1.5rem;
-  font-style: normal;
   font-weight: 400;
 }
 
 .p-details {
-  font-family: 'Inter';
   font-size: 1.125rem;
-  font-style: normal;
   font-weight: 400;
 }
 
