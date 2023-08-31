@@ -1,3 +1,4 @@
+import '@/styles/globals.scss';
 import type { AppProps } from "next/app";
 import { ReactElement } from "react";
 import { Inter } from "@next/font/google";
