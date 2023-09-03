@@ -1,0 +1,16 @@
+@use 'src/styles/mixins';
+
+.avatar {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 245px;
+
+    .avatar_info {
+        display: flex;
+        flex-direction: column;
+
+        text-align: left;
+        gap: 4px;
+    }
+}

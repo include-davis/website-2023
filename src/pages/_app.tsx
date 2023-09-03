@@ -1,6 +1,7 @@
 import type { AppProps } from "next/app";
 import { ReactElement } from "react";
 import { Inter } from "@next/font/google";
+import '@/styles/globals.scss';
 
 const inter = Inter ({
   weight: ["400", "700"],

@@ -1,0 +1,30 @@
+@use "src/styles/mixins";
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+
+  .content {
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+    animation: slide-right-to-left linear infinite;
+  }
+
+  .content > * {
+    margin: 0 3.125em;
+  }
+
+  @keyframes slide-right-to-left {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+}
