@@ -1,11 +1,11 @@
 import Image from "next/image";
 import styles from "../../../styles/about/avatar/avatar.module.scss";
 
-interface AvatarProps {
+type AvatarProps = {
   name: string;
   title: string | null;
   image: string;
-}
+};
 
 export default function Avatar(props: AvatarProps): React.JSX.Element {
   return (

@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "../../styles/infiniteSlider/infiniteSlider.module.scss";
 
-interface InfiniteSliderProps {
+type InfiniteSliderProps = {
   children: React.ReactNode;
   durationInMs?: number;
   start?: number;
-}
+};
 
 export default function InfiniteSlider({
   children,
