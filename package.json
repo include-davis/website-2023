@@ -27,7 +27,7 @@
     "eslint-config-tc": "23.0.0",
     "eslint-config-typescript-tc": "7.0.0",
     "eslint-plugin-import": "^2.28.1",
-    "eslint-plugin-jest": "^27.0.0",
+    "eslint-plugin-jest": "^27.2.3",
     "eslint-plugin-jsx-a11y": "^6.0.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.33.2",
