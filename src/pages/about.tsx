@@ -107,7 +107,7 @@ export default function About(): React.JSX.Element {
             style={{ width: "100%" }}
           >
             <Image
-              src="/descPic.png"
+              src="/about/images/descPic.jpg"
               alt=""
               width={1200}
               height={450}

@@ -11,7 +11,7 @@ export default function Avatar(props: AvatarProps): React.JSX.Element {
   return (
     <article className={styles.avatar}>
       <Image
-        src={`/${props.image}`}
+        src={`/about/headshots/${props.image}`}
         width={235}
         height={208}
         style={{
