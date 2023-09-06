@@ -25,11 +25,11 @@
       padding: 200px 0;
     }
 
-    @include mixins.md-phone {
+    @include mixins.lg {
       padding: 150px 0;
     }
 
-    @include mixins.sm-phone {
+    @include mixins.md {
       padding: 100px 0;
     }
   }
@@ -60,7 +60,7 @@
 
         .header_text {
           display: inline-block;
-          line-height: 98%;
+          line-height: 110%;
           padding-bottom: 2%;
 
           background: var(--purple-gradient);
@@ -127,7 +127,7 @@
       }
     }
 
-    @include mixins.md-phone {
+    @include mixins.lg {
       gap: 100px;
 
       .header {
@@ -155,7 +155,7 @@
       }
     }
 
-    @include mixins.sm-phone {
+    @include mixins.md {
       gap: 50px;
 
       .header {
@@ -234,7 +234,7 @@
       }
     }
 
-    @include mixins.md-phone {
+    @include mixins.lg {
       .outline {
         width: calc(100% - 2 * var(--edge-spacer) * 0.3);
         gap: 100px;
@@ -246,7 +246,7 @@
       }
     }
 
-    @include mixins.sm-phone {
+    @include mixins.md {
       .outline {
         width: calc(100% - 2 * var(--edge-spacer) * 0.2);
         gap: 50px;
@@ -294,7 +294,7 @@
       }
     }
 
-    @include mixins.md-phone {
+    @include mixins.lg {
       gap: 25px;
       .board_text {
         > h1 {
@@ -312,7 +312,7 @@
       }
     }
 
-    @include mixins.sm-phone {
+    @include mixins.md {
       gap: 25px;
       .board_text {
         > h1 {
@@ -361,7 +361,7 @@
       }
     }
 
-    @include mixins.md-phone {
+    @include mixins.lg {
       .future_text {
         width: calc(100% - 2 * var(--edge-spacer) * 0.3);
         > h1 {
@@ -378,7 +378,7 @@
       }
     }
 
-    @include mixins.sm-phone {
+    @include mixins.md {
       .future_text {
         width: calc(100% - 2 * var(--edge-spacer) * 0.2);
         > h1 {

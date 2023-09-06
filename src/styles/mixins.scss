@@ -4,13 +4,13 @@
     }
 }
 
-@mixin md-phone {
+@mixin lg {
     @media screen and (max-width: 900px) {
         @content;
     }
 }
 
-@mixin sm-phone {
+@mixin md {
     @media screen and (max-width: 600px) {
         @content;
     }
