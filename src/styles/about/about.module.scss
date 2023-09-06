@@ -20,6 +20,18 @@
 
     width: 100%;
     padding: 250px 0;
+
+    @include mixins.tablet {
+      padding: 200px 0;
+    }
+
+    @include mixins.md-phone {
+      padding: 150px 0;
+    }
+
+    @include mixins.sm-phone {
+      padding: 100px 0;
+    }
   }
 
   .intro {
@@ -41,7 +53,10 @@
       gap: 159px;
 
       .header_text_container {
-        width: calc(100% - 2 * var(--edge-spacer));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calc(100% - 2 * var(--edge-spacer) * 0.7);
 
         .header_text {
           display: inline-block;
@@ -58,21 +73,26 @@
       .websites_slider {
         position: relative;
         width: 100%;
-      }
 
-      .transparent_mask {
-        mask-image: linear-gradient(
-          to right,
-          rgba(0, 0, 0, 1),
-          rgba(0, 0, 0, 0)
-        );
-        -webkit-mask-image: -webkit-gradient(
-          linear,
-          left 50%,
-          left bottom,
-          from(rgba(0, 0, 0, 1)),
-          to(rgba(0, 0, 0, 0))
-        );
+        .slider_container {
+          height: 100%;
+
+          .transparent_mask {
+            height: 100%;
+            mask-image: linear-gradient(
+              to right,
+              rgba(0, 0, 0, 1),
+              rgba(0, 0, 0, 0)
+            );
+            -webkit-mask-image: -webkit-gradient(
+              linear,
+              left 50%,
+              left bottom,
+              from(rgba(0, 0, 0, 1)),
+              to(rgba(0, 0, 0, 0))
+            );
+          }
+        }
       }
     }
 
@@ -80,7 +100,93 @@
       display: flex;
       flex-direction: column;
       gap: 42px;
-      width: calc(100% - 2 * var(--edge-spacer));
+      width: calc(100% - 2 * var(--edge-spacer) * 0.7);
+    }
+
+    @include mixins.tablet {
+      gap: 150px;
+
+      .header {
+        gap: 100px;
+
+        .header_text_container {
+          width: calc(100% - 2 * var(--edge-spacer) * 0.5);
+          > h1 {
+            font-size: 5rem;
+          }
+        }
+      }
+
+      .desc {
+        width: calc(100% - 2 * var(--edge-spacer) * 0.5);
+        gap: 25px;
+
+        > h2 {
+          font-size: 3rem;
+        }
+      }
+    }
+
+    @include mixins.md-phone {
+      gap: 100px;
+
+      .header {
+        gap: 50px;
+
+        .header_text_container {
+          width: calc(100% - 2 * var(--edge-spacer) * 0.3);
+          > h1 {
+            font-size: 3.75rem;
+          }
+
+          > p {
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      .desc {
+        width: calc(100% - 2 * var(--edge-spacer) * 0.3);
+        gap: 25px;
+
+        > h2 {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    @include mixins.sm-phone {
+      gap: 50px;
+
+      .header {
+        gap: 25px;
+
+        .header_text_container {
+          width: calc(100% - 2 * var(--edge-spacer) * 0.2);
+          > h1 {
+            font-size: 3rem;
+          }
+
+          > p {
+            font-size: 1rem;
+          }
+        }
+
+        .websites_slider {
+          .slider_container {
+            aspect-ratio: 1.5;
+          }
+        }
+      }
+
+      .desc {
+        width: calc(100% - 2 * var(--edge-spacer) * 0.2);
+        gap: 25px;
+
+        > h2 {
+          font-size: 1.5rem;
+        }
+      }
     }
   }
 
@@ -93,7 +199,7 @@
       flex-direction: column;
       align-items: center;
 
-      width: calc(100% - 2 * var(--edge-spacer));
+      width: calc(100% - 2 * var(--edge-spacer) * 0.7);
       gap: 250px;
 
       > div {
@@ -115,6 +221,43 @@
         }
       }
     }
+
+    @include mixins.tablet {
+      .outline {
+        width: calc(100% - 2 * var(--edge-spacer) * 0.5);
+        gap: 150px;
+        > div {
+          > h2 {
+            font-size: 3rem;
+          }
+        }
+      }
+    }
+
+    @include mixins.md-phone {
+      .outline {
+        width: calc(100% - 2 * var(--edge-spacer) * 0.3);
+        gap: 100px;
+        > div {
+          > h2 {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+
+    @include mixins.sm-phone {
+      .outline {
+        width: calc(100% - 2 * var(--edge-spacer) * 0.2);
+        gap: 50px;
+
+        > div {
+          > h2 {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
   }
 
   .board {
@@ -128,12 +271,63 @@
 
     .board_members {
       display: grid;
-      width: calc(100% - 2 * var(--edge-spacer));
-      grid-template-columns: repeat(auto-fit, minmax(236px, 1fr));
+      width: calc(100% - 2 * var(--edge-spacer) * 0.7);
+      grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
       align-items: center;
       justify-items: center;
 
-      gap: 42px 25px;
+      gap: 40px 24px;
+    }
+
+    @include mixins.tablet {
+      gap: 42px;
+
+      .board_text {
+        > h1 {
+          font-size: 5rem;
+        }
+      }
+
+      .board_members {
+        width: calc(100% - 2 * var(--edge-spacer) * 0.5);
+        gap: 25px 25px;
+      }
+    }
+
+    @include mixins.md-phone {
+      gap: 25px;
+      .board_text {
+        > h1 {
+          font-size: 3.75rem;
+        }
+
+        > p {
+          font-size: 1.5rem;
+        }
+      }
+
+      .board_members {
+        width: calc(100% - 2 * var(--edge-spacer) * 0.3);
+        gap: 25px 25px;
+      }
+    }
+
+    @include mixins.sm-phone {
+      gap: 25px;
+      .board_text {
+        > h1 {
+          font-size: 3rem;
+        }
+
+        > p {
+          font-size: 1rem;
+        }
+      }
+
+      .board_members {
+        width: calc(100% - 2 * var(--edge-spacer) * 0.2);
+        gap: 25px 25px;
+      }
     }
   }
 
@@ -146,13 +340,59 @@
       align-items: center;
       gap: 12px;
 
-      width: calc(100% - 2 * var(--edge-spacer));
+      width: calc(100% - 2 * var(--edge-spacer) * 0.7);
       text-align: center;
       color: var(--text-white);
     }
 
     .company_slider {
       margin: 83px 0 0 0;
+    }
+    @include mixins.tablet {
+      .future_text {
+        width: calc(100% - 2 * var(--edge-spacer) * 0.5);
+        > h1 {
+          font-size: 5rem;
+        }
+      }
+
+      .company_slider {
+        margin: 50px 0 0 0;
+      }
+    }
+
+    @include mixins.md-phone {
+      .future_text {
+        width: calc(100% - 2 * var(--edge-spacer) * 0.3);
+        > h1 {
+          font-size: 3.75rem;
+        }
+
+        > p {
+          font-size: 1.5rem;
+        }
+      }
+
+      .company_slider {
+        margin: 30px 0 0 0;
+      }
+    }
+
+    @include mixins.sm-phone {
+      .future_text {
+        width: calc(100% - 2 * var(--edge-spacer) * 0.2);
+        > h1 {
+          font-size: 3rem;
+        }
+
+        > p {
+          font-size: 1rem;
+        }
+      }
+
+      .company_slider {
+        margin: 10px 0 0 0;
+      }
     }
   }
 }

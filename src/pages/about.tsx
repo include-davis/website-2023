@@ -18,25 +18,33 @@ const companies = assets.map((asset, index) => {
 const websites = [
   <Image
     src="/about/images/b&v.jpg"
-    width={644.995}
-    height={356.836}
+    width={645}
+    height={357}
     style={{ objectFit: "cover", objectPosition: "0", borderRadius: "14.16px" }}
     key={"b&v"}
     alt=""
   />,
   <Image
     src="/about/images/ielc.jpg"
-    width={644.995}
-    height={356.836}
-    style={{ objectFit: "contain", borderRadius: "14.16px" }}
+    width={645}
+    height={357}
+    style={{
+      objectFit: "contain",
+      objectPosition: "0",
+      borderRadius: "14.16px",
+    }}
     key={"ielc"}
     alt=""
   />,
   <Image
     src="/about/images/brkbar.jpg"
-    width={644.995}
-    height={356.836}
-    style={{ objectFit: "contain", borderRadius: "14.16px" }}
+    width={645}
+    height={357}
+    style={{
+      objectFit: "contain",
+      objectPosition: "0",
+      borderRadius: "14.16px",
+    }}
     key="brkbar"
     alt=""
   />,
@@ -68,8 +76,10 @@ export default function About(): React.JSX.Element {
               }}
               alt=""
             />
-            <div className={styles.transparent_mask}>
-              <InfiniteSlider durationInMs={4000}>{websites}</InfiniteSlider>
+            <div className={styles.slider_container}>
+              <div className={styles.transparent_mask}>
+                <InfiniteSlider durationInMs={4000}>{websites}</InfiniteSlider>
+              </div>
             </div>
           </div>
         </section>
