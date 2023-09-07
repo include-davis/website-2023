@@ -55,4 +55,5 @@ jobs:
           status: ${{ job.status }}
           deployment_id: ${{ steps.deployment.outputs.deployment_id }}
           logs: ${{ steps.deploy-netlify.outputs.netlify_logs_url }}
+          env: ${{ steps.deployment.outputs.env }}
           env_url: ${{ steps.deploy-netlify.outputs.netlify_preview_url }}
