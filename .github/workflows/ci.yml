@@ -5,13 +5,34 @@ on:
     branches: [main]
 
 jobs:
-  test_pull_request:
-    name: Lint, build, and deploy PR
+  test_pull_request_dependabot:
+    name: Lint code and build project (dependabot only)
+    if: ${{ github.actor == 'dependabot[bot]' }}
     environment: preview
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 16
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        run: yarn install --immutable --immutable-cache --check-cache
+
+      - name: Lint code and build project
+        run: yarn build
+
+  test_pull_request_user:
+    name: Lint, build, and deploy PR
+    if: ${{ github.actor != 'dependabot[bot]' }}
+    environment: preview
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
       - name: Use Node.js 16
         uses: actions/setup-node@v3
@@ -37,10 +58,11 @@ jobs:
           COMMAND="netlify deploy --build --context branch-deploy --alias ${{ github.head_ref }}"
           OUTPUT=$(sh -c "$COMMAND")
 
-          NETLIFY_URL=$(echo "$OUTPUT" | grep -Eo '(http|https)://[a-zA-Z0-9./?=_-]*(--)[a-zA-Z0-9./?=_-]*') # Unique key: --
+          NETLIFY_URL=$(echo "$OUTPUT" | grep -Eo '(http|https)://[a-zA-Z0-9./?=_-]*(--)includedavis-[a-zA-Z0-9./?=_-]*') # Unique key: --
           NETLIFY_LOGS_URL=$(echo "$OUTPUT" | grep -Eo '(http|https)://app.netlify.com/[a-zA-Z0-9./?=_-]*') # Unique key: app.netlify.com
+          NETLIFY_FIXED_URL=$(echo $NETLIFY_URL | tr '\n' ' ')
 
-          echo "netlify_preview_url=$NETLIFY_URL" >> $GITHUB_OUTPUT
+          echo "netlify_preview_url=$NETLIFY_FIXED_URL" >> $GITHUB_OUTPUT
           echo "netlify_logs_url=$NETLIFY_LOGS_URL" >> $GITHUB_OUTPUT
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}

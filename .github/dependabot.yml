@@ -8,7 +8,7 @@ updates:
       time: "12:00"
       timezone: "America/Los_Angeles"
     assignees:
-      - alecF2
+      - ryyu444
     labels:
       - "dependencies"
     versioning-strategy: increase
