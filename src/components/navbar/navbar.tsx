@@ -23,18 +23,21 @@ export default function Navbar({ nav, theme }: NavbarProps): React.JSX.Element {
 
   return (
     <div className={styles.navbar_wrapper}>
-      <article className={styles.navbar}>
-        <Image src={logo} alt="" className={styles.logo} />
-        <nav className={styles.navbar_right}>
+      <nav className={styles.navbar}>
+        <section className={styles.logo}>
+          <Image src={logo} alt="" />
+        </section>
+        <section className={styles.navbar_right}>
           <ul
             className={`${styles.redirects} ${
               active ? styles.activeDropdown : ""
             }`}
           >
-            {nav.map((item) => (
+            {nav.map((item, index) => (
               <li
                 key={item.name}
                 className={`${active ? styles.slideText : ""}`}
+                style={{transitionDelay: `calc(0.3s / 3 * ${active ? index + 1 : nav.length - index - 1})`}}
               >
                 <Link href={`/${item.path}`}>
                   <span
@@ -54,8 +57,8 @@ export default function Navbar({ nav, theme }: NavbarProps): React.JSX.Element {
           >
             {active ? <RxChevronDown /> : <RxHamburgerMenu />}
           </button>
-        </nav>
-      </article>
+        </section>
+      </nav>
     </div>
   );
 }
