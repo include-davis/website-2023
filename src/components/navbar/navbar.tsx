@@ -34,7 +34,9 @@ export default function Navbar({ nav, path }: NavbarProps): React.JSX.Element {
     <div className={styles.navbar_wrapper}>
       <nav className={styles.navbar}>
         <section className={styles.logo}>
-          <Image src={logo} alt="" />
+          <Link href={"/"}>
+            <Image src={logo} alt="" />
+          </Link>
         </section>
         <section className={styles.navbar_right}>
           <ul
