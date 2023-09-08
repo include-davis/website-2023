@@ -14,10 +14,10 @@ const nav = [
 ];
 
 function getTheme(path: string) {
-  if (path === "/about" || path === "/projects" || path === "/get-involved") {
-    return "dark";
-  } else {
+  if (path === "/") {
     return "light";
+  } else {
+    return "dark";
   }
 }
 

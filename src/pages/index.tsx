@@ -1,5 +1,4 @@
 import { ReactElement } from "react";
-import Navbar from "@/components/navbar/navbar";
 
 export default function Home(): ReactElement {
   return (
