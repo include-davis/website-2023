@@ -8,12 +8,21 @@ import styles from "../../styles/navbar/navbar.module.scss";
 
 type NavbarProps = {
   nav: { name: string; path: string }[];
-  theme: string;
+  path: string;
 };
 
-export default function Navbar({ nav, theme }: NavbarProps): React.JSX.Element {
+function getTheme(path: string) {
+  if (path === "/") {
+    return "light";
+  } else {
+    return "dark";
+  }
+}
+
+export default function Navbar({ nav, path }: NavbarProps): React.JSX.Element {
   const [active, setActive] = useState(false);
 
+  const theme = getTheme(path);
   const logo = theme === "light" ? logoWhite : logoPurple;
   const color = theme === "light" ? styles.light : styles.dark;
 
@@ -37,7 +46,11 @@ export default function Navbar({ nav, theme }: NavbarProps): React.JSX.Element {
               <li
                 key={item.name}
                 className={`${active ? styles.slideText : ""}`}
-                style={{transitionDelay: `calc(0.3s / 3 * ${active ? index + 1 : nav.length - index - 1})`}}
+                style={{
+                  transitionDelay: `calc(0.3s / 3 * ${
+                    active ? index + 1 : nav.length - index - 1
+                  })`,
+                }}
               >
                 <Link href={`/${item.path}`}>
                   <span

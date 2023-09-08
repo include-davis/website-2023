@@ -17,21 +17,12 @@ const navLinks = [
   { name: "Get Involved", path: "get-involved" },
 ];
 
-function getTheme(path: string) {
-  if (path === "/about" || path === "/projects" || path === "/get-involved") {
-    return "dark";
-  } else {
-    return "light";
-  }
-}
-
 export default function App({ Component, pageProps }: AppProps): ReactElement {
   const router = useRouter();
-  const theme = getTheme(router.pathname);
 
   return (
     <div className={`${inter.variable}`} style={{ position: "relative" }}>
-      <Navbar nav={navLinks} theme={theme} />
+      <Navbar nav={navLinks} path={router.pathname} />
       <Component {...pageProps} />
     </div>
   );
