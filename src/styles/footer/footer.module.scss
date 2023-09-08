@@ -1,0 +1,128 @@
+@use "src/styles/mixins";
+
+.footer_wrapper {
+  position: absolute;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: var(--footer-height);
+  background: transparent;
+
+  .footer {
+    width: calc(100% - 2 * var(--edge-spacer) * 0.7);
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .footer_right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+
+      .footer_redirects {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > li {
+          list-style-type: none;
+          padding: 0 10px;
+          > a {
+            text-decoration: none;
+          }
+        }
+      }
+
+      .mobile {
+        display: none;
+        background: none;
+        border: none;
+        height: 100%;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  @include mixins.tablet {
+    height: calc(var(--footer-height) * 0.8);
+    .footer {
+      width: calc(100% - 2 * var(--edge-spacer) * 0.5);
+
+      .footer_right {
+        .footer_redirects {
+          > li {
+            > a {
+              > span {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include mixins.lg {
+    height: calc(var(--footer-height) * 0.6);
+    .footer {
+      width: calc(100% - 2 * var(--edge-spacer) * 0.3);
+      // .navbar_right {
+      //   .redirects {
+      //     display: block;
+      //   }
+
+      //   .active {
+      //     display: block;
+      //   }
+      //   .dropdown {
+      //     display: block;
+      //   }
+      // }
+    }
+  }
+
+  @include mixins.md {
+    height: calc(var(--footer-height) * 0.4);
+
+    .footer {
+      width: calc(100% - 2 * var(--edge-spacer) * 0.1);
+      justify-content: center;
+
+      .logo {
+        display: none;
+      }
+
+      .footer_right {
+        .footer_redirects {
+          display: none;
+        }
+        .mobile {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+
+          > p {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.light {
+  color: var(--text-white);
+}
+
+.dark {
+  color: var(--include-purple);
+}
