@@ -27,7 +27,9 @@ export default function Footer({ nav, path }: FooterProps): React.JSX.Element {
     <div className={styles.footer_wrapper}>
       <footer className={styles.footer}>
         <section className={styles.logo}>
-          <Image src={logo} alt="" />
+          <Link href={"/"}>
+            <Image src={logo} alt="" />
+          </Link>
         </section>
         <section className={styles.footer_right}>
           <ul className={styles.footer_redirects}>
