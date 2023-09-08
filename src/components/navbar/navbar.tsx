@@ -2,29 +2,17 @@ import React, { useState } from "react";
 import { RxHamburgerMenu, RxChevronDown } from "react-icons/rx";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import logoWhite from "../../../public/navbar/logoWhite.png";
-import logoPurple from "../../../public/navbar/logoPurple.png";
+import logoWhite from "../../../public/logoWhite.png";
+import logoPurple from "../../../public/logoPurple.png";
 import styles from "../../styles/navbar/navbar.module.scss";
 
-const nav = [
-  { name: "About", href: "about" },
-  { name: "Projects", href: "projects" },
-  { name: "Get Involved", href: "get-involved" },
-];
+type NavbarProps = {
+  nav: { name: string; path: string }[];
+  theme: string;
+};
 
-function getTheme(path: string) {
-  if (path === "/") {
-    return "light";
-  } else {
-    return "dark";
-  }
-}
-
-export default function Navbar(): React.JSX.Element {
+export default function Navbar({ nav, theme }: NavbarProps): React.JSX.Element {
   const [active, setActive] = useState(false);
-  const router = useRouter();
-  const theme = getTheme(router.pathname);
 
   const logo = theme === "light" ? logoWhite : logoPurple;
   const color = theme === "light" ? styles.light : styles.dark;
@@ -35,7 +23,7 @@ export default function Navbar(): React.JSX.Element {
 
   return (
     <div className={styles.navbar_wrapper}>
-      <main className={styles.navbar}>
+      <article className={styles.navbar}>
         <Image src={logo} alt="" className={styles.logo} />
         <nav className={styles.navbar_right}>
           <ul
@@ -48,7 +36,7 @@ export default function Navbar(): React.JSX.Element {
                 key={item.name}
                 className={`${active ? styles.slideText : ""}`}
               >
-                <Link href={`/${item.href}`}>
+                <Link href={`/${item.path}`}>
                   <span
                     className={`p-small ${color} ${
                       active ? styles.fadeInText : ""
@@ -67,7 +55,7 @@ export default function Navbar(): React.JSX.Element {
             {active ? <RxChevronDown /> : <RxHamburgerMenu />}
           </button>
         </nav>
-      </main>
+      </article>
     </div>
   );
 }
