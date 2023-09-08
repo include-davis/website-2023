@@ -17,11 +17,11 @@ export default function Footer({ nav, theme }: FooterProps): React.JSX.Element {
 
   return (
     <div className={styles.footer_wrapper}>
-      <main className={styles.footer}>
-        <div className={styles.logo}>
+      <footer className={styles.footer}>
+        <section className={styles.logo}>
           <Image src={logo} alt="" />
-        </div>
-        <footer className={styles.footer_right}>
+        </section>
+        <section className={styles.footer_right}>
           <ul className={styles.footer_redirects}>
             {nav.map((link) => (
               <li key={link.path}>
@@ -37,8 +37,8 @@ export default function Footer({ nav, theme }: FooterProps): React.JSX.Element {
             </p>
             <RxHeartFilled className={color} />
           </section>
-        </footer>
-      </main>
+        </section>
+      </footer>
     </div>
   );
 }
