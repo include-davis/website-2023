@@ -1,17 +1,25 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { RxHeartFilled } from "react-icons/rx";
 import logoWhite from "../../../public/logoWhite.png";
 import logoPurple from "../../../public/logoPurple.png";
 import styles from "../../styles/footer/footer.module.scss";
 
 type FooterProps = {
   nav: { name: string; path: string }[];
-  theme: string;
+  path: string;
 };
 
-export default function Footer({ nav, theme }: FooterProps): React.JSX.Element {
+function getTheme(path: string) {
+  if (path === "/" || path === "/about" || path === "/get-involved") {
+    return "light";
+  } else {
+    return "dark";
+  }
+}
+
+export default function Footer({ nav, path }: FooterProps): React.JSX.Element {
+  const theme = getTheme(path);
   const logo = theme === "light" ? logoWhite : logoPurple;
   const color = theme === "light" ? styles.light : styles.dark;
 
@@ -31,12 +39,6 @@ export default function Footer({ nav, theme }: FooterProps): React.JSX.Element {
               </li>
             ))}
           </ul>
-          <section className={styles.mobile}>
-            <p className={`${color}`}>
-              Made with love by <span>#include</span>
-            </p>
-            <RxHeartFilled className={color} />
-          </section>
         </section>
       </footer>
     </div>
