@@ -12,7 +12,7 @@ import styles from "../styles/about/about.module.scss";
 
 // Have navbar be fixed & inherit background color from page
 const companies = assets.map((asset, index) => {
-  return <Image src={asset} alt="" key={index} />;
+  return <Image src={asset} alt="" priority={true} key={index} />;
 });
 
 const websites = [
@@ -22,6 +22,7 @@ const websites = [
     height={357}
     style={{ objectFit: "cover", objectPosition: "0", borderRadius: "14.16px" }}
     key={"b&v"}
+    priority={true}
     alt=""
   />,
   <Image
@@ -34,6 +35,7 @@ const websites = [
       borderRadius: "14.16px",
     }}
     key={"ielc"}
+    priority={true}
     alt=""
   />,
   <Image
@@ -46,6 +48,7 @@ const websites = [
       borderRadius: "14.16px",
     }}
     key="brkbar"
+    priority={true}
     alt=""
   />,
 ];
