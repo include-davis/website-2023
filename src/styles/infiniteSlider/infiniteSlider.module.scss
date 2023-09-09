@@ -6,16 +6,17 @@
   align-items: center;
   overflow: hidden;
   width: 100%;
-  
+
   .content {
     display: flex;
     align-items: center;
     margin: 0;
-    
     animation: slide-right-to-left linear infinite;
+    animation-fill-mode: forwards;
   }
 
   .content > * {
+    position: relative;
     aspect-ratio: 16 / 9;
     margin: 0 3.125em;
   }
