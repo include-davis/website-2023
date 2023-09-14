@@ -1,0 +1,16 @@
+{
+  "cards" : {
+    "design": {
+      "header": "Design",
+      "Description": "Focuses on visual design, user experience, and user interface."
+    },
+    "tech": {
+      "header": "Tech",
+      "Description": "Focuses on the underlying code and functionality of an app or website."
+    },
+    "board": {
+      "header": "Board",
+      "Description": "Responsible for the overall direction and management of our organization."
+    }
+}
+}
