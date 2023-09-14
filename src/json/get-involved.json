@@ -2,15 +2,18 @@
   "cards" : {
     "design": {
       "header": "Design",
-      "Description": "Focuses on visual design, user experience, and user interface."
+      "description": "Focuses on visual design, user experience, and user interface.",
+      "alt": "Icon of a pencil with ruler in it"
     },
     "tech": {
       "header": "Tech",
-      "Description": "Focuses on the underlying code and functionality of an app or website."
+      "description": "Focuses on the underlying code and functionality of an app or website.",
+      "alt": "Icon displaying html brackets"
     },
     "board": {
       "header": "Board",
-      "Description": "Responsible for the overall direction and management of our organization."
+      "description": "Responsible for the overall direction and management of our organization.",
+      "alt": "Icon of three people next to each other"
     }
-}
+  }
 }
