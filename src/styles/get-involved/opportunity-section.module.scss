@@ -1,0 +1,18 @@
+.header {
+  color: var(--text-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cardsContainer {
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+
+  margin-top: 64px;
+}
+
+.opportunityContainer {
+  background: var(--purple-gradient);
+  padding: 200px;
+}
