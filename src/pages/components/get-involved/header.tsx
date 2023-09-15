@@ -6,6 +6,18 @@ import Image from 'next/image';
 export default function Header(): ReactElement {
   return (
     <div className={styles.header}>
+      <Image
+        src='/get-involved/svgs/mesh-left.png'
+        width={667}
+        height={642}
+        alt='Mesh gradient graphic'
+        className={styles.meshLeft}/>
+        <Image
+        src='/get-involved/svgs/mesh-right.png'
+        width={905}
+        height={674}
+        alt='Mesh gradient graphic'
+        className={styles.meshRight}/>
       <div className={styles.cta}>
         <p style={{color: 'var(--text-black-light)'}}>GET INVOLVED</p>
         <h1 className={styles.hook}>The journey to create amazing things starts here</h1>
@@ -33,13 +45,4 @@ export default function Header(): ReactElement {
     </div>
   );
 }
-        {/* <Image
-        src='/get-involved/svgs/mesh-left.png'
-        width={668}
-        height={642}
-        alt='Mesh gradient graphic'/>
-        <Image
-        src='/get-involved/svgs/mesh-right.png'
-        width={668}
-        height={642}
-        alt='Mesh gradient graphic'/> */}
+        
