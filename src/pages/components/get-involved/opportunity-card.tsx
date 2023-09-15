@@ -1,4 +1,4 @@
-import { JSXElementConstructor, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal } from 'react';
+import { ReactElement} from 'react';
 import styles from '../../../styles/get-involved/opportunity-card.module.scss';
 import Image from 'next/image';
 
