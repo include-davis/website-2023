@@ -1,0 +1,33 @@
+.numContainer {
+  background: var(--purple-gradient);
+  display: flex;
+  justify-content: center;
+  column-gap: 50px;
+
+  width: 1250px;
+  padding: 50px 150px;
+  border-radius: 20px;
+}
+
+.numContainer > div {
+  color: var(--text-grey);
+}
+
+.number {
+  font-size: 5.3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+
+.card {
+  border: 0.5px solid #FFF;
+  border-radius: 8px;
+
+  width: 200px;
+  padding: 20px;
+  text-align: center;
+}
+.title {
+  font-family: Inter;
+}
