@@ -1,3 +1,5 @@
+@use "src/styles/mixins";
+
 :root {
 
   // colors
@@ -7,12 +9,19 @@
   --text-white: #FFF;
   --text-grey: #D0D0D0;
   --purple-gradient: linear-gradient(46deg, #332950 0%, #3C257E 48.96%, #322D41 100%);
+  --grey-background: rgba(0, 0, 0, 0.10);
 
   // spacers
   --spacer: 48px;
 }
 
-h1, h1, h3, h4, p, .p-small, .p-details {
+h1,
+h1,
+h3,
+h4,
+p,
+.p-small,
+.p-details {
   font-family: var(--font-inter);
   font-style: normal;
   font-weight: 700;
@@ -59,4 +68,14 @@ p {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button {
+  border-radius: 10px;
+  background: var(--include-purple);
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: var(--text-white);
+  padding: 20px 50px;
 }
