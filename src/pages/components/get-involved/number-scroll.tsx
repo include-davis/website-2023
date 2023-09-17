@@ -1,9 +1,11 @@
-import { ReactElement } from 'react';
+import  { ReactElement } from 'react';
+import dynamic from 'next/dynamic'
+const AnimatedNumbers = dynamic(() => import('react-animated-numbers'), {
+  ssr: false,
+})
+import { motion } from 'framer-motion';
 import styles from '../../../styles/get-involved/number-scroll.module.scss';
 import data from '../../../json/get-involved.json';
-import AnimatedNumber from 'react-animated-numbers';
-import { Inter } from '@next/font/google';
-
 
 export default function NumberScroll(): ReactElement {
   const stats = data.stats;
@@ -14,12 +16,17 @@ export default function NumberScroll(): ReactElement {
     return (
         <div className={styles.card}>
           <div className={styles.numBox}>
-            <AnimatedNumber
-              fontStyle={{ fontFamily: 'Inter', fontSize: 85, fontWeight: 700}}
-              animateToNumber={card.number}
-              config={{ tension: 89, friction: 40 }}
-              animationType={"calm"}
-            ></AnimatedNumber>
+          <motion.div
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.8 }}>
+            <AnimatedNumbers
+            fontStyle={{ fontFamily: 'Inter', fontSize: 85, fontWeight: 700}}
+            animateToNumber={card.number}
+            configs={{ tension: 89, friction: 40 }}
+            animationType={"calm"}
+          ></AnimatedNumbers>
+        </motion.div>
             {card.number != 1 && <p>+</p>}
           </div>
           <p className={`${styles.title} p-details`}>{card.title}</p>
