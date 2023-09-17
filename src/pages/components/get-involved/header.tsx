@@ -26,7 +26,7 @@ export default function Header(): ReactElement {
       </div>
 
       <p className={styles.numberText}>The numbers</p>
-
+      <NumberScroll></NumberScroll>
 
       <div className={styles.recruitmentContainer}>
         <div className={styles.recruitmentText}>
@@ -44,8 +44,6 @@ export default function Header(): ReactElement {
         alt='Mesh gradient graphic'/>
 
       </div>
-      <NumberScroll></NumberScroll>
-
     </div>
   );
 }
