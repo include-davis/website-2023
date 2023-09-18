@@ -1,7 +1,15 @@
-.faq {
-    width: 47.5%;
+.faqbox{
+    width: 100%;
 
-    p {
-        font-weight: 700;
-    }
+    .faq {
+        width: 50%;
+    
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    
+        p {
+            font-weight: 700;
+        }
+    }    
 }

@@ -1,0 +1,40 @@
+{
+    "services-page" : [
+        {
+            "q" : "What are the prerequisites or requirements to join a cohort?",
+            "a" : "Being enthusiastic and passionate to learn. You are not required to have programming or design experience to apply, however applicants with prior experience have a higher change of being accepted."
+        },
+        {
+            "q" : "What kinds of projects cohort members work on?",
+            "a" : "Cohort member work on a real client project with the guidance of designated leads. These project range from website and mobile apps, to design and brand development projects."
+        },
+        {
+            "q" : "How is a week of work usually like?",
+            "a" : "Member are expected to attend a minimum of one weekly meeting with their teams. These team meetings usually last 2 hours. Then they will be assigned work to do outside of their zmeeting times."
+        },
+        {
+            "q" : "Are positions quarterly or yearly?",
+            "a" : "Cohort members work on a project during two continuous quarters. Board members are expected to hold their position for the whole school year."
+        },
+        {
+            "q" : "Can students from any major apply?",
+            "a" : "Yes. We are open to accept applicant from all majors."
+        },
+        {
+            "q" : "What is the expected time commitment?",
+            "a" : "Weekly time commitment is highly influence on the project or stage that you are working on. Usually cohort member could spend anywhere between 5-10+ hours per week."
+        },
+        {
+            "q" : "What is the cost of membership?",
+            "a" : "$15 per quarter. Membership dues help us to pay for our technological services, host events and production of marketing materials."
+        },
+        {
+            "q" : "Are there opportunities for advancement within the club?",
+            "a" : "$15 per quarter. Membership dues help us to pay for our technological services, host events and production of marketing materials."
+        },
+        {
+            "q" : "How can #include help me professionally?",
+            "a" : "As part of #include you will gain real-world experience, expand your skills, network with professionals, enhance your portfolio, and develop leadership abilities. All of which contribute to your professional growth and open doors to exciting career opportunities."
+        }
+    ]
+}

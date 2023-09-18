@@ -4,6 +4,10 @@ import styles from '../styles/services/services.module.scss';
 import PhaseCard from '../components/services/phaseCard';
 import FAQ from '../components/services/faq';
 
+import Data from '../json/services/faqs.json';
+
+const faqs = Data["services-page"]
+
 function Services(): ReactElement {
     return (
       <div className={styles.page}>
@@ -28,9 +32,7 @@ function Services(): ReactElement {
         <div className={styles.faq_box}>
             <h2>Frequently Asked Questions</h2>
             <div className={styles.content}>
-                <FAQ/>
-                <FAQ/>
-                <FAQ/>
+                <FAQ faqList={faqs} />
             </div>
         </div>
       </div>

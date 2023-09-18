@@ -1,11 +1,19 @@
 import { ReactElement } from 'react';
 import styles from '../../styles/services/faq.module.scss';
 
-export default function FAQ(): ReactElement {
+interface FAQProp {
+  faqList: { q: string, a: string} [];
+}
+
+export default function FAQ( {faqList} : FAQProp ): ReactElement {
     return (
-      <div className={styles.faq}>
-        <p className="p-small">question</p>
-        <div className="p-details">answer</div>
+      <div className={styles.faqbox}>
+        {faqList.map( (faq, index) => (
+          <div key={index} className={styles.faq}>
+            <p className="p-small">{faq.q}</p>
+            <div className="p-details">{faq.a}</div>
+          </div>
+        ))}
       </div>
-    );
-  }
+  );
+}
