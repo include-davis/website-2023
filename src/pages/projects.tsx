@@ -8,13 +8,13 @@ export default function Projects(): ReactElement {
   return (
     <main className={styles.page}>
       <header>
-        <p>ABOUT</p>
+        <p className={styles.header_small}>ABOUT</p>
         <h1 className={styles.header}>Made in Davis: <br />Transforming ideas into reality</h1>
       </header>
       <section className={styles.projects}>
         {
           projects.map((project, index) => {
-            return <article className={styles.project}>
+            return <article className={styles.project} key={index}>
               <img className={styles.img} src={project.img} />
               <p className='p-details'>{project.term}</p>
               <h4>{project.title}</h4>

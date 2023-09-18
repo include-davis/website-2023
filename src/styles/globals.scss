@@ -30,6 +30,18 @@ p,
 h1 {
   font-size: 7.5rem;
   font-weight: 400;
+
+  @include mixins.tablet {
+    font-size: 6rem;
+  }
+
+  @include mixins.phone {
+    font-size: 4.5rem;
+  }
+
+  @include mixins.sm-phone {
+    font-size: 3rem;
+  }
 }
 
 h2 {
@@ -52,11 +64,19 @@ p {
 .p-small {
   font-size: 1.5rem;
   font-weight: 400;
+
+  @include mixins.sm-phone {
+    font-size: 1.2rem;
+  }
 }
 
 .p-details {
   font-size: 1.125rem;
   font-weight: 400;
+
+  @include mixins.sm-phone {
+    font-size: 1rem;
+  }
 }
 
 * {
@@ -78,4 +98,8 @@ button {
   font-size: 2rem;
   color: var(--text-white);
   padding: 20px 50px;
+
+  @include mixins.phone {
+    font-size: 1.5rem;
+  }
 }
