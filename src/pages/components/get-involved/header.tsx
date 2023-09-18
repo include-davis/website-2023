@@ -1,6 +1,7 @@
-import { ReactElement} from 'react';
+import { ReactElement } from 'react';
 import styles from '../../../styles/get-involved/header.module.scss';
 import Image from 'next/image';
+import NumberScroll from './number-scroll';
 
 
 export default function Header(): ReactElement {
@@ -25,6 +26,7 @@ export default function Header(): ReactElement {
       </div>
 
       <p className={styles.numberText}>The numbers</p>
+      <NumberScroll></NumberScroll>
 
       <div className={styles.recruitmentContainer}>
         <div className={styles.recruitmentText}>

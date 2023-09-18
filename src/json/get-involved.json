@@ -1,4 +1,23 @@
 {
+  "stats" : {
+    "cardOne" : {
+      "title": "Cohorts",
+      "number": 8
+    },
+    "cardTwo" : {
+      "title": "Years",
+      "number": 4
+    },
+    "cardThree" : {
+      "title": "Members",
+      "number": 120
+    },
+    "cardFour" : {
+      "title": "You",
+      "number": 1
+    }
+  },
+
   "cards" : {
     "design": {
       "header": "Design",
@@ -16,4 +35,5 @@
       "alt": "Icon of three people next to each other"
     }
   }
+
 }
