@@ -31,6 +31,7 @@ export default function NumberScroll(): ReactElement {
                     fontWeight: 700,
                   }}
                   animateToNumber={card.number}
+                  // @ts-expect-error Package seems to be buggy
                   configs={{ tension: 89, friction: 40 }}
                 />
               </motion.div>
