@@ -27,3 +27,67 @@
   padding: 20px 50px;
   margin-top: 64px;
 }
+
+.purpleBg, .innerCircle, .line {
+  background: var(--purple-gradient);
+}
+.description {
+  color: var(--text-white);
+  padding: 92px 340px 387px;
+  text-align: center;
+}
+.textGradient {
+  background: linear-gradient(73deg, #89CAFF -22.81%, #97C3BD 17.31%, #FFFBA4 56.6%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.line {
+  width: 2px;
+  height: 232px;
+}
+.innerCircle {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  
+}
+.outerCircle {
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--include-purple);
+  border-radius: 100%;
+  box-shadow: 0px 0px 75px 0px rgba(60, 37, 126, 0.60);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scrollLine {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bulletPoints {
+  padding: 200px;
+  display: flex;
+  column-gap: 50px;
+  justify-content: center;
+}
+.leftPoints {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+.pointTwo {
+  align-self: center;
+  text-align: left;
+}
+.pointOne, .pointThree {
+  text-align: right;
+}
+.pointOne, .pointTwo, .pointThree {
+  width: 500px;
+}
