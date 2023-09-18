@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import dynamic from 'next/dynamic'
+import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
 import styles from '../../../styles/get-involved/number-scroll.module.scss';
 import data from '../../../json/get-involved/get-involved.json';
