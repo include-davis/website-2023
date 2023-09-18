@@ -6,59 +6,43 @@ import Avatar from "@/components/about/avatar/avatar";
 import { motion } from "framer-motion";
 import data from "@/json/about/about.json";
 import board from "@/json/about/board.json";
-import assets from "@/components/about/assets";
-import blurs from "@/components/about/blurs";
 import styles from "../styles/about/about.module.scss";
 
 // Have navbar be fixed & inherit background color from page
-const companies = assets.map((asset, index) => {
-  return <Image src={asset} alt="" priority={true} key={index} />;
+const companies = [
+  "Riot",
+  "Apple",
+  "Amazon",
+  "Microsoft",
+  "LinkedIn",
+  "Visa",
+  "Netflix",
+].map((company) => {
+  return <img src={`/about/svgs/${company}.svg`} alt="" key={company} />;
 });
 
-const websites = [
-  <Image
-    src="/about/images/b&v.jpg"
-    width={645}
-    height={357}
-    style={{ objectFit: "cover", objectPosition: "0", borderRadius: "14.16px" }}
-    key={"b&v"}
-    priority={true}
-    alt=""
-  />,
-  <Image
-    src="/about/images/ielc.jpg"
-    width={645}
-    height={357}
-    style={{
-      objectFit: "contain",
-      objectPosition: "0",
-      borderRadius: "14.16px",
-    }}
-    key={"ielc"}
-    priority={true}
-    alt=""
-  />,
-  <Image
-    src="/about/images/brkbar.jpg"
-    width={645}
-    height={357}
-    style={{
-      objectFit: "contain",
-      objectPosition: "0",
-      borderRadius: "14.16px",
-    }}
-    key="brkbar"
-    priority={true}
-    alt=""
-  />,
-];
+const blurs = {
+  blue: "/about/svgs/blurBlue.svg",
+  purple: "/about/svgs/blurPurple.svg",
+};
+
+const websites = ["bv", "ielc", "brkbar"].map((website) => {
+  return (
+    <img
+      src={`/about/images/${website}.jpg`}
+      className={styles.website_img}
+      key={website}
+      alt=""
+    />
+  );
+});
 
 export default function About(): React.JSX.Element {
   return (
     <div className={styles.about}>
       <article className={styles.intro}>
-        <Image
-          src={blurs.Blue}
+        <img
+          src={blurs.blue}
           style={{ position: "absolute", top: "0", right: "0" }}
           alt=""
         />
@@ -68,18 +52,8 @@ export default function About(): React.JSX.Element {
             <h1 className={styles.header_text}>{data.intro.header}</h1>
           </div>
           <div className={styles.websites_slider}>
-            <Image
-              src={blurs.Red}
-              style={{
-                position: "absolute",
-                height: "166%",
-                width: "100%",
-                top: "-66%",
-                left: "0",
-              }}
-              alt=""
-            />
             <div className={styles.slider_container}>
+              <div className={styles.red_blur} />
               <div className={styles.transparent_mask}>
                 <InfiniteSlider durationInMs={4000}>{websites}</InfiniteSlider>
               </div>
@@ -111,10 +85,9 @@ export default function About(): React.JSX.Element {
           >
             <Image
               src="/about/images/descPic.jpg"
+              width={1280}
+              height={960}
               alt=""
-              width={1200}
-              height={450}
-              sizes="(min-width: 480px) calc(100vw - 96px), 347px"
               style={{
                 width: "100%",
                 height: "auto",
@@ -124,8 +97,8 @@ export default function About(): React.JSX.Element {
             />
           </motion.section>
         </section>
-        <Image
-          src={blurs.Purple}
+        <img
+          src={blurs.purple}
           style={{ position: "absolute", top: "0", left: "0" }}
           alt=""
         />
@@ -165,13 +138,13 @@ export default function About(): React.JSX.Element {
           </div>
         </section>
         <section className={styles.board_members}>
-          {board.members.map((m) => {
+          {board.members.map((mem) => {
             return (
               <Avatar
-                name={m.name}
-                title={m.title}
-                image={m.imageSrc}
-                key={m.name}
+                name={mem.name}
+                title={mem.title}
+                image={mem.imageSrc}
+                key={mem.name}
               />
             );
           })}

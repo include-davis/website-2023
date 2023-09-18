@@ -6,20 +6,28 @@
   align-items: center;
   overflow: hidden;
   width: 100%;
+  height: 100%;
 
   .content {
     display: flex;
     align-items: center;
+    height: 100%;
     margin: 0;
+    margin-right: 83px;
+    gap: 83px;
     animation: slide-right-to-left linear infinite;
     animation-fill-mode: forwards;
+
+    @include mixins.md {
+      margin-right: 36px;
+      gap: 36px;
+    }
   }
 
-  .content > * {
-    position: relative;
-    aspect-ratio: 16 / 9;
-    margin: 0 3.125em;
-  }
+  // .content > * {
+  //   aspect-ratio: 16 / 9;
+  //   margin: 0 3.125em;
+  // }
 
   @keyframes slide-right-to-left {
     from {
