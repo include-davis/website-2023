@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import OpportunityCard from './opportunity-card';
 import styles from '../../../styles/get-involved/opportunity-section.module.scss';
-import data from '../../../json/get-involved.json';
+import data from '../../../json/get-involved/get-involved.json';
 
 export default function Opportunities(): React.JSX.Element {
   const { cards } = data;
