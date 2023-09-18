@@ -6,4 +6,4 @@ export default function AboutUs(): React.JSX.Element {
       <h1>About Us</h1>
     </div>
   );
-};
+}
