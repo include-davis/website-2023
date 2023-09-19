@@ -25,19 +25,21 @@ export default function GetInvolved(): React.JSX.Element {
       <section className={styles.test}>
         <div className={styles.purpleBg}>
           <h3 className={styles.description}>
-            We aim to provide resources and opportunities to help students <span className={styles.textGradient}>find their path</span>, no
+            We aim to provide resources and opportunities to help students{' '}
+            <span className={styles.textGradient}>find their path</span>, no
             matter where they are at in their journey.
           </h3>
         </div>
-        
+
         {/* <div>image placeholder</div> */}
         <div className={styles.whiteBg}>
-          <Image 
-          src='/get-involved/svgs/group.png'
-          width={1200}
-          height={636}
-          alt='Group of four people surrounded at a meeting table.'
-          className={styles.groupImg}/>
+          <Image
+            src="/get-involved/svgs/group.png"
+            width={1200}
+            height={636}
+            alt="Group of four people surrounded at a meeting table."
+            className={styles.groupImg}
+          />
           <div className={styles.bulletPoints}>
             <div className={styles.leftPoints}>
               <div className={styles.pointOne}>
@@ -56,44 +58,50 @@ export default function GetInvolved(): React.JSX.Element {
                 <motion.div
                   variants={boxVariant}
                   initial="hidden"
-                  whileInView="visible">
-                    <h3>Make an impact in your community</h3>
-                    <p>Build things that make you proud</p>
+                  whileInView="visible"
+                >
+                  <h3>Make an impact in your community</h3>
+                  <p>Build things that make you proud</p>
                 </motion.div>
               </div>
             </div>
             <div className={styles.scrollLine}>
               <motion.div
-              variants={boxVariant}
-              initial="hidden"
-              whileInView="visible">
+                variants={boxVariant}
+                initial="hidden"
+                whileInView="visible"
+              >
                 {bullet}
               </motion.div>
               <motion.div
-              variants={boxVariant}
-              initial="hidden"
-              whileInView="visible">
-              {line}
+                variants={boxVariant}
+                initial="hidden"
+                whileInView="visible"
+              >
+                {line}
               </motion.div>
               <motion.div
-              variants={boxVariant}
-              initial="hidden"
-              whileInView="visible">
+                variants={boxVariant}
+                initial="hidden"
+                whileInView="visible"
+              >
                 {bullet}
               </motion.div>
               <motion.div
-              variants={boxVariant}
-              initial="hidden"
-              whileInView="visible">
+                variants={boxVariant}
+                initial="hidden"
+                whileInView="visible"
+              >
                 {line}
               </motion.div>
               {bullet}
             </div>
             <div className={styles.pointTwo}>
               <motion.div
-              variants={boxVariant}
-              initial="hidden"
-              whileInView="visible">
+                variants={boxVariant}
+                initial="hidden"
+                whileInView="visible"
+              >
                 <h3>Work with real clients</h3>
                 <p>Get relevant industry experience</p>
               </motion.div>
@@ -101,8 +109,8 @@ export default function GetInvolved(): React.JSX.Element {
           </div>
         </div>
       </section>
-      <Opportunities/>
-      <MainContentFooter/>
+      <Opportunities />
+      <MainContentFooter />
     </div>
   );
 }

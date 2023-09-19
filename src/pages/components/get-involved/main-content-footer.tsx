@@ -1,5 +1,6 @@
 import { ReactElement } from 'react';
 import styles from '../../../styles/get-involved/get-involved.module.scss';
+
 export default function MainContentFooter(): ReactElement {
   return (
     <section className={styles.mainFooter}>
@@ -7,7 +8,9 @@ export default function MainContentFooter(): ReactElement {
         Are you a company looking to build<br></br>something amazing?
       </h2>
       <p className={styles.small_text}>Explore what we can do for you</p>
-      <button className={styles.btn}>Learn More</button>
+      <button type="button" className={styles.btn}>
+        Learn More
+      </button>
     </section>
   );
 }
