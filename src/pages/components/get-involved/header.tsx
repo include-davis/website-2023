@@ -11,6 +11,7 @@ export default function Header(): ReactElement {
         width={667}
         height={642}
         alt="Mesh gradient graphic"
+        priority
         className={styles.meshLeft}
       />
       <Image

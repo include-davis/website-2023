@@ -2,11 +2,17 @@ import { ReactElement } from 'react';
 import Image from 'next/image';
 import styles from '../../../styles/get-involved/opportunity-card.module.scss';
 
-export default function OpportunityCard(
-  name: string,
-  alt: string,
-  description: string
-): ReactElement {
+interface OpportunityCardProps {
+  name: string;
+  alt: string;
+  description: string;
+}
+
+export default function OpportunityCard({
+  name,
+  alt,
+  description,
+}: OpportunityCardProps): ReactElement {
   return (
     <div className={styles.cardContainer}>
       <Image
