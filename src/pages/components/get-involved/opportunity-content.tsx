@@ -9,7 +9,7 @@ export default function Opportunities(): React.JSX.Element {
   const cardElements = Object.keys(cards).map((index) => {
     const card = cards[index as keyof typeof cards];
 
-    return OpportunityCard(card.header, card.description, card.alt);
+    return OpportunityCard(card.header, card.alt, card.description);
   });
 
   return (

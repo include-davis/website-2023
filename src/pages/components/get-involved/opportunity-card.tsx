@@ -4,8 +4,8 @@ import styles from '../../../styles/get-involved/opportunity-card.module.scss';
 
 export default function OpportunityCard(
   name: string,
-  description: string,
-  alt: string
+  alt: string,
+  description: string
 ): ReactElement {
   return (
     <div className={styles.cardContainer}>
