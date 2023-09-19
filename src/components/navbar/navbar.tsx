@@ -60,7 +60,7 @@ export default function Navbar({ nav, path }: NavbarProps): React.JSX.Element {
                       active ? styles.fadeInText : ""
                     }`}
                   >
-                    {item.name}
+                    {item.name.toLowerCase()}
                   </span>
                 </Link>
               </li>

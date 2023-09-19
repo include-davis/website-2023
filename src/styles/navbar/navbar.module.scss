@@ -4,7 +4,7 @@
   width: 100%;
   height: var(--navbar-height);
   position: absolute;
-  top: 0;
+  top: var(--navbar-spacer-desktop);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,7 +47,7 @@
   }
 
   @include mixins.tablet {
-    height: calc(var(--navbar-height) * 0.8);
+    top: var(--navbar-spacer-tablet);
     .navbar {
       width: calc(100% - 2 * var(--edge-spacer) * 0.5);
 
@@ -66,7 +66,6 @@
   }
 
   @include mixins.lg {
-    height: calc(var(--navbar-height) * 0.6);
     .navbar {
       width: calc(100% - 2 * var(--edge-spacer) * 0.3);
       // .navbar_right {
@@ -85,7 +84,7 @@
   }
 
   @include mixins.md {
-    height: calc(var(--navbar-height) * 0.4);
+    top: var(--navbar-spacer-mobile);
     .navbar {
       width: calc(100% - 2 * var(--edge-spacer) * 0.1);
       position: relative;
@@ -94,14 +93,16 @@
           background: var(--purple-gradient);
           position: absolute;
           width: calc(100% + 2 * var(--edge-spacer) * 0.1);
-          height: calc(100vh - calc(var(--navbar-height) * 0.4));
+          height: calc(
+            100vh - var(--navbar-height) - 2 * var(--navbar-spacer-mobile)
+          );
           left: calc(var(--edge-spacer) * -0.1);
-          top: 100%;
+          top: calc(var(--navbar-height) + var(--navbar-spacer-mobile));
 
           flex-direction: column;
           align-items: flex-start;
           justify-content: center;
-          gap: calc(var(--navbar-height) * 0.1);
+          // gap: calc(var(--navbar-height) * 0.1);
 
           max-height: 0;
           overflow: hidden;
@@ -132,7 +133,9 @@
         }
 
         .activeDropdown {
-          max-height: calc(100vh - calc(var(--navbar-height) * 0.4));
+          max-height: calc(
+            100vh - var(--navbar-height) - 2 * var(--navbar-spacer-mobile)
+          );
         }
         .dropdown {
           display: flex;
