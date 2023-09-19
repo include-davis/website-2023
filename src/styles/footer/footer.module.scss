@@ -2,7 +2,7 @@
 
 .footer_wrapper {
   position: absolute;
-  bottom: 0;
+  bottom: var(--footer-spacer-desktop);
 
   display: flex;
   align-items: center;
@@ -29,6 +29,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        text-wrap: nowrap;
 
         > li {
           list-style-type: none;
@@ -50,7 +51,7 @@
   }
 
   @include mixins.tablet {
-    height: calc(var(--footer-height) * 0.8);
+    bottom: var(--footer-spacer-tablet);
     .footer {
       width: calc(100% - 2 * var(--edge-spacer) * 0.5);
 
@@ -69,7 +70,6 @@
   }
 
   @include mixins.lg {
-    height: calc(var(--footer-height) * 0.6);
     .footer {
       width: calc(100% - 2 * var(--edge-spacer) * 0.3);
       // .navbar_right {
@@ -88,7 +88,8 @@
   }
 
   @include mixins.md {
-    height: calc(var(--footer-height) * 0.4);
+    height: var(--footer-height-mobile);
+    bottom: var(--footer-spacer-mobile);
 
     .footer {
       width: calc(100% - 2 * var(--edge-spacer) * 0.1);
