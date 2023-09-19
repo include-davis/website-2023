@@ -15,11 +15,12 @@
   // spacers
   --spacer: 48px;
   --edge-spacer: 245px;
-  --navbar-height: 42px;
+  --navbar-height: 250px;
+  --footer-height: 250px;
 }
 
 h1,
-h1,
+h2,
 h3,
 h4,
 p,
@@ -31,7 +32,7 @@ p,
 }
 
 h1 {
-  font-size: 7.5rem;
+  font-size: 6rem;
   font-weight: 400;
 }
 
