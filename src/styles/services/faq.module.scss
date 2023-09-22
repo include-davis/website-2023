@@ -1,12 +1,13 @@
 .faqbox{
     width: 100%;
 
+    display: flex;
+    flex-direction: column;
+    gap: 8.8vh;
+
     .faq {
-        width: 50%;
-    
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 3.3vh;
     
         p {
             font-weight: 700;
