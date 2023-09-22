@@ -36,6 +36,7 @@ export default function GetInvolved(): React.JSX.Element {
       variants={boxVariant}
       initial="hidden"
       whileInView="visible"
+      className={styles.pointInfo}
     >
       <h3>{header}</h3>
       <p>{info}</p>
@@ -55,9 +56,9 @@ export default function GetInvolved(): React.JSX.Element {
       />
     );
   });
-  
+
   return (
-    <div>
+    <div className={styles.page}>
       <section className={styles.header}>
         <Image
           src="/get-involved/svgs/mesh-left.png"
@@ -124,10 +125,12 @@ export default function GetInvolved(): React.JSX.Element {
             <div className={styles.pointOne}>
               {createPoint("Apply to join", "Become part of our cohort or executive board")}
             </div>
+            <div className={styles.phone}>{line}</div>
             <div className={styles.pointThree}>
             {createPoint("Make an impact in your community", "Build things that make you proud")}
             </div>
           </div>
+          <div className={styles.phone}>{line}</div>
           <div className={styles.scrollLine}>
             {bullet}
             {line}
@@ -153,7 +156,7 @@ export default function GetInvolved(): React.JSX.Element {
       </div>
       <div className={styles.cardsContainer}> {cardElements}</div>
     </section>
-    {/* FAQ WILL GO HERE */}
+  
     <section className={styles.mainFooter}>
       <h2 className={styles.question}>
         Are you a company looking to build something amazing?
