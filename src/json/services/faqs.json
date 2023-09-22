@@ -1,5 +1,5 @@
 {
-    "services-page" : [
+    "col1" : [
         {
             "q" : "What are the prerequisites or requirements to join a cohort?",
             "a" : "Being enthusiastic and passionate to learn. You are not required to have programming or design experience to apply, however applicants with prior experience have a higher change of being accepted."
@@ -15,7 +15,10 @@
         {
             "q" : "Are positions quarterly or yearly?",
             "a" : "Cohort members work on a project during two continuous quarters. Board members are expected to hold their position for the whole school year."
-        },
+        }
+    ],
+
+    "col2" : [
         {
             "q" : "Can students from any major apply?",
             "a" : "Yes. We are open to accept applicant from all majors."
