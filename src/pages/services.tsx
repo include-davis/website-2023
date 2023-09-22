@@ -3,10 +3,12 @@ import styles from '../styles/services/services.module.scss';
 
 import PhaseCard from '../components/services/phaseCard';
 import FAQ from '../components/services/faq';
+import ContactForm from '../components/services/form';
 
 import Data from '../json/services/faqs.json';
 
-const faqs = Data["services-page"]
+const faqs_col1 = Data["col1"]
+const faqs_col2 = Data["col2"]
 
 function Services(): ReactElement {
     return (
@@ -25,14 +27,14 @@ function Services(): ReactElement {
                 </div>
             </div>
             <div className={styles.form_box}>
-                <p>Thank you for your interest in working with us. Please fill out the form below and tell us more about your project. We'll get back to you within one or two business days.</p>
-                <h4>form space</h4>
+                <ContactForm />
             </div>
         </div>
         <div className={styles.faq_box}>
             <h2>Frequently Asked Questions</h2>
             <div className={styles.content}>
-                <FAQ faqList={faqs} />
+                <FAQ faqList={faqs_col1} />
+                <FAQ faqList={faqs_col2} />
             </div>
         </div>
       </div>
