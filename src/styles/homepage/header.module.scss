@@ -18,22 +18,25 @@
     flex-direction: column;
     background: var(--purple-gradient);
     justify-content: space-between;
-    width: 1728px;
-    height: 1457px;
+    max-height: 1457px; 
+    overflow: hidden;
 }
 
 .images{
-    display: inline-flex;
+    display: flex;
     justify-content: center;
-    gap: 50px; 
-    width: 1361px;
-    height: 224px;
-    border-radius: 0px 0px 50px 50px;
+    gap: 50px;     
+    //flex-wrap: wrap;
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 10%, transparent 90%);
 
     @include mixins.phone {
         display: none;
     }
+}
+.picture{
+    width: 27%;  
+    max-width: 400px;
+    max-height: 200px;
 }
 
 .main_content{
@@ -43,20 +46,25 @@
     flex-direction: column;
     align-items: center;
     gap: 62px;
+    width: 100%;
+    height: auto;
 }
 
 .title {
+    width: 100%;
+    height: auto;
     @include mixins.phone {
         display: inline-block;
         padding-top: 200px;
         padding-left: 60px;
         padding-bottom: 0;
         transform: rotate(45deg); //causes too big of a "gap"
-        
     }
 }
   
 .diagonal {
+    display: inline-flex;
+    max-width: 706px;
     @include mixins.phone {
         font-size: 40px;
         display: inline-block;
@@ -66,8 +74,8 @@
 
 .description{
     font-size: 24px;
-    width: 706px;
-    margin: auto;
+    max-width: 706px;
+    text-align: center;
 }
 
 .join{
@@ -78,10 +86,11 @@
     backdrop-filter: blur(2px);
     background: none;
     color: var(--text-white);
-
+    margin-bottom: 250px;
 }
 
 .footer{
     color: var(--text-white);
     text-align: center;
 }
+

@@ -7,9 +7,9 @@ export default function Header(): ReactElement {
         <div className={styles.homepage}>
         <div className={styles.main_content}>
           <div className={styles.images}>
-            <img width="400" height="200" src="/homepage/design-home1.png" />
-            <img width="400" height="200" src="/homepage/design-home2.png" />
-            <img width="400" height="200" src="/homepage/design-home3.png" />
+            <img className={styles.picture} src="/homepage/design-home1.png" />
+            <img className={styles.picture} src="/homepage/design-home2.png" />
+            <img className={styles.picture} src="/homepage/design-home3.png" />
           </div>
           <h1 className={styles.title}>
             <span className={styles.diagonal}>Design.</span>
