@@ -1,9 +1,9 @@
 import { ReactElement } from 'react';
 import styles from '../styles/services/services.module.scss';
 
-import PhaseCard from '../components/services/phaseCard';
-import FAQ from '../components/services/faq';
-import ContactForm from '../components/services/form';
+import PhaseCard from './components/services/phaseCard';
+import FAQ from './components/services/faq';
+import ContactForm from './components/services/form';
 
 import Data from '../json/services/faqs.json';
 
