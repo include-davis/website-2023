@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import styles from '../../styles/services/phaseCard.module.scss';
+import styles from '../../../styles/services/phaseCard.module.scss';
 
 export default function PhaseCard(): ReactElement {
     return (
