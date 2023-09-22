@@ -1,0 +1,95 @@
+.form_container {
+
+    .block1 {
+        margin-bottom: 8.8vh;
+
+        p {
+            margin-bottom: 5vh;
+        }
+
+        .form_inputs { 
+            display: flex;
+            flex-direction: column;
+            gap: 3.3vh;
+            
+            .name_input {
+                display: flex;
+                flex-direction: row;
+                gap: 2vw;
+
+                .input {
+                    height: 3rem;
+                    border: none;
+                    border-bottom: 1px solid var(--text-black-light) ;
+                }
+            }
+            .input {
+                width: 100%;
+                height: 3rem;
+                border: none;
+                border-bottom: 1px solid var(--text-black-light) ;
+            }
+
+            .input::placeholder {
+                color: var(--text-black-light);
+                vertical-align: bottom;
+
+                font-size: 2rem;
+                font-weight: 400;
+                padding-left: 1vw;
+            }
+        }
+    }
+        
+    .block2 {
+        margin-bottom: 8.8vh;
+
+        h3 {
+            margin-bottom: 2.5vh;
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 5.2vh;
+            text-align: center;
+        }
+
+        .options {
+            border: 1px solid var(--text-black-light);
+            border-radius: 1.25rem;
+
+            display: flex;
+            flex-wrap: wrap;
+            
+            .help_options1, .help_options2, .help_options3, .help_options4, .help_options5, .help_options6 {
+                width: 50%;
+                padding: 1.25rem 0.625rem;
+
+                display: flex;
+                gap: 2vw;
+
+                input {
+                    width: 1.875rem;
+                    height: 1.875rem;
+                    flex-shrink: 0;
+
+                    border: 1px solid var(--text-black-dark);
+                }
+            }
+
+            .help_options1, .help_options3, .help_options5 {
+                border-right: 1px solid var(--text-black-dark);
+            }
+
+            .help_options1, .help_options2, .help_options3, .help_options4 {
+                border-bottom: 1px solid var(--text-black-dark);
+            }
+        }
+
+    }
+    
+    .block3 {
+        margin-bottom: 8.8vh;
+
+    }
+}
