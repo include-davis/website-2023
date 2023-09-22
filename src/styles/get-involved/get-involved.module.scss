@@ -1,3 +1,142 @@
+@use 'src/styles/mixins';
+// HEADER //
+.header {
+  position: relative;
+  padding: 200px var(--edge-spacer);
+  overflow: hidden;
+}
+
+.meshLeft {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  transform: rotate(-15deg) translateX(-10%);
+  filter: blur(7px);
+}
+
+.meshRight {
+  position: absolute;
+  right: 0;
+  top: 450px;
+  transform: rotate(15deg) translateX(10%);
+  filter: blur(7px);
+}
+
+.cta {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0px auto;
+}
+
+.hook, .button {
+  color: var(--include-purple);
+  text-align: center;
+}
+
+.numberText, .recruitmentInfo {
+  color: var(--text-black-light);
+}
+
+.button {
+  background-color: transparent;
+  border: 1px solid var(--include-purple);
+  border-radius: 10px;
+
+  font-size: 1.5rem;
+  padding: 15px 50px;
+  margin-top: 36px;
+  margin-bottom: 200px;
+}
+
+
+.numberText {
+  text-align: center;
+}
+
+.recruitmentContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 217px;
+}
+
+.recruitmentText {
+  display: flex;
+  flex-direction: column;
+}
+.recruitmentInfo {
+  max-width: 650px;
+  padding: 20px 0px;
+}
+// HEADER //
+
+
+//NUMBER SCROLL//
+.numContainer {
+  background: var(--purple-gradient);
+  display: flex;
+  justify-content: center;
+  column-gap: 50px;
+
+  padding: 50px;
+  border-radius: 20px;
+  margin: 50px auto 200px;
+  justify-self: center;
+  max-width: 1200px;
+}
+
+.numContainer > div {
+  color: var(--text-grey);
+}
+
+.card {
+  border: 0.5px solid #FFF;
+  border-radius: 8px;
+  padding: 20px;
+
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.numBox {
+  display: flex;
+  align-items: center;
+}
+
+.numBox > p {
+  font-weight: 700;
+  font-size: 5.313rem;
+}
+//NUMBER SCROLL //
+
+//OPPORTUNITIES//
+.oporrtunityTitle {
+  color: var(--text-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cardsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+
+  column-gap: 30px;
+  margin-top: 64px;
+}
+
+.opportunityContainer {
+  background: var(--purple-gradient);
+  padding: 200px var(--edge-spacer);
+}
+//OPPORTUNITIES//
+//FOOTER//
 .mainFooter {
   background: var(--purple-gradient);
   padding: 150px var(--edge-spacer);
@@ -28,6 +167,7 @@
   margin-top: 64px;
 }
 
+// FOOTER ^^^ //
 .whiteBg {
   padding-top: 300px;
   position: relative;
@@ -106,3 +246,4 @@
 
 
 }
+

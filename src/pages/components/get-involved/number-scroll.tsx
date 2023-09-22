@@ -31,7 +31,7 @@ export default function NumberScroll(): ReactElement {
                     fontWeight: 700,
                   }}
                   animateToNumber={card.number}
-                  configs={[{ tension: 89, friction: 40 }]}
+                  configs={[{ tension: 89, friction: 30 }]}
                 />
               </motion.div>
               {card.number !== 1 && <p>+</p>}
