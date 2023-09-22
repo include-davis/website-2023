@@ -18,13 +18,19 @@
     flex-direction: column;
     background: var(--purple-gradient);
     justify-content: space-between;
-    
+    width: 1728px;
+    height: 1457px;
 }
 
 .images{
     display: inline-flex;
     justify-content: center;
-    gap: 50px;
+    gap: 50px; 
+    width: 1361px;
+    height: 224px;
+    border-radius: 0px 0px 50px 50px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 10%, transparent 90%);
+
     @include mixins.phone {
         display: none;
     }
@@ -37,7 +43,6 @@
     flex-direction: column;
     align-items: center;
     gap: 62px;
-
 }
 
 .title {
@@ -71,10 +76,12 @@
     border-radius: 10px;
     border: 1px solid var(--White, #FFF);
     backdrop-filter: blur(2px);
+    background: none;
+    color: var(--text-white);
 
 }
+
 .footer{
     color: var(--text-white);
     text-align: center;
-
 }
