@@ -1,0 +1,39 @@
+{
+  "stats" : {
+    "cardOne" : {
+      "title": "Cohorts",
+      "number": 8
+    },
+    "cardTwo" : {
+      "title": "Years",
+      "number": 4
+    },
+    "cardThree" : {
+      "title": "Members",
+      "number": 120
+    },
+    "cardFour" : {
+      "title": "You",
+      "number": 1
+    }
+  },
+
+  "cards" : {
+    "design": {
+      "header": "Design",
+      "description": "Focuses on visual design, user experience, and user interface.",
+      "alt": "Icon of a pencil with ruler in it"
+    },
+    "tech": {
+      "header": "Tech",
+      "description": "Focuses on the underlying code and functionality of an app or website.",
+      "alt": "Icon displaying html brackets"
+    },
+    "board": {
+      "header": "Board",
+      "description": "Responsible for the overall direction and management of our organization.",
+      "alt": "Icon of three people next to each other"
+    }
+  }
+
+}

@@ -1,0 +1,72 @@
+.header {
+  position: relative;
+  padding: 200px 200px;
+  overflow: hidden;
+}
+
+.meshLeft {
+  position: absolute;
+  left: -120px;
+  top: 100px;
+  transform: rotate(-15deg);
+  filter: blur(7px);
+}
+
+.meshRight {
+  position: absolute;
+  right: -250px;
+  top: 450px;
+  transform: rotate(15deg);
+  filter: blur(7px);
+}
+
+.hook, .button {
+  color: var(--include-purple);
+  text-align: center;
+}
+
+.numberText, .recruitmentInfo {
+  color: var(--text-black-light);
+}
+
+.button {
+  background-color: transparent;
+  border: 1px solid var(--include-purple);
+  border-radius: 10px;
+
+  font-size: 1.5rem;
+  padding: 15px 50px;
+  margin-top: 36px;
+  margin-bottom: 200px;
+}
+
+.cta {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.numberText {
+  text-align: center;
+}
+
+.recruitmentContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 217px;
+}
+
+.recruitmentText {
+  display: flex;
+  flex-direction: column;
+}
+.recruitmentInfo {
+  max-width: 650px;
+}
+.test {
+  color: red;
+}
