@@ -1,0 +1,49 @@
+@use 'src/styles/mixins';
+
+.container {
+    >h1 {
+        font-size: 80px;
+
+        @include mixins.tablet {
+            font-size: 60px;
+        }
+
+        @include mixins.phone {
+            font-size: 40px;
+        }
+    }
+}
+.homepage{
+    display: flex;
+    flex-direction: column;
+    background: var(--purple-gradient);
+}
+
+.images{
+    display: inline-flex;
+    justify-content: center;
+    gap: 50px;
+    @include mixins.phone {
+        display: none;
+    }
+}
+
+.title {
+    @include mixins.phone {
+        display: inline-block;
+        padding-top: 200px;
+        padding-left: 60px;
+        padding-bottom: 0;
+        transform: rotate(45deg); //causes too big of a "gap"
+        
+    }
+}
+  
+.diagonal {
+    @include mixins.phone {
+        font-size: 40px;
+        display: inline-block;
+        transform: rotate(-45deg);
+    }
+}
+
