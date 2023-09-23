@@ -6,7 +6,7 @@
   border-radius: 14.16px;
   aspect-ratio: 16/9;
 
-  @include mixins.sm-phone{
+  @include mixins.sm-phone {
     max-width: 390px;
   }
 }
@@ -53,7 +53,7 @@
     gap: 250px;
     padding-top: 298px;
 
-    > h2 {
+    >h2 {
       color: #414141;
     }
 
@@ -114,18 +114,14 @@
 
           .transparent_mask {
             height: 100%;
-            mask-image: linear-gradient(
-              to right,
-              rgba(0, 0, 0, 1),
-              rgba(0, 0, 0, 0)
-            );
-            -webkit-mask-image: -webkit-gradient(
-              linear,
-              left 50%,
-              left bottom,
-              from(rgba(0, 0, 0, 1)),
-              to(rgba(0, 0, 0, 0))
-            );
+            mask-image: linear-gradient(to right,
+                rgba(0, 0, 0, 1),
+                rgba(0, 0, 0, 0));
+            -webkit-mask-image: -webkit-gradient(linear,
+                left 50%,
+                left bottom,
+                from(rgba(0, 0, 0, 1)),
+                to(rgba(0, 0, 0, 0)));
           }
         }
       }
@@ -210,18 +206,16 @@
       max-width: 1200px;
       gap: 250px;
 
-      > div {
-        > h2 {
+      >div {
+        >h2 {
           color: var(--text-white);
           line-height: 112.903%;
 
           .gradient_text {
             display: inline-block;
 
-            background: var(
-              --gradient-variation,
-              linear-gradient(46deg, #89caff 0%, #97c3bd 50.52%, #fffba4 100%)
-            );
+            background: var(--gradient-variation,
+                linear-gradient(46deg, #89caff 0%, #97c3bd 50.52%, #fffba4 100%));
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -312,6 +306,7 @@
 
     .company_slider {
       margin: 0;
+      width: 100%;
     }
 
     @include mixins.tablet {
@@ -328,6 +323,7 @@
 
     @include mixins.sm-phone {
       padding-bottom: 150px;
+
       .future_text {
         width: calc(100% - 2 * var(--edge-spacer) * 0.1);
       }
