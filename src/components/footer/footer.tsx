@@ -36,7 +36,7 @@ export default function Footer({ nav, path }: FooterProps): React.JSX.Element {
             {nav.map((link) => (
               <li key={link.path}>
                 <Link href={`/${link.path}`}>
-                  <span className={`p-small ${color}`}>{link.name}</span>
+                  <span className={`p-details ${color}`}>{link.name}</span>
                 </Link>
               </li>
             ))}
