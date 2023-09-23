@@ -1,9 +1,8 @@
 import { ReactElement } from 'react';
 import styles from '../../../styles/homepage/grow.module.scss';
 
-export default function Footer(): ReactElement {
+export default function Grow(): ReactElement {
     return(
-        <div className={styles.growparent}>
         <div className={styles.grow}>
             <div className={styles.main_content}>
                 <div className={styles.title}>
@@ -20,7 +19,6 @@ export default function Footer(): ReactElement {
                 <img className={styles.picture} src="/homepage/grow1.png" />
                 <img className={styles.picture} src="/homepage/grow2.png" />
             </div>        
-        </div>
         </div>
 
     );

@@ -8,10 +8,11 @@
     max-height: 1457px; 
     overflow: hidden;
     width: 100%;
-    padding: 16px;
+    padding: 0 16px;
 
     @include mixins.phone {
-        //width: 100%;
+        min-width: 100%;
+        margin: 0;
     }
 }
 
@@ -49,12 +50,13 @@
 }
 
 .title {
+    display: flex;
     width: auto;
     height: auto;
     gap: 20px;
     justify-content: center;
     align-items: center;
-    display: flex;
+    flex-wrap: wrap;
 
     @include mixins.phone {
         display: inline-block;
@@ -71,6 +73,7 @@
         font-size: 56px;
         transform: rotate(45deg);
         padding-bottom: 36px;
+
     }
 }
 
@@ -115,7 +118,6 @@
     @include mixins.phone {
         margin-top: 100px;
         text-align: left;
-
     }
 }
 

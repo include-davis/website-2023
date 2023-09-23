@@ -2,21 +2,30 @@
 
 .grow{
     padding: 0px 16px;
-
     display: flex;
     flex-direction: row;
-    margin: 250px auto 250px;
+    padding-top: 250px;
+    padding-bottom: 500px;
+    margin: auto;
     max-width: 1200px;
     justify-content: space-between;
     align-items: center;
+    background: var(--White);
+    
 
     @include mixins.phone {
+        padding-top: 100px;
+        padding-bottom: 300px;
         flex-direction: column;
         width:fit-content;
-
     }
 }
-
+.main_content{
+    border-right: 1px solid var(--Gray, #D0D0D0);
+    @include mixins.phone {
+        border-right: none;
+    }
+}
 .title{
     >h2{
         font-size: 62px;

@@ -1,0 +1,44 @@
+@use 'src/styles/mixins';
+
+
+.parent{
+    padding: 0px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--purple-gradient);
+    margin: auto; 
+
+    @include mixins.phone {
+        min-width:100%;
+        margin: 0;
+        padding: 0;
+        
+    }
+
+
+}
+
+.mission{
+    transform: translateY(-50%);
+
+    >h2{
+        max-width: 1000px;
+        margin-top: 250px;
+        margin-bottom: 32px;
+
+        @include mixins.phone {
+            font-size: 46px;
+        }
+    }
+}
+
+.mission_img{
+    max-width: 824px;
+    max-height: 412px;
+    margin-bottom: 250px;
+    width: 90%;
+
+}
