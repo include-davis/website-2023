@@ -26,7 +26,7 @@ const companiesContent = companies.map((company, index) => {
       src={`/about/svgs/${company}.svg`}
       loading="eager"
       alt=""
-      key={index}
+      key={`${company} ${index}`}
     />
   );
 });
@@ -39,13 +39,13 @@ const blurs = {
 let websites = ["bv", "ielc", "brkbar"];
 websites = websites.concat(websites.slice(0));
 
-const websitesContent = websites.map((website) => {
+const websitesContent = websites.map((website, index) => {
   return (
     <img
       src={`/about/images/${website}.jpg`}
       className={styles.website_img}
       loading="eager"
-      key={website}
+      key={`${website} ${index}`}
       alt=""
     />
   );
