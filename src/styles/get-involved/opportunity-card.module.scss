@@ -1,3 +1,5 @@
+@use 'src/styles/mixins';
+
 .cardContainer {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -6,11 +8,20 @@
   border-radius: 20px;
 
   padding: 30px;
-  width: 380px;
+  max-width: 380px;
 
   display: flex;
   flex-direction: column;
   row-gap: 40px;
+
+  @include mixins.phone {
+    >h4 {
+    font-size: 1.95rem;
+  }
+  >p {
+    font-size: 1.5rem;
+  }
+  }
 }
 
 .header, .button {
