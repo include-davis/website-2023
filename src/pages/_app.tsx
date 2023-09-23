@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }: AppProps): ReactElement {
   return (
     <div className={`${inter.variable}`} style={{ position: 'relative' }}>
       <Component {...pageProps} />
-      <Footer nav={navLinks} path={router.pathname} />
+      <Footer nav={navLinks} path={router.pathname} router={router} />
     </div>
   );
 }

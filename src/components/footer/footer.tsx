@@ -8,6 +8,7 @@ import styles from "../../styles/footer/footer.module.scss";
 type FooterProps = {
   nav: { name: string; path: string }[];
   path: string;
+  router: any;
 };
 
 function getTheme(path: string) {
@@ -18,7 +19,7 @@ function getTheme(path: string) {
   }
 }
 
-export default function Footer({ nav, path }: FooterProps): React.JSX.Element {
+export default function Footer({ nav, path, router }: FooterProps): React.JSX.Element {
   const theme = getTheme(path);
   const logo = theme === "light" ? logoWhite : logoPurple;
   const color = theme === "light" ? styles.light : styles.dark;
@@ -27,7 +28,7 @@ export default function Footer({ nav, path }: FooterProps): React.JSX.Element {
     <div className={styles.footer_wrapper}>
       <footer className={styles.footer}>
         <section className={styles.logo}>
-          <Link href={"/"}>
+          <Link href={"/"} onClick={() => router.refresh()}>
             <Image src={logo} alt="" />
           </Link>
         </section>
@@ -35,7 +36,7 @@ export default function Footer({ nav, path }: FooterProps): React.JSX.Element {
           <ul className={styles.footer_redirects}>
             {nav.map((link) => (
               <li key={link.path}>
-                <Link href={`/${link.path}`}>
+                <Link href={`/${link.path}`} onClick={() => router.refresh()}>
                   <span className={`p-details ${color}`}>{link.name}</span>
                 </Link>
               </li>
