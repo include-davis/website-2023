@@ -1,0 +1,149 @@
+@use "src/styles/mixins";
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 299px;
+    padding-left: 264px;
+    padding-right: 264px;
+    gap: 250px;
+    margin-bottom: 250px;
+
+    @include mixins.sm-desktop {
+        padding-top: 200px;
+        padding-left: 80px;
+        padding-right: 80px;
+        gap: 120px;
+        margin-bottom: 200px;
+    }
+
+    @include mixins.phone {
+        padding-top: 150px;
+        padding-left: 24px;
+        padding-right: 24px;
+        gap: 50px;
+        margin-bottom: 150px;
+    }
+}
+
+.header {
+    background: var(--purple-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header_small {
+    @include mixins.tablet {
+        font-size: 1.5rem;
+    }
+
+    @include mixins.sm-phone {
+        font-size: 1rem;
+    }
+}
+
+.projects {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+
+    @include mixins.tablet {
+        gap: 80px;
+    }
+
+    @include mixins.phone {
+        gap: 40px;
+    }
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 50px 30px;
+    border-radius: 20px;
+    border: solid 1px black;
+    background: var(--grey-background);
+    align-items: flex-start;
+    text-align: left;
+
+    @include mixins.sm-phone {
+        padding: 24px 14px;
+    }
+}
+
+.project>h4 {
+    font-size: 3.875rem;
+
+    @include mixins.tablet {
+        font-size: 3rem;
+    }
+
+    @include mixins.phone {
+        font-size: 2.5rem;
+    }
+
+    @include mixins.sm-phone {
+        font-size: 2rem;
+    }
+}
+
+.img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.closings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    >h1,
+    >p {
+        color: var(--include-purple);
+    }
+
+    >p {
+        font-size: 2rem;
+        margin-bottom: 64px;
+
+        @include mixins.phone {
+            font-size: 1.5rem;
+        }
+    }
+
+    >div {
+        display: flex;
+        flex-direction: row;
+        gap: 64px;
+
+        @include mixins.tablet {
+            gap: 48px;
+        }
+
+        @include mixins.sm-phone {
+            flex-direction: column;
+            gap: 24px;
+            width: 100%;
+        }
+
+        button {
+            @include mixins.sm-phone {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.students_button {
+    background: transparent;
+    border: solid 1px var(--include-purple);
+    color: var(--include-purple);
+}
