@@ -7,9 +7,8 @@
     justify-content: space-between;
     max-height: 1457px; 
     overflow: hidden;
-    width: 100%;
+    width: fit-content;
     padding: 16px;
-
 
     @include mixins.phone {
         //width: 100%;
@@ -50,11 +49,11 @@
 }
 
 .title {
-    display: flex;
-    width: fit-content;
+    width: auto;
     height: auto;
     gap: 20px;
     justify-content: center;
+    align-items: center;
 
     @include mixins.phone {
         display: inline-block;
