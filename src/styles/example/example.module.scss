@@ -8,7 +8,7 @@
             font-size: 60px;
         }
 
-        @include mixins.lg {
+        @include mixins.phone {
             font-size: 40px;
         }
     }

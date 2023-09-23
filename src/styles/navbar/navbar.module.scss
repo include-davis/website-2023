@@ -42,6 +42,7 @@
         background: none;
         border: none;
         font-size: 1.5rem;
+        padding: 0;
       }
     }
   }
@@ -49,48 +50,24 @@
   @include mixins.tablet {
     top: var(--navbar-spacer-tablet);
     .navbar {
-      width: calc(100% - 2 * var(--edge-spacer) * 0.5);
-
-      .navbar_right {
-        .redirects {
-          > li {
-            > a {
-              > span {
-                font-size: 1rem;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  @include mixins.lg {
-    .navbar {
       width: calc(100% - 2 * var(--edge-spacer) * 0.3);
-      // .navbar_right {
-      //   .redirects {
-      //     display: block;
-      //   }
-
-      //   .active {
-      //     display: block;
-      //   }
-      //   .dropdown {
-      //     display: block;
-      //   }
-      // }
     }
   }
 
-  @include mixins.md {
+  @include mixins.phone {
+    .navbar {
+      width: calc(100% - 2 * var(--edge-spacer) * 0.2);
+    }
+  }
+
+  @include mixins.sm-phone {
     top: var(--navbar-spacer-mobile);
     .navbar {
       width: calc(100% - 2 * var(--edge-spacer) * 0.1);
       position: relative;
       .navbar_right {
         .redirects {
-          background: var(--purple-gradient);
+          backdrop-filter: blur(16px);
           position: absolute;
           width: calc(100% + 2 * var(--edge-spacer) * 0.1);
           height: calc(

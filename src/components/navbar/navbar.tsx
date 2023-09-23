@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { RxHamburgerMenu, RxChevronDown } from "react-icons/rx";
+import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
 import Image from "next/image";
 import Link from "next/link";
 import logoWhite from "../../../public/logoWhite.png";
@@ -9,6 +9,7 @@ import styles from "../../styles/navbar/navbar.module.scss";
 type NavbarProps = {
   nav: { name: string; path: string }[];
   path: string;
+  router: any;
 };
 
 function getTheme(path: string) {
@@ -19,7 +20,7 @@ function getTheme(path: string) {
   }
 }
 
-export default function Navbar({ nav, path }: NavbarProps): React.JSX.Element {
+export default function Navbar({ nav, path, router }: NavbarProps): React.JSX.Element {
   const [active, setActive] = useState(false);
 
   const theme = getTheme(path);
@@ -34,7 +35,7 @@ export default function Navbar({ nav, path }: NavbarProps): React.JSX.Element {
     <div className={styles.navbar_wrapper}>
       <nav className={styles.navbar}>
         <section className={styles.logo}>
-          <Link href={"/"}>
+          <Link href={"/"} onClick={() => router.refresh()}>
             <Image src={logo} alt="" />
           </Link>
         </section>
@@ -54,9 +55,9 @@ export default function Navbar({ nav, path }: NavbarProps): React.JSX.Element {
                   })`,
                 }}
               >
-                <Link href={`/${item.path}`}>
+                <Link href={`/${item.path}`} onClick={() => router.refresh()}>
                   <span
-                    className={`p-small ${color} ${
+                    className={`p-details ${color} ${
                       active ? styles.fadeInText : ""
                     }`}
                   >
@@ -70,7 +71,7 @@ export default function Navbar({ nav, path }: NavbarProps): React.JSX.Element {
             className={`${styles.dropdown} ${color}`}
             onClick={toggleMenu}
           >
-            {active ? <RxChevronDown /> : <RxHamburgerMenu />}
+            {active ? <RxCross1 /> : <RxHamburgerMenu />}
           </button>
         </section>
       </nav>
