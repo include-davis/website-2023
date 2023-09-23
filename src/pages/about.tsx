@@ -20,9 +20,7 @@ let companies = [
 ];
 
 companies = companies.concat(companies.slice(0));
-// companies = companies.concat(companies.slice(0));
-
-const companySliderContent = companies.map((company, index) => {
+const companiesContent = companies.map((company, index) => {
   return (
     <img
       src={`/about/svgs/${company}.svg`}
@@ -39,11 +37,9 @@ const blurs = {
 };
 
 let websites = ["bv", "ielc", "brkbar"];
+websites = websites.concat(websites.slice(0));
 
-websites = websites.concat(websites);
-// websites = websites.concat(websites);
-
-const websitesSliderContent = websites.map((website) => {
+const websitesContent = websites.map((website) => {
   return (
     <img
       src={`/about/images/${website}.jpg`}
@@ -74,7 +70,9 @@ export default function About(): React.JSX.Element {
             <div className={styles.slider_container}>
               <div className={styles.red_blur} />
               <div className={styles.transparent_mask}>
-                <InfiniteSlider durationInMs={4000}>{websitesSliderContent}</InfiniteSlider>
+                <InfiniteSlider durationInMs={4000}>
+                  {websitesContent}
+                </InfiniteSlider>
               </div>
             </div>
           </div>
@@ -179,8 +177,8 @@ export default function About(): React.JSX.Element {
           </p>
         </section>
         <section className={styles.company_slider}>
-          <InfiniteSlider durationInMs={2000} start={83*7}>
-            {companySliderContent}
+          <InfiniteSlider durationInMs={2000}>
+            {companiesContent}
           </InfiniteSlider>
         </section>
       </article>
