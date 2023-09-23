@@ -1,0 +1,26 @@
+[
+    {
+        "term": "WINTER/SPRING 2023",
+        "title": "IELC Tutoring",
+        "description": "Website and brand identity project for the Interactive Elementary Learning Center to boost credibility and increase participation in their free 7-week summer program.",
+        "img": "./projects/ielc.png"
+    },
+    {
+        "term": "FALL/WINTER 2023",
+        "title": "Bloom and Vine",
+        "description": "Website project for Bloom and Vine a boutique floral design studio located in Northern California. Bloom and Vine strives to make every event unforgettable.",
+        "img": "./projects/bnv.png"
+    },
+    {
+        "term": "FALL/WINTER 2021",
+        "title": "Oneloop",
+        "description": "Oneloop is a team of graduate and undergraduate students at UCD. They design and build a Hyperloop pod to compete in SpaceX's annual Hyperloop competition.",
+        "img": "./projects/oneloop.png"
+    },
+    {
+        "term": "WINTER/SPRING 2022",
+        "title": "New Vietnam Studies Initiative",
+        "description": "We developed the website for NVSI, promoting research and collaboration in fields related to contemporary Vietnam's economic, political, and cultural development.",
+        "img": "./projects/nvsi.png"
+    }
+]
