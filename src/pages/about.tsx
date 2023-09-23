@@ -18,7 +18,14 @@ const companies = [
   "Visa",
   "Netflix",
 ].map((company) => {
-  return <img src={`/about/svgs/${company}.svg`} alt="" key={company} />;
+  return (
+    <img
+      src={`/about/svgs/${company}.svg`}
+      loading="eager"
+      alt=""
+      key={company}
+    />
+  );
 });
 
 const blurs = {
@@ -31,6 +38,7 @@ const websites = ["bv", "ielc", "brkbar"].map((website) => {
     <img
       src={`/about/images/${website}.jpg`}
       className={styles.website_img}
+      loading="eager"
       key={website}
       alt=""
     />
@@ -154,7 +162,9 @@ export default function About(): React.JSX.Element {
       <article className={styles.future}>
         <section className={styles.future_text}>
           <h1 style={{ lineHeight: "120.833%" }}>{data.future.header}</h1>
-          <p>{data.future.description}</p>
+          <p style={{ color: "var(--text-white)" }}>
+            {data.future.description}
+          </p>
         </section>
         <section className={styles.company_slider}>
           <InfiniteSlider durationInMs={2000}>{companies}</InfiniteSlider>

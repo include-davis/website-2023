@@ -18,7 +18,7 @@
     animation: slide-right-to-left linear infinite;
     animation-fill-mode: forwards;
 
-    @include mixins.md {
+    @include mixins.sm-phone {
       margin-right: 36px;
       gap: 36px;
     }
