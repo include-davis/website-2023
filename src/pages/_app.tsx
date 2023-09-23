@@ -3,6 +3,7 @@ import { ReactElement } from "react";
 import { Inter } from "@next/font/google";
 import { useRouter } from "next/router";
 import Navbar from "@/components/navbar/navbar";
+import Footer from "@/components/footer/footer";
 import "../styles/globals.scss";
 
 const inter = Inter({
@@ -24,6 +25,7 @@ export default function App({ Component, pageProps }: AppProps): ReactElement {
     <div className={`${inter.variable}`} style={{ position: "relative" }}>
       <Navbar nav={navLinks} path={router.pathname} router={router} />
       <Component {...pageProps} />
+      <Footer nav={navLinks} path={router.pathname} router={router} />
     </div>
   );
 }

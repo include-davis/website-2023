@@ -9,14 +9,14 @@
     padding-left: 264px;
     padding-right: 264px;
     gap: 250px;
-    margin-bottom: 250px;
+    padding-bottom: 250px;
 
     @include mixins.sm-desktop {
         padding-top: 200px;
         padding-left: 80px;
         padding-right: 80px;
         gap: 120px;
-        margin-bottom: 200px;
+        padding-bottom: 200px;
     }
 
     @include mixins.phone {
@@ -24,7 +24,7 @@
         padding-left: 24px;
         padding-right: 24px;
         gap: 50px;
-        margin-bottom: 150px;
+        padding-bottom: 150px;
     }
 }
 
