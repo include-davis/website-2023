@@ -23,6 +23,7 @@ export default function NumberScroll(): ReactElement {
                 initial="offscreen"
                 whileInView="onscreen"
                 viewport={{ once: true, amount: 0.8 }}
+                style={{ display: 'flex', alignItems: 'center'}}
               >
                 <AnimatedNumbers
                   fontStyle={{
@@ -31,10 +32,10 @@ export default function NumberScroll(): ReactElement {
                     fontWeight: 700,
                   }}
                   animateToNumber={card.number}
-                  configs={[{ tension: 89, friction: 40 }]}
+                  configs={[{ tension: 89, friction: 30 }]}
                 />
+                {card.number !== 1 && <p>+</p>}
               </motion.div>
-              {card.number !== 1 && <p>+</p>}
             </div>
             <p className={`${styles.title} p-details`}>{card.title}</p>
           </div>
