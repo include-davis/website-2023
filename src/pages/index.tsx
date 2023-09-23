@@ -6,10 +6,11 @@ import RecentWork from './components/homepage/recent-work';
 import Pillars from './components/homepage/pillars';
 import HomeFooter from './components/homepage/footer';
 
+import styles from '../../../styles/homepage/homepage.module.scss';
 
 export default function Home(): ReactElement {
-  return <div>
-
+  return( 
+  <div >
   <HomeHeader/>
   <Grow/>
   <Mission/>
@@ -17,6 +18,7 @@ export default function Home(): ReactElement {
   <Pillars/>
   <HomeFooter/>
 
-  </div>;
+  </div>
+  );
 
 }

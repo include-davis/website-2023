@@ -1,0 +1,72 @@
+@use 'src/styles/mixins';
+
+.grow{
+    padding: 0px 16px;
+
+    display: flex;
+    flex-direction: row;
+    margin: 250px auto 250px;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mixins.phone {
+        flex-direction: column;
+        width:fit-content;
+
+    }
+}
+
+
+
+.title{
+    >h2{
+        font-size: 62px;
+        max-width: 662px;
+        @include mixins.phone {
+            font-size: 46px;
+            margin-bottom: 12px;
+
+        }
+    }
+    >p{
+        font-size: 32px;
+        margin-bottom: 64px;
+        @include mixins.phone {
+            font-size: 18px;
+            margin-bottom: 32px;
+
+        }
+    }
+}
+
+.bulletpoint {
+    padding-left: 40px;
+    >li {
+        max-width: 662px;
+        font-size: 32px;
+        font-family: Inter, sans-serif;
+        margin-bottom: 48px;
+        list-style-position: outside;
+
+        @include mixins.phone {
+            font-size: 18px;
+        }
+    }
+}
+.learn{        
+    list-style-image: url('/homepage/flashcards.png');
+}
+.create{
+    list-style-image: url('/homepage/edit.png');
+}
+.connect{
+    list-style-image: url('/homepage/team.png');
+}
+
+.images{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}

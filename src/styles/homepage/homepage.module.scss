@@ -1,15 +1,6 @@
 @use 'src/styles/mixins';
 
-.container {
-    >h1 {
-        font-size: 80px;
 
-        @include mixins.tablet {
-            font-size: 60px;
-        }
-
-        @include mixins.phone {
-            font-size: 40px;
-        }
-    }
+.homepage{
+    padding: 0px 16px;
 }
