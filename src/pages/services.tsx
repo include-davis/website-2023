@@ -5,10 +5,12 @@ import PhaseCard from './components/services/phaseCard';
 import FAQ from './components/services/faq';
 import ContactForm from './components/services/form';
 
-import Data from '../json/services/faqs.json';
+import FAQS from '../json/services/faqs.json';
+import PHASES from '../json/services/process_phases.json';
 
-const faqs_col1 = Data["col1"]
-const faqs_col2 = Data["col2"]
+const faqs_col1 = FAQS["col1"]
+const faqs_col2 = FAQS["col2"]
+const devPhases = PHASES["phases"]
 
 function Services(): ReactElement {
     return (
@@ -23,7 +25,10 @@ function Services(): ReactElement {
                 <img src={"/assets/services/process.png"} alt="process"/>
                 <h2>Process</h2>
                 <div className={styles.timeline}>
-                    <PhaseCard/>
+                    <div className={styles.line}/>
+                    <div className={styles.phase}>
+                        <PhaseCard phaseList={devPhases}/>
+                    </div>
                 </div>
             </div>
             <div className={styles.form_box}>

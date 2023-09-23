@@ -1,0 +1,35 @@
+{
+    "phases": 
+    [
+        {
+            "title": "Discovery Phase",
+            "desc": "In the initial consultation, we'll schedule a meeting to discuss your project requirements, goals, and vision. Our team will conduct thorough research and analysis to gain a deep understanding of your industry, target audience, and competitors.",
+            "img": "/assets/services/discovery.png"
+        },
+        {
+            "title": "Planning Phase",
+            "desc": "Based on the information gathered, we'll brainstorm and develop creative concepts for your project. We'll then present you with a detailed proposal outlining our approach, and timelines.",
+            "img": "/assets/services/planning.png"
+        },
+        {
+            "title": "Design Phase",
+            "desc": "This is where the magic happens. Our designers will create wireframes and interactive prototypes to visualize the structure and functionality of your project.",
+            "img": "/assets/services/design.png"
+        },
+        {
+            "title": "Development Phase",
+            "desc": "Our skilled developers will bring the designs to life by coding the user interfaces and implementing responsive layouts. If needed, we'll integrate complex functionalities and databases to ensure a seamless user experience.",
+            "img": "/assets/services/development.png"
+        },
+        {
+            "title": "Deployment and Launch",
+            "desc": "This is the exciting phase where your project is ready to be unveiled to the world.",
+            "img": "/assets/services/launch.png"
+        },
+        {
+            "title": "Post Launch Support",
+            "desc": "If requested, we'll provide training to your team on managing and updating the project.",
+            "img": "/assets/services/support.png"
+        }
+    ]
+}

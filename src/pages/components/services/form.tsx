@@ -57,10 +57,11 @@ export default function ContactForm(onSubmitHandler: any): ReactElement {
 
             <div className={styles.block3}>
                 <h3>Tell us more about your project</h3>
-                <textarea id="projectDeets" name="projectDeets" placeholder="Specific of your project, timeline, goals, etc." />
+                <textarea className={styles.textarea} id="projectDeets" name="projectDeets" placeholder="Specific of your project, timeline, goals, etc." />
+
+                <input className={styles.submit_button} type="submit" value="Submit Form"/>         
             </div>
 
-            <input className={styles.submit_button} type="submit" value="Submit Form"/>         
         </form>        
     );
 }

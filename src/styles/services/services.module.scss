@@ -53,9 +53,16 @@
             }
 
             .timeline {
-                border: 1px solid var(--text-grey);
-            }
+                display: flex;
+                flex-direction: row;
+                gap: 5.4375rem;
 
+                .line {
+                    display: block;
+                    width: 2px;
+                    background-color: var(--include-purple);
+                }
+            }
         }
 
         .form_box {
