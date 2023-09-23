@@ -1,5 +1,10 @@
-import { ReactElement } from 'react';
+import { ReactElement } from "react";
 
 export default function Home(): ReactElement {
-  return <div>empty homepage</div>;
+  return (
+    <div style={{ height: "100vh", backgroundColor: "grey" }}>
+      empty homepage
+      <div>hello!</div>
+    </div>
+  );
 }
