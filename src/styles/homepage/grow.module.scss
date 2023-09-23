@@ -17,12 +17,11 @@
     }
 }
 
-
-
 .title{
     >h2{
         font-size: 62px;
         max-width: 662px;
+        margin-bottom: 12px;
         @include mixins.phone {
             font-size: 46px;
             margin-bottom: 12px;
