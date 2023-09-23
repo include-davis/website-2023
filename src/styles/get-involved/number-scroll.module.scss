@@ -1,0 +1,41 @@
+.numContainer {
+  background: var(--purple-gradient);
+  display: flex;
+  justify-content: center;
+  column-gap: 50px;
+
+  padding: 50px;
+  border-radius: 20px;
+  margin-top: 50px;
+  margin-bottom: 200px;
+  justify-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+.numContainer > div {
+  color: var(--text-grey);
+}
+
+.card {
+  border: 0.5px solid #FFF;
+  border-radius: 8px;
+  padding: 20px;
+
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.numBox {
+  display: flex;
+  align-items: center;
+}
+
+.numBox > p {
+  font-weight: 700;
+  font-size: 5.313rem;
+}
