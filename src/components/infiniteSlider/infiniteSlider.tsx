@@ -9,7 +9,7 @@ type InfiniteSliderProps = {
 
 export default function InfiniteSlider({
   children,
-  durationInMs = 3000,
+  durationInMs = 1000,
   start = 0,
 }: InfiniteSliderProps): React.JSX.Element {
   const count = React.Children.toArray(children).length;
@@ -21,12 +21,6 @@ export default function InfiniteSlider({
 
   return (
     <article className={styles.container}>
-      <section className={styles.content} style={sx}>
-        {children}
-      </section>
-      <section className={styles.content} style={sx}>
-        {children}
-      </section>
       <section className={styles.content} style={sx}>
         {children}
       </section>

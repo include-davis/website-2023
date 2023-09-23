@@ -19,14 +19,14 @@
     animation-fill-mode: forwards;
 
     @include mixins.sm-phone {
-      margin-right: 36px;
+      padding-right: 36px;
       gap: 36px;
     }
   }
 
   // .content > * {
-  //   aspect-ratio: 16 / 9;
-  //   margin: 0 3.125em;
+  //   // aspect-ratio: 16 / 9;
+  //   margin-right: 83px;
   // }
 
   @keyframes slide-right-to-left {

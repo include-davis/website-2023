@@ -9,7 +9,7 @@ import board from "@/json/about/board.json";
 import styles from "../styles/about/about.module.scss";
 
 // Have navbar be fixed & inherit background color from page
-const companies = [
+let companies = [
   "Riot",
   "Apple",
   "Amazon",
@@ -17,13 +17,18 @@ const companies = [
   "LinkedIn",
   "Visa",
   "Netflix",
-].map((company) => {
+];
+
+companies = companies.concat(companies.slice(0));
+// companies = companies.concat(companies.slice(0));
+
+const companySliderContent = companies.map((company, index) => {
   return (
     <img
       src={`/about/svgs/${company}.svg`}
       loading="eager"
       alt=""
-      key={company}
+      key={index}
     />
   );
 });
@@ -33,7 +38,12 @@ const blurs = {
   purple: "/about/svgs/blurPurple.svg",
 };
 
-const websites = ["bv", "ielc", "brkbar"].map((website) => {
+let websites = ["bv", "ielc", "brkbar"];
+
+websites = websites.concat(websites);
+// websites = websites.concat(websites);
+
+const websitesSliderContent = websites.map((website) => {
   return (
     <img
       src={`/about/images/${website}.jpg`}
@@ -50,6 +60,7 @@ export default function About(): React.JSX.Element {
     <div className={styles.about}>
       <article className={styles.intro}>
         <img
+          className={styles.blur}
           src={blurs.blue}
           style={{ position: "absolute", top: "0", right: "0" }}
           alt=""
@@ -63,7 +74,7 @@ export default function About(): React.JSX.Element {
             <div className={styles.slider_container}>
               <div className={styles.red_blur} />
               <div className={styles.transparent_mask}>
-                <InfiniteSlider durationInMs={4000}>{websites}</InfiniteSlider>
+                <InfiniteSlider durationInMs={4000}>{websitesSliderContent}</InfiniteSlider>
               </div>
             </div>
           </div>
@@ -106,6 +117,7 @@ export default function About(): React.JSX.Element {
           </motion.section>
         </section>
         <img
+          className={styles.blur}
           src={blurs.purple}
           style={{ position: "absolute", top: "0", left: "0" }}
           alt=""
@@ -167,7 +179,9 @@ export default function About(): React.JSX.Element {
           </p>
         </section>
         <section className={styles.company_slider}>
-          <InfiniteSlider durationInMs={2000}>{companies}</InfiniteSlider>
+          <InfiniteSlider durationInMs={2000} start={83*7}>
+            {companySliderContent}
+          </InfiniteSlider>
         </section>
       </article>
     </div>
