@@ -1,11 +1,236 @@
+@use 'src/styles/mixins';
+
+// HEADER //
+.header, .opportunityContainer, .mainFooter {
+  padding: 200px var(--edge-spacer);
+
+  @include mixins.tablet {
+    padding: 100px var(--med-edge-spacer);
+  }
+  @include mixins.phone {
+    padding: 50px var(--small-edge-spacer);
+  }
+}
+.header {
+  position: relative;
+  overflow: hidden;
+}
+
+.meshLeft {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  transform: rotate(-15deg) translateX(-10%);
+  filter: blur(7px);
+
+  @include mixins.tablet {
+    transform: translate(-30%, -20%) scale(0.8);
+  }
+  @include mixins.phone {
+    transform: translate(-45%, -35%) scale(0.5);
+  }
+
+}
+
+.meshRight {
+  position: absolute;
+  right: 0;
+  top: 450px;
+  transform: rotate(15deg) translateX(35%);
+  filter: blur(7px);
+
+  @include mixins.tablet {
+    transform: translate(50%, -20%) scale(0.8);
+  }
+  @include mixins.phone {
+    transform: rotate(20deg) translate(40%, -60%) scale(0.5);
+  }
+}
+.cta {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0px auto;
+  
+  @include mixins.phone {
+    >p {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.hook, .button {
+  color: var(--include-purple);
+  text-align: center;
+  @include mixins.tablet {
+    font-size: 4.5rem;
+  }
+
+  @include mixins.phone {
+    font-size: 3rem;
+  }
+
+}
+
+.numberText, .recruitmentInfo {
+  color: var(--text-black-light);
+}
+
+.button {
+  background-color: transparent;
+  border: 1px solid var(--include-purple);
+  border-radius: 10px;
+
+  font-size: 1.5rem;
+  padding: 15px 50px;
+  margin-top: 36px;
+  margin-bottom: 200px;
+
+  @include mixins.phone {
+    margin-bottom: 100px;
+  }
+}
+
+.numberText {
+  text-align: center;
+}
+
+.recruitmentContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 217px;
+  @include mixins.tablet {
+    flex-direction: column-reverse; 
+  }
+  @include mixins.phone {
+    flex-direction: column-reverse; 
+  }
+}
+
+.recruitmentText {
+  display: flex;
+  flex-direction: column;
+  @include mixins.tablet {
+    > h2 {
+      font-size: 4.5rem;
+    }
+  }
+  @include mixins.phone {
+    > h2 {
+      font-size: 3rem;
+    }
+    > p {
+      font-size: 1.5rem;
+    }
+  }
+
+}
+.recruitmentInfo {
+  max-width: 650px;
+  padding: 20px 0px;
+}
+// HEADER //
+
+
+//NUMBER SCROLL//
+.numContainer {
+  background: var(--purple-gradient);
+  display: flex;
+  justify-content: center;
+  column-gap: 50px;
+
+  padding: 50px;
+  border-radius: 20px;
+  margin: 50px auto 200px;
+  justify-self: center;
+  max-width: 1200px;
+}
+
+.numContainer > div {
+  color: var(--text-grey);
+}
+
+.card {
+  border: 0.5px solid #FFF;
+  border-radius: 8px;
+  padding: 20px;
+
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.numBox {
+  display: flex;
+  align-items: center;
+}
+
+.numBox > p {
+  font-weight: 700;
+  font-size: 5.313rem;
+}
+//NUMBER SCROLL //
+
+//OPPORTUNITIES//
+.oporrtunityTitle {
+  color: var(--text-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mixins.phone {
+    >h3 {
+    font-size: 2.75rem;
+  }
+  }
+}
+.cardsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+
+  column-gap: 30px;
+  margin-top: 64px;
+
+  @include mixins.tablet {
+    column-gap: 0px;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+  }
+  @include mixins.phone {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+}
+
+.opportunityContainer {
+  background: var(--purple-gradient);
+  
+}
+//OPPORTUNITIES//
+
+//FOOTER//
 .mainFooter {
   background: var(--purple-gradient);
-  padding: 150px var(--spacer);
 
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.question {
+  @include mixins.tablet {
+    font-size: 4.25rem;
+  }
+  @include mixins.phone {
+    font-size: 3rem;
+  }
+  }
 .question, .btn {
   color: var(--text-white);
   text-align: center;
@@ -14,6 +239,10 @@
   color: var(--text-grey);
   text-align: center;
   margin-top: 12px;
+
+  @include mixins.phone {
+    font-size: 1.5rem;
+  }
 }
 .btn {
   background-color: transparent;
@@ -28,9 +257,16 @@
   margin-top: 64px;
 }
 
+// FOOTER ^^^ //
 .whiteBg {
   padding-top: 300px;
   position: relative;
+  @include mixins.tablet {
+    padding: 250px 0px 100px;
+  }
+  @include mixins.phone {
+    padding: 150px 0px 50px;
+  }
 }
 .purpleBg, .innerCircle, .line {
   background: var(--purple-gradient);
@@ -40,6 +276,14 @@
   color: var(--text-white);
   padding: 92px 340px 450px;
   text-align: center;
+
+  @include mixins.tablet {
+    padding: 92px var(--med-edge-spacer) 350px;
+  }
+  @include mixins.phone {
+    padding: 50px var(--small-edge-spacer) 150px;
+    font-size: 2.75rem;
+  }
 }
 .textGradient {
   background: linear-gradient(73deg, #89CAFF -22.81%, #97C3BD 17.31%, #FFFBA4 56.6%);
@@ -50,6 +294,9 @@
 .line {
   width: 2px;
   height: 232px;
+  @include mixins.phone {
+    margin: auto;
+  }
 }
 .innerCircle {
   width: 25px;
@@ -67,24 +314,47 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 .scrollLine {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @include mixins.phone {
+    display: none;
+  }
+
 }
 .bulletPoints {
   padding: 250px;
   display: flex;
   column-gap: 50px;
   justify-content: center;
+
+  @include mixins.tablet {
+    padding: 100px var(--med-edge-spacer);
+  }
+
+  @include mixins.phone {
+    padding: 0px var(--small-edge-spacer);
+    flex-direction: column;
+  }
 }
 .leftPoints {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @include mixins.phone {
+    display: block;
+  }
 
+}
+.phone {
+  display: none;
+  @include mixins.phone {
+    display: contents;
+  }
 }
 .pointTwo {
   align-self: center;
@@ -92,9 +362,31 @@
 }
 .pointOne, .pointThree {
   text-align: right;
+
 }
 .pointOne, .pointTwo, .pointThree {
-  width: 500px;
+  max-width: 500px;
+  @include mixins.phone {
+    text-align: center;
+  }
+}
+.pointInfo {
+  @include mixins.tablet {
+    >h3 {
+      font-size: 3rem;}
+      >p {
+        font-size: 1.85rem;
+      }
+  }
+  @include mixins.phone {
+    padding: 20px;
+    >h3 {
+      font-size: 2.75rem;}
+      >p {
+        font-size: 1.5rem;
+      }
+  }
+
 }
 
 .groupImg {
@@ -103,6 +395,27 @@
   left: 50%;
   right: 50%;
   transform: translate(-50%, -50%);
+  
+  @include mixins.tablet {
+    max-width: 90%;
+    height: auto;
+  }
+  @include mixins.phone {
+    max-width: 90%;
+    height: auto;
+  }
+}
 
+.container {
+  >h1 {
+      font-size: 80px;
 
+      @include mixins.tablet {
+          font-size: 60px;
+      }
+
+      @include mixins.phone {
+          font-size: 40px;
+      }
+  }
 }
