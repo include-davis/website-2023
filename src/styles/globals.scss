@@ -13,7 +13,7 @@
     #3c257e 50.92%,
     #322d41 93.48%
   );
-  --grey-background: rgba(0, 0, 0, 0.10);
+  --grey-background: rgba(0, 0, 0, 0.1);
 
   // spacers
   --spacer: 48px;
@@ -63,7 +63,19 @@ h1 {
 }
 
 h2 {
-  font-size: 3.875rem;
+  font-size: 4rem;
+
+  @include mixins.tablet {
+    font-size: 3.5rem;
+  }
+
+  @include mixins.phone {
+    font-size: 3rem;
+  }
+
+  @include mixins.sm-phone {
+    font-size: 2rem;
+  }
 }
 
 h3 {
@@ -77,6 +89,18 @@ h4 {
 p {
   font-size: 2rem;
   font-weight: 400;
+
+  @include mixins.tablet {
+    font-size: 1.75rem;
+  }
+
+  @include mixins.phone {
+    font-size: 1.5rem;
+  }
+
+  @include mixins.sm-phone {
+    font-size: 1.25rem;
+  }
 }
 
 .p-small {
