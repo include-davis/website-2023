@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import logoWhite from "../../../public/logoWhite.png";
 import logoPurple from "../../../public/logoPurple.png";
+
+import Logo from "../branding/logo";
 import styles from "../../styles/navbar/navbar.module.scss";
 
 type NavbarProps = {
@@ -24,7 +26,7 @@ export default function Navbar({ nav, path, router }: NavbarProps): React.JSX.El
   const [active, setActive] = useState(false);
 
   const theme = getTheme(path);
-  const logo = theme === "light" ? logoWhite : logoPurple;
+  const logoColor = theme === "light" ? "var(--text-white)" : "var(--include-purple)";
   const color = theme === "light" ? styles.light : styles.dark;
 
   const toggleMenu = () => {
@@ -36,30 +38,27 @@ export default function Navbar({ nav, path, router }: NavbarProps): React.JSX.El
       <nav className={styles.navbar}>
         <section className={styles.logo}>
           <Link href={"/"} onClick={() => router.refresh()}>
-            <Image src={logo} alt="" />
+            <Logo fillColor={logoColor} />
           </Link>
         </section>
         <section className={styles.navbar_right}>
           <ul
-            className={`${styles.redirects} ${
-              active ? styles.activeDropdown : ""
-            }`}
+            className={`${styles.redirects} ${active ? styles.activeDropdown : ""
+              }`}
           >
             {nav.map((item, index) => (
               <li
                 key={item.name}
                 className={`${active ? styles.slideText : ""}`}
                 style={{
-                  transitionDelay: `calc(0.3s / 3 * ${
-                    active ? index + 1 : nav.length - index - 1
-                  })`,
+                  transitionDelay: `calc(0.3s / 3 * ${active ? index + 1 : nav.length - index - 1
+                    })`,
                 }}
               >
                 <Link href={`/${item.path}`} onClick={() => router.refresh()}>
                   <span
-                    className={`p-details ${color} ${
-                      active ? styles.fadeInText : ""
-                    }`}
+                    className={`p-details ${color} ${active ? styles.fadeInText : ""
+                      }`}
                   >
                     {item.name.toLowerCase()}
                   </span>
