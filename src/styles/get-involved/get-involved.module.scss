@@ -135,24 +135,6 @@
 // HEADER //
 
 
-//NUMBER SCROLL//
-.numContainer {
-  background: var(--purple-gradient);
-  display: flex;
-  justify-content: center;
-  column-gap: 50px;
-
-  padding: 50px;
-  border-radius: 20px;
-  margin: 50px auto 200px;
-  justify-self: center;
-  max-width: 1200px;
-}
-
-.numContainer > div {
-  color: var(--text-grey);
-}
-
 .card {
   border: 0.5px solid #FFF;
   border-radius: 8px;
@@ -395,15 +377,8 @@
   left: 50%;
   right: 50%;
   transform: translate(-50%, -50%);
-  
-  @include mixins.tablet {
-    max-width: 90%;
-    height: auto;
-  }
-  @include mixins.phone {
-    max-width: 90%;
-    height: auto;
-  }
+  max-width: 90%;
+  height: auto;
 }
 
 .container {
