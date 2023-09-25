@@ -30,7 +30,7 @@
 .card {
   border: 0.5px solid #FFF;
   border-radius: 8px;
-  padding: 20px;
+  padding: 15px;
 
   flex: 1 ;
   display: flex;
@@ -46,4 +46,8 @@
 .numBox > p {
   font-weight: 700;
   font-size: 5.313rem;
+}
+.animatedNum {
+  font-size: 5.313rem;
+  font-weight: 700;
 }
