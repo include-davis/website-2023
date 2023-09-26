@@ -1,16 +1,26 @@
-.page {
+@use 'src/styles/mixins';
+
+.page {    
+    padding-top: calc( var(--navbar-spacer-desktop) + var(--navbar-height) );
+    
+    --phase-height-desktop: 55vh;
+    --phase-height-mobile: 200px;
+
     .main_content {
         display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10rem;
-            padding: var(--edge-spacer);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10rem;
+        padding: var(--edge-spacer);
         
         .start_box {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 0.5rem;
+
+            width: 100%;
 
             p {
                 color: var(--text-black-light);
@@ -42,6 +52,7 @@
             flex-direction: column;
             align-items: center;
             gap: 1.5rem;
+            width: 100%;
 
             img {
                 width: 5rem;
@@ -55,17 +66,111 @@
             .timeline {
                 display: flex;
                 flex-direction: row;
-                gap: 5.4375rem;
+                width: 100%;
 
-                .line {
-                    display: block;
-                    width: 2px;
-                    background-color: var(--include-purple);
+                .scrollLine {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+//                    justify-content: center;
+                    padding-top: 0.5rem;
+                    
+                    @include mixins.phone {
+                        display: none;
+                    }
+
+                    .line {
+                        width: 2px;
+                        height: var(--phase-height-desktop);
+                        background-color: var(--include-purple);
+                        
+                        @include mixins.phone {
+                            margin: auto;
+                        }
+                    }
+    
+                    .innerCircle {
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 100%;
+                        background: var(--purple-gradient);
+                        
+                    }
+                    .outerCircle {
+                        width: 50px;
+                        height: 50px;
+                        border: 2px solid var(--include-purple);
+                        border-radius: 100%;
+                        box-shadow: 0px 0px 75px 0px rgba(60, 37, 126, 0.60);
+                      
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;  
+                    }
+                }
+
+                  
+                  .bulletPoints {
+                    padding: 250px;
+                    display: flex;
+                    column-gap: 50px;
+                    justify-content: center;
+                  
+                    @include mixins.tablet {
+                      padding: 100px var(--med-edge-spacer);
+                    }
+                  
+                    @include mixins.phone {
+                      padding: 0px var(--small-edge-spacer);
+                      flex-direction: column;
+                    }
+                  }
+
+                .phases {
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 2.25rem;
+                    align-self: stretch;
+
+                    padding: 0 3rem;                
+
+                    .phase {
+                        width: 100%;
+                        height: calc( var(--phase-height-desktop) + 0.9rem);
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+
+                        align-self: center;
+                        text-align: left;
+                
+                        .text {
+                            width: 50%;
+                
+                        }
+                
+                        img {
+                            width: 21.875rem;
+                            height: 14.58331rem;
+                            border-radius: 1.25rem;
+                            }
+                
+                        .odd {
+                            transform: rotate(-5deg);
+                        }
+                
+                        .even {
+                            transform: rotate(5deg);
+                        }
+                    }
                 }
             }
         }
 
         .form_box {
+            max-width: 100%;;
             
             h4 {
                 border: 1px solid var(--text-grey);

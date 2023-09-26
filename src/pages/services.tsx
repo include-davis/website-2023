@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
 import styles from '../styles/services/services.module.scss';
+import { motion } from 'framer-motion';
 
-import PhaseCard from './components/services/phaseCard';
 import FAQ from './components/services/faq';
 import ContactForm from './components/services/form';
 
@@ -10,9 +10,37 @@ import PHASES from '../json/services/process_phases.json';
 
 const faqs_col1 = FAQS["col1"]
 const faqs_col2 = FAQS["col2"]
-const devPhases = PHASES["phases"]
+const phaseList = PHASES["phases"]
 
-function Services(): ReactElement {
+export default function Services(): ReactElement {
+
+    const faqs = <div className={styles.content}>
+        <FAQ faqList={faqs_col1} />
+        <FAQ faqList={faqs_col2} />
+    </div>
+
+    const boxVariant = { // used for bullet point transitions
+        visible: { opacity: 2, scale: 1, transition: { duration: 0.5 } },
+        hidden: { opacity: 0, scale: 0 },
+    };
+
+    const bullet = <motion.div //used to create bullet w/ animation
+        variants={boxVariant}
+        initial="hidden"
+        whileInView="visible">
+        <div className={styles.outerCircle}>
+        <div className={styles.innerCircle}></div>
+        </div>
+    </motion.div>
+
+    const line = <motion.div //used to create line with animation
+        variants={boxVariant}
+        initial="hidden"
+        whileInView="visible"
+        >
+        <div className={styles.line}></div>
+    </motion.div> 
+
     return (
       <div className={styles.page}>
         <div className={styles.main_content}>
@@ -25,10 +53,33 @@ function Services(): ReactElement {
                 <img src={"/assets/services/process.png"} alt="process"/>
                 <h2>Process</h2>
                 <div className={styles.timeline}>
-                    <div className={styles.line}/>
-                    <div className={styles.phase}>
-                        <PhaseCard phaseList={devPhases}/>
+                    <div className={styles.scrollLine}>
+                        {bullet}
+                        {line}
+                        {bullet}
+                        {line}
+                        {bullet}
+                        {line}
+                        {bullet}
+                        {line}
+                        {bullet}
+                        {line}
+                        {bullet}
                     </div>
+                    <div className={styles.phases}>
+                        {phaseList.map( (phase, index) => (
+                        <div key={index} className={styles.phase}>
+                            <div className={styles.text}>
+                            <h3>{phase.title}</h3>
+                            <p className="p-small">{phase.desc}</p>
+                            </div>
+                            <div className={styles.img_wrapper}>
+                                <img src={phase.img} className={index%2 === 0 ? styles.img_even : styles.img_odd}/>
+                            </div>
+                        </div>
+                        ))}
+                    </div>
+                
                 </div>
             </div>
             <div className={styles.form_box}>
@@ -37,14 +88,8 @@ function Services(): ReactElement {
         </div>
         <div className={styles.faq_box}>
             <h2>Frequently Asked Questions</h2>
-            <div className={styles.content}>
-                <FAQ faqList={faqs_col1} />
-                <FAQ faqList={faqs_col2} />
-            </div>
+            {faqs}
         </div>
       </div>
     );
 }
-
-
-export default Services;
