@@ -4,23 +4,34 @@
   background: var(--purple-gradient);
   display: flex;
   justify-content: center;
-  column-gap: 35px;
+  column-gap: 30px;
 
   padding: 50px;
   border-radius: 20px;
   margin: 50px auto 200px;
-  justify-self: center;
+
   max-width: 1200px;
+  @media screen and (max-width: 1240px)  {
+    margin-left: calc(-1 * var(--edge-spacer) / 2);
+    margin-right: calc(-1 * var(--edge-spacer) / 2);
+
+    
+  }
+  @include mixins.tablet {
+    flex-direction: column;
+    row-gap: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 
   @include mixins.phone{
     flex-direction: column;
     row-gap: 50px;
     margin-bottom: 100px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
-  @include mixins.tablet {
-    flex-direction: column;
-    row-gap: 50px;
-  }
+
 }
 
 .numContainer > div {
@@ -30,9 +41,9 @@
 .card {
   border: 0.5px solid #FFF;
   border-radius: 8px;
-  padding: 20px;
+  padding: 15px;
 
-  flex: 1 ;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,4 +57,8 @@
 .numBox > p {
   font-weight: 700;
   font-size: 5.313rem;
+}
+.animatedNum {
+  font-size: 5.313rem;
+  font-weight: 700;
 }
