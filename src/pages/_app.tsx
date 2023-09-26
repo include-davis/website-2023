@@ -24,9 +24,9 @@ export default function App({ Component, pageProps }: AppProps): ReactElement {
 
   return (
     <div className={`${inter.variable}`} style={{ position: "relative" }}>
-      <Navbar nav={navLinks} path={router.pathname} router={router} />
+      <Navbar nav={navLinks} path={router.pathname} />
       <Component {...pageProps} />
-      <Footer nav={navLinks} path={router.pathname} router={router} />
+      <Footer nav={navLinks} path={router.pathname} />
     </div>
   );
 }

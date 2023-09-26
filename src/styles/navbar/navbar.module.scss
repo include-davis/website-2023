@@ -78,6 +78,7 @@
           height: calc(100vh - var(--navbar-height) - 2 * var(--navbar-spacer-mobile));
           left: calc(var(--edge-spacer) * -0.1);
           top: calc(var(--navbar-height) + var(--navbar-spacer-mobile));
+          z-index: 3;
 
           flex-direction: column;
           align-items: flex-start;
