@@ -1,0 +1,128 @@
+@use 'src/styles/mixins';
+
+.homepage{
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+    background: var(--purple-gradient);
+    justify-content: space-between;
+    overflow: hidden;
+    width: 100%;
+
+    @include mixins.phone {
+        min-width: 100%;
+        margin: 0;
+    }
+}
+
+.main_content{
+    color: var(--text-white);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 62px;
+    height: auto;
+    
+    @include mixins.phone {
+        gap: 0px;
+    }
+}
+
+.images{
+    padding-top: 250px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;     
+    flex-wrap: wrap;
+
+    >img{
+        max-width: 400px;
+        max-height: 200px;
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 80%, transparent 98%);
+
+    }
+
+    @include mixins.phone {
+        display: none;
+    }
+}
+
+.title {
+    >h1{
+        display: flex;
+        width: auto;
+        height: auto;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 120px;
+
+        @include mixins.phone {
+            display: inline-block;
+            transform: rotate(315deg); 
+            margin-bottom: -40px;
+        }
+    } 
+}
+  
+.diagonal {
+    display: flex;
+    max-width: 706px;
+    height: 100%;
+    flex-direction: column;
+
+    @include mixins.phone {
+        font-size: 4rem;
+        transform: rotate(45deg);
+        padding-bottom: 36px;
+    }
+}
+
+.mobile{
+    display: none;
+    @include mixins.phone {
+        display: flex;
+        width: 100%;
+        height: auto;
+        margin-bottom: 32px;
+    }
+}
+
+.description{
+    font-size: 24px;
+    max-width: 706px;
+    text-align: center;
+
+    @include mixins.phone {
+        font-size: 18px;
+        margin-bottom: 131px;
+    }
+
+}
+
+.join{
+    font-size: 32px;
+    padding: 20px 50px;
+    border-radius: 10px;
+    border: 1px solid var(--White, #FFF);
+    backdrop-filter: blur(2px);
+    background: none;
+    color: var(--text-white);
+    margin-bottom: 250px;
+    @include mixins.phone {
+        display: none;    
+    }
+}
+
+.footer{
+    color: var(--text-white);
+    text-align: center;
+    @include mixins.phone {
+        margin-top: 100px;
+        text-align: left;
+    }
+}
+

@@ -1,0 +1,47 @@
+@use 'src/styles/mixins';
+
+
+.parent{
+    padding: 0px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto; 
+    margin-top: 0%;
+
+    @include mixins.phone {
+        //transform: translateY(50%);
+    }
+
+}
+
+.mission{
+    //transform: translateY(-66%);
+
+    >h2{
+        max-width: 1000px;
+        margin-bottom: 32px;
+        font-size: 62px;
+
+
+        @include mixins.phone {
+            font-size: 46px;
+        }
+    }
+}
+
+.mission_img{
+    max-width: 824px;
+    max-height: 412px;
+    width: 100%;
+    justify-content: center;
+    align-items: start;
+    //margin-bottom: -;
+
+    @include mixins.phone {
+        
+    }
+}
+
