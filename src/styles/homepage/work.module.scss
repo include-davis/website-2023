@@ -2,17 +2,16 @@
 
 .work{
     padding: 0px 16px;
+    display: flex;
+    flex-direction: column;
     >p{
         margin: 32px 0;
         color: var(--text-grey);
     }
-
-    padding: 0px 16px;
-    display: flex;
-    flex-direction: column;
+   
 }
 .cardsContainer {
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -23,13 +22,28 @@
 }
 .title{
     text-align: center;
+    >img{
+        @include mixins.phone {
+            width: 40px;
+            height: 40px;    
+        }
+    }
     >h3{
         margin-top: 12px;
         color: white;
+        @include mixins.phone {
+            font-size: 32px;
+        }
     }
     >p{
         margin: 32px 0;
         color: var(--text-grey);
+        @include mixins.phone {
+            font-size: 18px;
+        }
+    }
+    @include mixins.phone {
+        text-align: start; 
     }
 
 }

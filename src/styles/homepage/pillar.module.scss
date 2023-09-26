@@ -3,10 +3,19 @@
 .pillars{
     padding: 0px 16px;
     text-align: center;
+    @include mixins.phone {
+        text-align: start; 
+    }
     
 }
 .title{
     color: var(--text-white);
+    >h3{
+        @include mixins.phone {
+            font-size: 32px;
+        }
+    }
+
     >img{
         margin-bottom: 12px;
     }
@@ -14,6 +23,11 @@
         margin-top: 16px;
         color: var(--text-grey);
         margin-bottom: 32px;
+        
+        @include mixins.phone {
+            font-size: 18px;
+        }
+
     }
 
 }

@@ -8,20 +8,26 @@
     }
     color: var(--White);
 }
-.title{
-    color: var(--text-white);
-    font-size: 120px;
 
-
-}
 .main_content{
     display: flex;
     flex-direction: column;
     align-items: center;
     color: var(--text-white);
+    >h1{
+        color: var(--text-white);
+        font-size: 120px;
+        @include mixins.phone {
+            font-size: 56px;
+        }
+        
+    }
     >p{
         max-width: 925px;
         margin-bottom: 64px; 
+        @include mixins.phone {
+            font-size: 18px;
+        }
     }
 }
 
@@ -37,6 +43,17 @@
         border-radius: 10px;
         border: 1px solid var(--text-white);
         font-size: 32px;
+        @include mixins.phone {
+            font-size: 24px;
+        }
+    }
+    @include mixins.phone {
+        flex-direction: column;
+        display: flex;
+        padding: 20px 50px;
+        align-items: center;
+        gap: 10px;
+        row-gap: 32px;
     }
 }
 
