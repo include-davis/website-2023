@@ -1,0 +1,73 @@
+@use 'src/styles/mixins';
+
+.footer {
+    padding: 0px 24px;
+    text-align: center;
+
+    >button {
+        color: red;
+    }
+
+    color: var(--White);
+}
+
+.main_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-white);
+
+    >h1 {
+        color: var(--text-white);
+    }
+
+    >p {
+        max-width: 925px;
+        margin-bottom: 64px;
+
+        @include mixins.phone {
+            font-size: 18px;
+        }
+    }
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 64px;
+
+    >button {
+        padding: 20px 50px;
+        align-items: flex-start;
+        gap: 10px;
+        border-radius: 10px;
+        border: 1px solid var(--text-white);
+        font-size: 32px;
+
+        @include mixins.phone {
+            font-size: 24px;
+            width: 100%;
+        }
+    }
+    @include mixins.phone {
+        flex-direction: column;
+        display: flex;
+        padding: 20px 50px;
+        align-items: center;
+        gap: 10px;
+        row-gap: 32px;
+    }
+}
+
+.students {
+    background: none;
+    color: var(--text-white);
+    text-align: center;
+}
+
+.companies {
+    color: var(--include-purple);
+    background: rgba(255, 255, 255, 0.80);
+
+}

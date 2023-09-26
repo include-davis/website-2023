@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Innovation",
+        "text": "We are always pushing the boundaries and looking for new and innovative ways to solve problems.",
+        "img": "/homepage/pillars/innovation.png"
+    },
+    {
+        "title": "Community",
+        "text": "We believe that by working together and supporting one another, we can achieve more than we ever could on our own.",
+        "img": "/homepage/pillars/community.png"
+    },
+    {
+        "title": "Education",
+        "text": "We are committed to providing our members with the knowledge and skills they need to succeed.",
+        "img": "/homepage/pillars/education.png"
+    },
+    {
+        "title": "Mentoring",
+        "text": "Everyone has something to offer and something to learn. Members can join cohorts to learn from more experienced peers.",
+        "img": "/homepage/pillars/mentoring.png"
+    }
+]
