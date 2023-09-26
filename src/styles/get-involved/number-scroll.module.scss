@@ -4,33 +4,28 @@
   background: var(--purple-gradient);
   display: flex;
   justify-content: center;
+  align-self: center;
   column-gap: 30px;
 
   padding: 50px;
   border-radius: 20px;
-  margin: 50px auto 200px;
+  margin-top: 50px;
+  margin-bottom: 200px;
 
-  max-width: 1200px;
-  @media screen and (max-width: 1240px)  {
-    margin-left: calc(-1 * var(--edge-spacer) / 2);
-    margin-right: calc(-1 * var(--edge-spacer) / 2);
+  width: 1000px;
 
-    
-  }
   @include mixins.tablet {
     flex-direction: column;
     row-gap: 50px;
-    margin-left: 0px;
-    margin-right: 0px;
+    width: 600px;
   }
 
   @include mixins.phone{
     flex-direction: column;
     row-gap: 50px;
     margin-bottom: 100px;
-    margin-left: 0px;
-    margin-right: 0px;
-  }
+    width: auto;
+    }
 
 }
 
