@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import { RxHamburgerMenu, RxCross1 } from 'react-icons/rx';
-import Image from 'next/image';
 import Link from 'next/link';
-import logoWhite from '../../../public/logoWhite.png';
-import logoPurple from '../../../public/logoPurple.png';
 
 import Logo from '../branding/logo';
 import styles from '../../styles/navbar/navbar.module.scss';
