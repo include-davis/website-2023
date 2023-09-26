@@ -2,7 +2,7 @@ import { ReactElement } from 'react';
 import styles from '../../../styles/services/faq.module.scss';
 
 interface FAQProp {
-  faqList: { q: string, a: string }[];
+  faqList: { q: string; a: string }[];
 }
 
 export default function FAQ({ faqList }: FAQProp): ReactElement {
