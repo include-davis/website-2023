@@ -15,6 +15,7 @@ const inter = Inter({
 const navLinks = [
   { name: 'About', path: 'about' },
   { name: 'Projects', path: 'projects' },
+  { name: 'Services', path: 'services'},
   { name: 'Get Involved', path: 'get-involved' },
 ];
 
