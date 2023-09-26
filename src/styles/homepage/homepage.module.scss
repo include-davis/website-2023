@@ -1,36 +1,19 @@
 @use 'src/styles/mixins';
 
-.homepage{
-    @include mixins.phone {
-        
-    }
-}
-
-.grow{
-    margin-bottom: calc(35vh + 250px);
-    @include mixins.phone {
-        margin-bottom: calc(35vh + 100px);
-    }
-
-}
-
-.purple{
+.purple {
     background: var(--purple-gradient);
-}
+    padding-bottom: 400px;
 
-.offset{
-    transform: translateY(-35vh);
-    //margin-bottom: -35vh;
-
-
-    @include mixins.phone {
-        transform: translateY(-35vh);
+    @include mixins.tablet {
+        padding-bottom: 200px;
     }
-
-    
 }
 
-.grow, .mission, .work, .pillars, .footer{
+
+.grow,
+.work,
+.pillars,
+.footer {
     //margin-top: 700px;
     margin-top: 250px;
 
@@ -39,6 +22,6 @@
     }
 }
 
-.work{
+.work {
     //margin-bottom: 250px;
 }

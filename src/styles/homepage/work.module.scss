@@ -1,54 +1,63 @@
 @use 'src/styles/mixins';
 
-.work{
-    padding: 0px 16px;
+.work {
+    padding: 0px 24px;
     display: flex;
     flex-direction: column;
-    >p{
+
+    >p {
         margin: 32px 0;
         color: var(--text-grey);
     }
-   
+
 }
+
 .cardsContainer {
     max-width: 1200px;
+    width: 100%;
     margin: auto;
-    justify-content: space-around;
+    // justify-content: space-around;
     flex-wrap: wrap;
-  
+
+
     display: flex;
     flex-direction: row;
     gap: 32px;
 }
-.title{
+
+.title {
     text-align: center;
-    >img{
+
+    >img {
         @include mixins.phone {
             width: 40px;
-            height: 40px;    
+            height: 40px;
         }
     }
-    >h3{
+
+    >h3 {
         margin-top: 12px;
         color: white;
         @include mixins.phone {
             font-size: 32px;
         }
     }
-    >p{
+
+    >p {
         margin: 32px 0;
         color: var(--text-grey);
         @include mixins.phone {
             font-size: 18px;
         }
     }
+
     @include mixins.phone {
-        text-align: start; 
+        text-align: start;
     }
 
 }
 
-.more{
+.more {
     text-align: center;
     font-size: 18px;
 }
