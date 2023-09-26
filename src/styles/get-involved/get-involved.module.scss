@@ -1,14 +1,25 @@
 @use 'src/styles/mixins';
 
 // HEADER //
-.header, .mainFooter {
+.header {
+  padding: 200px var(--edge-spacer) 200px;
+
+  @include mixins.tablet {
+    padding: 150px var(--med-edge-spacer) 100px;
+  }
+  @include mixins.phone {
+    padding: 100px var(--small-edge-spacer) 50px;
+  }
+}
+.mainFooter {
   padding: 200px var(--edge-spacer);
 
   @include mixins.tablet {
-    padding: 100px var(--med-edge-spacer);
+    padding: 100px var(--med-edge-spacer)
+    200px;
   }
   @include mixins.phone {
-    padding: 50px var(--small-edge-spacer);
+    padding: 50px var(--small-edge-spacer) 200px;
   }
 }
 .header {
@@ -26,10 +37,10 @@
   filter: blur(7px);
 
   @include mixins.tablet {
-    transform: translate(-30%, -20%) scale(0.8);
+    transform: translate(-30%, -10%) scale(0.8);
   }
   @include mixins.phone {
-    transform: translate(-45%, -35%) scale(0.5);
+    transform: translate(-45%, -25%) scale(0.5);
   }
 
 }

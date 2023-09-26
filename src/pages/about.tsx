@@ -30,7 +30,7 @@ const companiesContent = companies.map((company, index) => {
     />
   );
 });
-
+ 
 const blurs = {
   blue: "/about/svgs/blurBlue.svg",
   purple: "/about/svgs/blurPurple.svg",
