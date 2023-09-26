@@ -30,7 +30,7 @@ export default function Services(): ReactElement {
         initial="hidden"
         whileInView="visible">
         <div className={styles.outerCircle}>
-        <div className={styles.innerCircle}></div>
+            <div className={styles.innerCircle}></div>
         </div>
     </motion.div>
 
@@ -38,59 +38,59 @@ export default function Services(): ReactElement {
         variants={boxVariant}
         initial="hidden"
         whileInView="visible"
-        >
+    >
         <div className={styles.line}></div>
-    </motion.div> 
+    </motion.div>
 
     return (
-      <div className={styles.page}>
-        <div className={styles.main_content}>
-            <div className={styles.start_box}>
-                <p>OUR SERVICES</p>
-                <h1>Start a project</h1>
-                <button><p>Start a project</p></button>
-            </div>
-            <div className={styles.process_box}>
-                <img src={"/assets/services/process.png"} alt="process"/>
-                <h2>Process</h2>
-                <div className={styles.timeline}>
-                    <div className={styles.scrollLine}>
-                        {bullet}
-                        {line}
-                        {bullet}
-                        {line}
-                        {bullet}
-                        {line}
-                        {bullet}
-                        {line}
-                        {bullet}
-                        {line}
-                        {bullet}
-                    </div>
-                    <div className={styles.phases}>
-                        {phaseList.map( (phase, index) => (
-                        <div key={index} className={styles.phase}>
-                            <div className={styles.text}>
-                            <h3>{phase.title}</h3>
-                            <p className="p-small">{phase.desc}</p>
-                            </div>
-                            <div className={styles.img_wrapper}>
-                                <img src={phase.img}/>
-                            </div>
+        <div className={styles.page}>
+            <div className={styles.main_content}>
+                <div className={styles.start_box}>
+                    <p>OUR SERVICES</p>
+                    <h1>Start a project</h1>
+                    <button><p>Start a project</p></button>
+                </div>
+                <div className={styles.process_box}>
+                    <img src={"/assets/services/process.png"} alt="process" />
+                    <h2>Process</h2>
+                    <div className={styles.timeline}>
+                        <div className={styles.scrollLine}>
+                            {bullet}
+                            {line}
+                            {bullet}
+                            {line}
+                            {bullet}
+                            {line}
+                            {bullet}
+                            {line}
+                            {bullet}
+                            {line}
+                            {bullet}
                         </div>
-                        ))}
+                        <div className={styles.phases}>
+                            {phaseList?.map((phase, index) => (
+                                <div key={index} className={styles.phase}>
+                                    <div className={styles.text}>
+                                        <h3>{phase.title}</h3>
+                                        <p className="p-small">{phase.desc}</p>
+                                    </div>
+                                    <div className={styles.img_wrapper}>
+                                        <img src={phase.img} />
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
                     </div>
-                
+                </div>
+                <div className={styles.form_box}>
+                    <ContactForm />
                 </div>
             </div>
-            <div className={styles.form_box}>
-                <ContactForm />
+            <div className={styles.faq_box}>
+                <h2>Frequently Asked Questions</h2>
+                {faqs}
             </div>
         </div>
-        <div className={styles.faq_box}>
-            <h2>Frequently Asked Questions</h2>
-            {faqs}
-        </div>
-      </div>
     );
 }
