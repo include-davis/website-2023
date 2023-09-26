@@ -19,6 +19,7 @@ export default function Services(): ReactElement {
         <FAQ faqList={faqs_col2} />
     </div>
 
+    //adapted from sam's code for the scroll line:
     const boxVariant = { // used for bullet point transitions
         visible: { opacity: 2, scale: 1, transition: { duration: 0.5 } },
         hidden: { opacity: 0, scale: 0 },
@@ -74,7 +75,7 @@ export default function Services(): ReactElement {
                             <p className="p-small">{phase.desc}</p>
                             </div>
                             <div className={styles.img_wrapper}>
-                                <img src={phase.img} className={index%2 === 0 ? styles.img_even : styles.img_odd}/>
+                                <img src={phase.img}/>
                             </div>
                         </div>
                         ))}

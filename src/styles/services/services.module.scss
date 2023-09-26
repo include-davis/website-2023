@@ -3,7 +3,8 @@
 .page {    
     padding-top: calc( var(--navbar-spacer-desktop) + var(--navbar-height) );
     
-    --phase-height-desktop: 55vh;
+    //variables for process animation
+    --phase-height-desktop: 50vh;
     --phase-height-mobile: 200px;
 
     .main_content {
@@ -13,7 +14,8 @@
         justify-content: center;
         gap: 10rem;
         padding: var(--edge-spacer);
-        
+
+        //Start a Project section
         .start_box {
             display: flex;
             flex-direction: column;
@@ -47,6 +49,7 @@
             }
         }
 
+        //Process section
         .process_box {
             display: flex;
             flex-direction: column;
@@ -68,12 +71,12 @@
                 flex-direction: row;
                 width: 100%;
 
+                //adapted from sam's code
                 .scrollLine {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-//                    justify-content: center;
-                    padding-top: 0.5rem;
+                    padding-top: 2.5rem;
                     
                     @include mixins.phone {
                         display: none;
@@ -109,25 +112,7 @@
                     }
                 }
 
-                  
-                  .bulletPoints {
-                    padding: 250px;
-                    display: flex;
-                    column-gap: 50px;
-                    justify-content: center;
-                  
-                    @include mixins.tablet {
-                      padding: 100px var(--med-edge-spacer);
-                    }
-                  
-                    @include mixins.phone {
-                      padding: 0px var(--small-edge-spacer);
-                      flex-direction: column;
-                    }
-                  }
-
                 .phases {
-
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -147,7 +132,7 @@
                         text-align: left;
                 
                         .text {
-                            width: 50%;
+                            width: 60%;
                 
                         }
                 
@@ -156,14 +141,6 @@
                             height: 14.58331rem;
                             border-radius: 1.25rem;
                             }
-                
-                        .odd {
-                            transform: rotate(-5deg);
-                        }
-                
-                        .even {
-                            transform: rotate(5deg);
-                        }
                     }
                 }
             }
@@ -179,7 +156,7 @@
     }
 
     .faq_box {
-        background-color: var(--text-grey);
+        background-color: var(--grey-background);
         width: 100%;
 
         display: inline-flex;
