@@ -20,19 +20,17 @@ export default function Home(): ReactElement {
       </div>
 
       <div className={styles.purple}>
-        <div className={styles.offset} >
-          <div className={styles.mission} >
-            <Mission />
-          </div>
-          <div className={styles.work} >
-            <RecentWork />
-          </div>
-          <div className={styles.pillars} >
-            <Pillars />
-          </div>
-          <div className={styles.footer} >
-            <HomeFooter />
-          </div>
+        <div className={styles.mission} >
+          <Mission />
+        </div>
+        <div className={styles.work} >
+          <RecentWork />
+        </div>
+        <div className={styles.pillars} >
+          <Pillars />
+        </div>
+        <div className={styles.footer} >
+          <HomeFooter />
         </div>
       </div>
     </div>

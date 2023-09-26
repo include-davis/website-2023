@@ -1,21 +1,21 @@
 @use 'src/styles/mixins';
 
-.homepage{
+.homepage {
     display: flex;
     flex-direction: column;
-    padding: 0 16px;
+    padding: 0 24px;
     background: var(--purple-gradient);
     justify-content: space-between;
     overflow: hidden;
     width: 100%;
 
-    @include mixins.phone {
+    @include mixins.tablet {
         min-width: 100%;
         margin: 0;
     }
 }
 
-.main_content{
+.main_content {
     color: var(--text-white);
     text-align: center;
     display: flex;
@@ -23,34 +23,37 @@
     align-items: center;
     gap: 62px;
     height: auto;
-    
-    @include mixins.phone {
+    padding-top: 174px;
+
+    @include mixins.tablet {
         gap: 0px;
+        padding-top: 72px;
     }
 }
 
-.images{
-    padding-top: 250px;
+.images {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;     
+    gap: 50px;
     flex-wrap: wrap;
 
-    >img{
-        max-width: 400px;
-        max-height: 200px;
+    >img {
+        width: 400px;
+        height: 200px;
         mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 80%, transparent 98%);
+        border-radius: 20px;
+        object-fit: cover;
 
     }
 
-    @include mixins.phone {
+    @include mixins.tablet {
         display: none;
     }
 }
 
 .title {
-    >h1{
+    >h1 {
         display: flex;
         width: auto;
         height: auto;
@@ -58,53 +61,59 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        font-size: 120px;
 
-        @include mixins.phone {
+        @include mixins.tablet {
             display: inline-block;
-            transform: rotate(315deg); 
+            transform: rotate(315deg);
             margin-bottom: -40px;
         }
-    } 
+    }
 }
-  
+
 .diagonal {
     display: flex;
     max-width: 706px;
     height: 100%;
     flex-direction: column;
 
-    @include mixins.phone {
+    @include mixins.tablet {
         font-size: 4rem;
         transform: rotate(45deg);
         padding-bottom: 36px;
     }
 }
 
-.mobile{
+.mobile {
     display: none;
-    @include mixins.phone {
+
+    @include mixins.tablet {
         display: flex;
-        width: 100%;
+        width: 70%;
         height: auto;
         margin-bottom: 32px;
+        border-radius: 20px;
     }
+
+    @include mixins.phone {
+        width: 100%;
+    }
+
 }
 
-.description{
-    font-size: 24px;
+.description {
+    font-size: 1.5rem;
     max-width: 706px;
     text-align: center;
 
-    @include mixins.phone {
-        font-size: 18px;
+    @include mixins.tablet {
+        font-size: 1.125rem;
         margin-bottom: 131px;
     }
 
 }
 
-.join{
-    font-size: 32px;
+.join {
+    font-size: 2rem;
     padding: 20px 50px;
     border-radius: 10px;
     border: 1px solid var(--White, #FFF);
@@ -112,17 +121,18 @@
     background: none;
     color: var(--text-white);
     margin-bottom: 250px;
-    @include mixins.phone {
-        display: none;    
+
+    @include mixins.tablet {
+        display: none;
     }
 }
 
-.footer{
+.footer {
     color: var(--text-white);
     text-align: center;
-    @include mixins.phone {
+
+    @include mixins.tablet {
         margin-top: 100px;
         text-align: left;
     }
 }
-
