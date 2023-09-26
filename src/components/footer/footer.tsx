@@ -1,9 +1,7 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
-import logoWhite from "../../../public/logoWhite.png";
-import logoPurple from "../../../public/logoPurple.png";
 import styles from "../../styles/footer/footer.module.scss";
+import Logo from "../branding/logo";
 
 type FooterProps = {
   nav: { name: string; path: string }[];
@@ -21,7 +19,7 @@ function getTheme(path: string) {
 
 export default function Footer({ nav, path, router }: FooterProps): React.JSX.Element {
   const theme = getTheme(path);
-  const logo = theme === "light" ? logoWhite : logoPurple;
+  const logoColor = theme === "light" ? "var(--text-white)" : "var(--include-purple)";
   const color = theme === "light" ? styles.light : styles.dark;
 
   return (
@@ -29,7 +27,7 @@ export default function Footer({ nav, path, router }: FooterProps): React.JSX.El
       <footer className={styles.footer}>
         <section className={styles.logo}>
           <Link href={"/"} onClick={() => router.refresh()}>
-            <Image src={logo} alt="" />
+            <Logo fillColor={logoColor} />
           </Link>
         </section>
         <section className={styles.footer_right}>
@@ -37,7 +35,7 @@ export default function Footer({ nav, path, router }: FooterProps): React.JSX.El
             {nav.map((link) => (
               <li key={link.path}>
                 <Link href={`/${link.path}`} onClick={() => router.refresh()}>
-                  <span className={`p-details ${color}`}>{link.name}</span>
+                  <span className={`p-details ${color}`}>{link.name.toLowerCase()}</span>
                 </Link>
               </li>
             ))}
