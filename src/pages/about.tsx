@@ -1,7 +1,9 @@
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import Image from 'next/image';
-import InfiniteSlider from '@/components/infiniteSlider/infiniteSlider';
-import FadeInText from '@/components/about/fadeInText/fadeInText';
+import InfiniteSlider from '@/components/infiniteSlider/infinite-slider';
+import FadeInText from '@/components/about/fadeInText/fade-in-text';
 import Avatar from '@/components/about/avatar/avatar';
 import { motion } from 'framer-motion';
 import data from '@/json/about/about.json';

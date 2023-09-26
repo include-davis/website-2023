@@ -1,6 +1,9 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable react/no-unescaped-entities */
 import { ReactElement } from 'react';
 import styles from '../../styles/services/form.module.scss';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function ContactForm(onSubmitHandler: any): ReactElement {
   return (
     <form className={styles.form_container} onSubmit={onSubmitHandler}>

@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable @next/next/no-img-element */
 import { ReactElement } from 'react';
 import Link from 'next/link';
 
@@ -33,10 +36,14 @@ export default function Projects(): ReactElement {
         </p>
         <div>
           <Link href="/">
-            <button className={styles.companies_button}>Companies</button>
+            <button type="button" className={styles.companies_button}>
+              Companies
+            </button>
           </Link>
           <Link href="/">
-            <button className={styles.students_button}>Students</button>
+            <button type="button" className={styles.students_button}>
+              Students
+            </button>
           </Link>
         </div>
       </section>

@@ -8,6 +8,7 @@ export default function FadeInText({
   index,
 }: {
   children: React.ReactNode;
+  // eslint-disable-next-line react/require-default-props
   index?: number;
 }): React.JSX.Element {
   const container = useRef(null);

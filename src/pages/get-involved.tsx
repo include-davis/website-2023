@@ -12,25 +12,17 @@ export default function GetInvolved(): React.JSX.Element {
     visible: { opacity: 2, scale: 1, transition: { duration: 0.5 } },
     hidden: { opacity: 0, scale: 0 },
   };
-
+  // used to create bullet w/ animation
   const bullet = (
-    <motion.div // used to create bullet w/ animation
-      variants={boxVariant}
-      initial="hidden"
-      whileInView="visible"
-    >
+    <motion.div variants={boxVariant} initial="hidden" whileInView="visible">
       <div className={styles.outerCircle}>
         <div className={styles.innerCircle}></div>
       </div>
     </motion.div>
   );
-
+  // used to create line with animation
   const line = (
-    <motion.div // used to create line with animation
-      variants={boxVariant}
-      initial="hidden"
-      whileInView="visible"
-    >
+    <motion.div variants={boxVariant} initial="hidden" whileInView="visible">
       <div className={styles.line}></div>
     </motion.div>
   );

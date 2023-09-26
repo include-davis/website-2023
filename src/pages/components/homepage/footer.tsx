@@ -1,5 +1,4 @@
 import { ReactElement } from 'react';
-import { color } from 'framer-motion';
 import styles from '../../../styles/homepage/footer.module.scss';
 
 export default function Footer(): ReactElement {
@@ -15,8 +14,12 @@ export default function Footer(): ReactElement {
       </div>
 
       <div className={styles.buttons}>
-        <button className={styles.companies}>Companies</button>
-        <button className={styles.students}>Students</button>
+        <button type="button" className={styles.companies}>
+          Companies
+        </button>
+        <button type="button" className={styles.students}>
+          Students
+        </button>
       </div>
     </div>
   );

@@ -8,10 +8,12 @@ interface AvatarProps {
 }
 
 export default function Avatar(props: AvatarProps): React.JSX.Element {
+  const { image, name, title } = props;
+
   return (
     <article className={styles.avatar}>
       <Image
-        src={`/about/headshots/${props.image}`}
+        src={`/about/headshots/${image}`}
         width={235}
         height={208}
         style={{
@@ -21,8 +23,8 @@ export default function Avatar(props: AvatarProps): React.JSX.Element {
         alt="Avatar"
       />
       <section className={styles.avatar_info}>
-        <div className="p-small">{props.name}</div>
-        <div className="p-details">{props.title}</div>
+        <div className="p-small">{name}</div>
+        <div className="p-details">{title}</div>
       </section>
     </article>
   );

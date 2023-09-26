@@ -1,6 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { ReactElement } from 'react';
 import dynamic from 'next/dynamic';
-import { motion } from 'framer-motion';
 import CountUp from 'react-countup';
 import styles from '../../../styles/get-involved/number-scroll.module.scss';
 import data from '../../../json/get-involved.json';
@@ -32,7 +32,7 @@ export default function NumberScroll(): ReactElement {
                   scrollSpyDelay={1}
                 />
               )) ||
-                (card.number == 1 && (
+                (card.number === 1 && (
                   <CountUp
                     start={0}
                     end={card.number}

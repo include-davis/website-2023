@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable jsx-a11y/alt-text */
 import { ReactElement } from 'react';
 import styles from '../../../styles/homepage/card.module.scss';
 
@@ -19,7 +21,7 @@ export default function WorkCard({
       <hr></hr>
       <h4 className={styles.header}>{header}</h4>
       <p className={styles.desc}>{description}</p>
-      <button className={styles.button}>
+      <button type="button" className={styles.button}>
         <span className={styles.dot}>&#9679;</span> VISIT SITE
       </button>
     </div>

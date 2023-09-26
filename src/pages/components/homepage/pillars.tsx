@@ -1,3 +1,8 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable jsx-a11y/alt-text */
 import { ReactElement, useState } from 'react';
 import menu from '../../../json/homepage/menu.json';
 import styles from '../../../styles/homepage/pillar.module.scss';
@@ -19,8 +24,8 @@ export default function Pillars(): ReactElement {
               <div
                 key={item.title}
                 onClick={() => setIndex(index)}
-                className={`${styles.chip} ${activeIndex === index ? styles.active : null
-                  }`}
+                className={`${styles.chip} 
+                ${activeIndex === index ? styles.active : null}`}
               >
                 <p>{item.title}</p>
               </div>

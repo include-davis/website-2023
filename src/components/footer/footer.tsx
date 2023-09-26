@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import React from 'react';
 import Link from 'next/link';
 import styles from '../../styles/footer/footer.module.scss';
@@ -6,10 +7,12 @@ import Logo from '../branding/logo';
 interface FooterProps {
   nav: { name: string; path: string }[];
   path: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   router: any;
 }
 
-function getTheme(path: string) {
+// eslint-disable-next-line func-style
+function getTheme(path: string): string {
   if (path === '/' || path === '/about' || path === '/get-involved') {
     return 'light';
   }

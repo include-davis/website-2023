@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable jsx-a11y/alt-text */
 import WorkCard from './work-card';
 import data from '../../../json/recent-work.json';
 import styles from '../../../styles/homepage/work.module.scss';

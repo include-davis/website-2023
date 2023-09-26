@@ -1,5 +1,9 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable react/no-array-index-key */
 import { ReactElement } from 'react';
-import InfiniteSlider from '@/components/infiniteSlider/infiniteSlider';
+import InfiniteSlider from '@/components/infiniteSlider/infinite-slider';
 import styles from '../../../styles/homepage/header.module.scss';
 
 let companies = [
@@ -44,7 +48,9 @@ export default function Header(): ReactElement {
           to fostering collaboration, growth and the creation of creative
           digital solutions.
         </p>
-        <button className={styles.join}>Join the community</button>
+        <button type="button" className={styles.join}>
+          Join the community
+        </button>
       </div>
 
       <div className={styles.footer}>

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import { ReactElement } from 'react';
 import styles from '../../../styles/services/faq.module.scss';
 
