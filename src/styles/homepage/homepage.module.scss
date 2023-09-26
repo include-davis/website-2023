@@ -1,0 +1,27 @@
+@use 'src/styles/mixins';
+
+.purple {
+    background: var(--purple-gradient);
+    padding-bottom: 400px;
+
+    @include mixins.tablet {
+        padding-bottom: 200px;
+    }
+}
+
+
+.grow,
+.work,
+.pillars,
+.footer {
+    //margin-top: 700px;
+    margin-top: 250px;
+
+    @include mixins.phone {
+        margin-top: 100px;
+    }
+}
+
+.work {
+    //margin-bottom: 250px;
+}

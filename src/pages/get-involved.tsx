@@ -84,9 +84,8 @@ export default function GetInvolved(): React.JSX.Element {
           Apply
         </button>
       </div>
-
-      <p className={styles.numberText}>The numbers</p>
-      <NumberScroll />
+        <p className={styles.numberText}>The numbers</p>
+        <NumberScroll />
 
       <div className={styles.recruitmentContainer}>
         <div className={styles.recruitmentText}>
