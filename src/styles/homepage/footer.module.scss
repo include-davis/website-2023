@@ -50,7 +50,6 @@
             width: 100%;
         }
     }
-
     @include mixins.phone {
         flex-direction: column;
         display: flex;
