@@ -1,3 +1,45 @@
 @use 'src/styles/mixins';
 
+.homepage{
 
+    @include mixins.phone {
+        
+    }
+}
+
+.grow{
+    margin-bottom: calc(35vh + 250px);
+    @include mixins.phone {
+        margin-bottom: calc(35vh + 100px);
+    }
+
+}
+
+.purple{
+    background: var(--purple-gradient);
+}
+
+.offset{
+    transform: translateY(-35vh);
+    //margin-bottom: -35vh;
+
+
+    @include mixins.phone {
+        transform: translateY(-35vh);
+    }
+
+    
+}
+
+.grow, .mission, .work, .pillars, .footer{
+    //margin-top: 700px;
+    margin-top: 250px;
+
+    @include mixins.phone {
+        margin-top: 100px;
+    }
+}
+
+.work{
+    //margin-bottom: 250px;
+}

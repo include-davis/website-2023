@@ -11,11 +11,13 @@ export default function Header(): ReactElement {
             <img src="/homepage/design-home2.png" />
             <img src="/homepage/design-home3.png" />
           </div>
-          <h1 className={styles.title}>
+          <div className={styles.title}>
+          <h1 className={styles.tit}>
             <span className={styles.diagonal}>Design.</span>
             <span className={styles.diagonal}>Develop.</span>
             <span className={styles.diagonal}>Create.</span>
           </h1>
+          </div>
           <img className={styles.mobile} src="/homepage/design-home2.png" />
           <p className={styles.description}>We are a UC Davis community of web developers and designers dedicated to fostering collaboration, growth and the creation of creative digital solutions.</p>
           <button className={styles.join}>Join the community</button>

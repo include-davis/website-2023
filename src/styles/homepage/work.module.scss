@@ -1,5 +1,40 @@
 @use 'src/styles/mixins';
 
+.work{
+    padding: 0px 16px;
+    >p{
+        margin: 32px 0;
+        color: var(--text-grey);
+    }
+
+    padding: 0px 16px;
+    display: flex;
+    flex-direction: column;
+}
+.cardsContainer {
+    width: 1200px;
+    margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
 .title{
-    color: red;
+    text-align: center;
+    >h3{
+        margin-top: 12px;
+        color: white;
+    }
+    >p{
+        margin: 32px 0;
+        color: var(--text-grey);
+    }
+
+}
+
+.more{
+    text-align: center;
+    font-size: 18px;
 }

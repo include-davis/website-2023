@@ -1,0 +1,19 @@
+@use 'src/styles/mixins';
+
+.pillars{
+    padding: 0px 16px;
+    text-align: center;
+    
+}
+.title{
+    color: var(--text-white);
+    >img{
+        margin-bottom: 12px;
+    }
+    >p{
+        margin-top: 16px;
+        color: var(--text-grey);
+        margin-bottom: 32px;
+    }
+
+}

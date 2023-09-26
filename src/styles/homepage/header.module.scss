@@ -10,6 +10,7 @@
     width: 100%;
     padding: 0 16px;
 
+
     @include mixins.phone {
         min-width: 100%;
         margin: 0;
@@ -50,30 +51,33 @@
 }
 
 .title {
-    display: flex;
-    width: auto;
-    height: auto;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    >h1{
+        display: flex;
+        width: auto;
+        height: auto;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
 
-    @include mixins.phone {
-        display: inline-block;
-        padding: auto;
-        transform: rotate(315deg); 
-        margin-bottom: -40px;
-    }
+        @include mixins.phone {
+            display: inline-block;
+            transform: rotate(315deg); 
+            margin-bottom: -40px;
+        }
+    } 
 }
   
 .diagonal {
     display: flex;
     max-width: 706px;
+    height: 100%;
+    flex-direction: column;
+
     @include mixins.phone {
-        font-size: 56px;
+        font-size: 4rem;
         transform: rotate(45deg);
         padding-bottom: 36px;
-
     }
 }
 
@@ -81,8 +85,9 @@
     display: none;
     @include mixins.phone {
         display: flex;
+        width: 100%;
+        height: auto;
         margin-bottom: 32px;
-    
     }
 }
 

@@ -10,9 +10,9 @@ export default function Grow(): ReactElement {
                     <p>Vibrant UC Davis community of talented designer, web developer and do-ers.</p>
                 </div>        
                 <ul className={styles.bulletpoint}>
-                    <li className={styles.learn}>Learn: Acquire valuable skills through hands-on experiences.</li>
-                    <li className={styles.create}>Create: Transform your imagination into tangible, impactful projects</li>
-                    <li className={styles.connect}>Connect: Forge lifelong connections and friendships with talented creatives.</li>
+                    <li className={styles.learn}> <strong>Learn:</strong> Acquire valuable skills through hands-on experiences.</li>
+                    <li className={styles.create}> <strong>Create:</strong> Transform your imagination into tangible, impactful projects</li>
+                    <li className={styles.connect}> <strong>Connect:</strong> Forge lifelong connections and friendships with talented creatives.</li>
                 </ul>
             </div>
             <div className={styles.images}>
