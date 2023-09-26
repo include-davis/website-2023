@@ -1,6 +1,6 @@
-import { ReactElement, useState } from "react";
-import menu from "../../../json/homepage/menu.json";
-import styles from "../../../styles/homepage/pillar.module.scss";
+import { ReactElement, useState } from 'react';
+import menu from '../../../json/homepage/menu.json';
+import styles from '../../../styles/homepage/pillar.module.scss';
 
 export default function Pillars(): ReactElement {
   const [activeIndex, setIndex] = useState(0);
@@ -15,19 +15,16 @@ export default function Pillars(): ReactElement {
       <div className={styles.menu}>
         <div className={styles.chips_wrapper}>
           <div className={styles.chips}>
-            {menu.map((item, index) => {
-              return (
-                <div
-                  key={item.title}
-                  onClick={() => setIndex(index)}
-                  className={`${styles.chip} ${
-                    activeIndex === index ? styles.active : null
+            {menu.map((item, index) => (
+              <div
+                key={item.title}
+                onClick={() => setIndex(index)}
+                className={`${styles.chip} ${activeIndex === index ? styles.active : null
                   }`}
-                >
-                  <p>{item.title}</p>
-                </div>
-              );
-            })}
+              >
+                <p>{item.title}</p>
+              </div>
+            ))}
           </div>
         </div>
         <div className={styles.pillar_desc}>

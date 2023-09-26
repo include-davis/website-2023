@@ -1,6 +1,6 @@
-import { ReactElement } from "react";
+import { ReactElement } from 'react';
 
-import styles from "../../../styles/homepage/mission.module.scss";
+import styles from '../../../styles/homepage/mission.module.scss';
 
 export default function Mission(): ReactElement {
   return (

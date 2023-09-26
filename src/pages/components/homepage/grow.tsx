@@ -1,5 +1,5 @@
-import { ReactElement } from "react";
-import styles from "../../../styles/homepage/grow.module.scss";
+import { ReactElement } from 'react';
+import styles from '../../../styles/homepage/grow.module.scss';
 
 export default function Grow(): ReactElement {
   return (
@@ -17,7 +17,7 @@ export default function Grow(): ReactElement {
             <div className={styles.grow_point}>
               <img src="/homepage/flashcards.png" />
               <p>
-                {" "}
+                {' '}
                 <strong>Learn:</strong> Acquire valuable skills through hands-on
                 experiences.
               </p>

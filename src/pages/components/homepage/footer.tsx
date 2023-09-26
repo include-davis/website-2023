@@ -1,6 +1,6 @@
-import { ReactElement } from "react";
-import styles from "../../../styles/homepage/footer.module.scss";
-import { color } from "framer-motion";
+import { ReactElement } from 'react';
+import { color } from 'framer-motion';
+import styles from '../../../styles/homepage/footer.module.scss';
 
 export default function Footer(): ReactElement {
   return (

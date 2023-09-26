@@ -1,5 +1,5 @@
-import { ReactElement } from "react";
-import styles from "../../../styles/services/form.module.scss";
+import { ReactElement } from 'react';
+import styles from '../../../styles/services/form.module.scss';
 
 export default function ContactForm(onSubmitHandler: any): ReactElement {
   return (

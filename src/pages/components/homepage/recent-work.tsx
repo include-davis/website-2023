@@ -1,12 +1,12 @@
-import { ReactElement } from "react";
-import WorkCard from "./work-card";
-import data from "../../../json/recent-work.json";
-import styles from "../../../styles/homepage/work.module.scss";
+import WorkCard from './work-card';
+import data from '../../../json/recent-work.json';
+import styles from '../../../styles/homepage/work.module.scss';
 
 export default function Work(): React.JSX.Element {
   const { cards } = data;
   const cardElements = Object.keys(cards).map((index) => {
     const card = cards[index as keyof typeof cards];
+
     return (
       <WorkCard
         key={index}

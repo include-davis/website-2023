@@ -1,28 +1,27 @@
-import { ReactElement } from "react";
-import InfiniteSlider from "@/components/infiniteSlider/infiniteSlider";
-import styles from "../../../styles/homepage/header.module.scss";
+import { ReactElement } from 'react';
+import InfiniteSlider from '@/components/infiniteSlider/infiniteSlider';
+import styles from '../../../styles/homepage/header.module.scss';
 
 let companies = [
-  "Riot",
-  "Apple",
-  "Amazon",
-  "Microsoft",
-  "LinkedIn",
-  "Visa",
-  "Netflix",
+  'Riot',
+  'Apple',
+  'Amazon',
+  'Microsoft',
+  'LinkedIn',
+  'Visa',
+  'Netflix',
 ];
 
-companies = companies.concat(companies.slice(0));
-const companiesContent = companies.map((company, index) => {
-  return (
-    <img
-      src={`/about/svgs/${company}.svg`}
-      loading="eager"
-      alt=""
-      key={`${company} ${index}`}
-    />
-  );
-});
+companies = [...companies, ...companies];
+const companiesContent = companies.map((company, index) => (
+  <img
+    src={`/about/svgs/${company}.svg`}
+    loading="eager"
+    alt=""
+    key={`${company} ${index}`}
+  />
+));
+
 export default function Header(): ReactElement {
   return (
     <div className={styles.homepage}>

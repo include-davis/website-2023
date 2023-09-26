@@ -1,5 +1,5 @@
-import { ReactElement } from "react";
-import styles from "../../../styles/homepage/card.module.scss";
+import { ReactElement } from 'react';
+import styles from '../../../styles/homepage/card.module.scss';
 
 interface WorkCardProps {
   date: string;

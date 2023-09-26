@@ -1,10 +1,10 @@
-import React from "react";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import NumberScroll from "./components/get-involved/number-scroll";
-import OpportunityCard from "./components/get-involved/opportunity-card";
-import styles from "../styles/get-involved/get-involved.module.scss";
-import data from "../json/get-involved.json";
+import React from 'react';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import NumberScroll from './components/get-involved/number-scroll';
+import OpportunityCard from './components/get-involved/opportunity-card';
+import styles from '../styles/get-involved/get-involved.module.scss';
+import data from '../json/get-involved.json';
 
 export default function GetInvolved(): React.JSX.Element {
   const boxVariant = {
@@ -14,7 +14,7 @@ export default function GetInvolved(): React.JSX.Element {
   };
 
   const bullet = (
-    <motion.div //used to create bullet w/ animation
+    <motion.div // used to create bullet w/ animation
       variants={boxVariant}
       initial="hidden"
       whileInView="visible"
@@ -26,7 +26,7 @@ export default function GetInvolved(): React.JSX.Element {
   );
 
   const line = (
-    <motion.div //used to create line with animation
+    <motion.div // used to create line with animation
       variants={boxVariant}
       initial="hidden"
       whileInView="visible"
@@ -35,20 +35,18 @@ export default function GetInvolved(): React.JSX.Element {
     </motion.div>
   );
 
-  const createPoint = (header: string, info: string) => {
+  const createPoint = (header: string, info: string): React.JSX.Element => (
     // used to create description w/ animation
-    return (
-      <motion.div
-        variants={boxVariant}
-        initial="hidden"
-        whileInView="visible"
-        className={styles.pointInfo}
-      >
-        <h3>{header}</h3>
-        <p>{info}</p>
-      </motion.div>
-    );
-  };
+    <motion.div
+      variants={boxVariant}
+      initial="hidden"
+      whileInView="visible"
+      className={styles.pointInfo}
+    >
+      <h3>{header}</h3>
+      <p>{info}</p>
+    </motion.div>
+  );
   // used for opportunity cards
   const { cards } = data;
   const cardElements = Object.keys(cards).map((index) => {
@@ -83,7 +81,7 @@ export default function GetInvolved(): React.JSX.Element {
           className={styles.meshRight}
         />
         <div className={styles.cta}>
-          <p style={{ color: "var(--text-black-light)" }}>GET INVOLVED</p>
+          <p style={{ color: 'var(--text-black-light)' }}>GET INVOLVED</p>
           <h1 className={styles.hook}>
             The journey to create amazing things starts here
           </h1>
@@ -98,17 +96,17 @@ export default function GetInvolved(): React.JSX.Element {
           <div className={styles.recruitmentText}>
             <h2>Recruitment cycle</h2>
             <p className={styles.recruitmentInfo}>
-              {" "}
+              {' '}
               Recruitment cycle happens twice a year (Fall Quarter & Winter
               Quarter) for design and tech cohorts.
             </p>
             <p className={styles.recruitmentInfo}>
-              {" "}
+              {' '}
               Our application process typically includes a short application and
               an interview.
             </p>
             <p className={styles.recruitmentInfo}>
-              {" "}
+              {' '}
               We are always looking for motivated and dedicated individuals to
               join our team.
             </p>
@@ -124,7 +122,7 @@ export default function GetInvolved(): React.JSX.Element {
       <section className={styles.mainContent}>
         <div className={styles.purpleBg}>
           <h3 className={styles.description}>
-            We aim to provide resources and opportunities to help students{" "}
+            We aim to provide resources and opportunities to help students{' '}
             <span className={styles.textGradient}>find their path</span>, no
             matter where they are at in their journey.
           </h3>
@@ -141,15 +139,15 @@ export default function GetInvolved(): React.JSX.Element {
             <div className={styles.leftPoints}>
               <div className={styles.pointOne}>
                 {createPoint(
-                  "Apply to join",
-                  "Become part of our cohort or executive board"
+                  'Apply to join',
+                  'Become part of our cohort or executive board'
                 )}
               </div>
               <div className={styles.phone}>{line}</div>
               <div className={styles.pointThree}>
                 {createPoint(
-                  "Make an impact in your community",
-                  "Build things that make you proud"
+                  'Make an impact in your community',
+                  'Build things that make you proud'
                 )}
               </div>
             </div>
@@ -163,8 +161,8 @@ export default function GetInvolved(): React.JSX.Element {
             </div>
             <div className={styles.pointTwo}>
               {createPoint(
-                "Work with real clients",
-                "Get relevant industry experience"
+                'Work with real clients',
+                'Get relevant industry experience'
               )}
             </div>
           </div>

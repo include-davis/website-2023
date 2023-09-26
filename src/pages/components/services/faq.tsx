@@ -1,5 +1,5 @@
-import { ReactElement } from "react";
-import styles from "../../../styles/services/faq.module.scss";
+import { ReactElement } from 'react';
+import styles from '../../../styles/services/faq.module.scss';
 
 interface FAQProp {
   faqList: { q: string; a: string }[];

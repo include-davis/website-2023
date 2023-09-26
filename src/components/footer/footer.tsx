@@ -1,20 +1,20 @@
-import React from "react";
-import Link from "next/link";
-import styles from "../../styles/footer/footer.module.scss";
-import Logo from "../branding/logo";
+import React from 'react';
+import Link from 'next/link';
+import styles from '../../styles/footer/footer.module.scss';
+import Logo from '../branding/logo';
 
-type FooterProps = {
+interface FooterProps {
   nav: { name: string; path: string }[];
   path: string;
   router: any;
-};
+}
 
 function getTheme(path: string) {
-  if (path === "/" || path === "/about" || path === "/get-involved") {
-    return "light";
-  } else {
-    return "dark";
+  if (path === '/' || path === '/about' || path === '/get-involved') {
+    return 'light';
   }
+
+  return 'dark';
 }
 
 export default function Footer({
@@ -24,14 +24,14 @@ export default function Footer({
 }: FooterProps): React.JSX.Element {
   const theme = getTheme(path);
   const logoColor =
-    theme === "light" ? "var(--text-white)" : "var(--include-purple)";
-  const color = theme === "light" ? styles.light : styles.dark;
+    theme === 'light' ? 'var(--text-white)' : 'var(--include-purple)';
+  const color = theme === 'light' ? styles.light : styles.dark;
 
   return (
     <div className={styles.footer_wrapper}>
       <footer className={styles.footer}>
         <section className={styles.logo}>
-          <Link href={"/"} onClick={() => router.refresh()}>
+          <Link href="/" onClick={() => router.refresh()}>
             <Logo fillColor={logoColor} />
           </Link>
         </section>
