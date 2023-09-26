@@ -72,6 +72,7 @@
 
       .navbar_right {
         .redirects {
+          --webkit-backdrop-filter: blur(16px);
           backdrop-filter: blur(16px);
           position: absolute;
           width: calc(100% + 2 * var(--edge-spacer) * 0.1);
