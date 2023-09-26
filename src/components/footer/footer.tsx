@@ -1,12 +1,10 @@
 import React from "react";
-import Link from "next/link";
 import styles from "../../styles/footer/footer.module.scss";
 import Logo from "../branding/logo";
 
 type FooterProps = {
   nav: { name: string; path: string }[];
   path: string;
-  router: any;
 };
 
 function getTheme(path: string) {
@@ -17,7 +15,7 @@ function getTheme(path: string) {
   }
 }
 
-export default function Footer({ nav, path, router }: FooterProps): React.JSX.Element {
+export default function Footer({ nav, path }: FooterProps): React.JSX.Element {
   const theme = getTheme(path);
   const logoColor = theme === "light" ? "var(--text-white)" : "var(--include-purple)";
   const color = theme === "light" ? styles.light : styles.dark;
@@ -26,17 +24,17 @@ export default function Footer({ nav, path, router }: FooterProps): React.JSX.El
     <div className={styles.footer_wrapper}>
       <footer className={styles.footer}>
         <section className={styles.logo}>
-          <Link href={"/"} onClick={() => router.refresh()}>
+          <a href={"/"}>
             <Logo fillColor={logoColor} />
-          </Link>
+          </a>
         </section>
         <section className={styles.footer_right}>
           <ul className={styles.footer_redirects}>
             {nav.map((link) => (
               <li key={link.path}>
-                <Link href={`/${link.path}`} onClick={() => router.refresh()}>
+                <a href={`/${link.path}`}>
                   <span className={`p-details ${color}`}>{link.name.toLowerCase()}</span>
-                </Link>
+                </a>
               </li>
             ))}
           </ul>

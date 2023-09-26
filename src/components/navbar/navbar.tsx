@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
-import Link from "next/link";
 
 import Logo from "../branding/logo";
 import styles from "../../styles/navbar/navbar.module.scss";
@@ -8,7 +7,6 @@ import styles from "../../styles/navbar/navbar.module.scss";
 type NavbarProps = {
   nav: { name: string; path: string }[];
   path: string;
-  router: any;
 };
 
 function getTheme(path: string) {
@@ -19,11 +17,12 @@ function getTheme(path: string) {
   }
 }
 
-export default function Navbar({ nav, path, router }: NavbarProps): React.JSX.Element {
+export default function Navbar({ nav, path }: NavbarProps): React.JSX.Element {
   const [active, setActive] = useState(false);
 
   const theme = getTheme(path);
-  const logoColor = theme === "light" ? "var(--text-white)" : "var(--include-purple)";
+  const logoColor =
+    theme === "light" ? "var(--text-white)" : "var(--include-purple)";
   const color = theme === "light" ? styles.light : styles.dark;
 
   const toggleMenu = () => {
@@ -34,32 +33,35 @@ export default function Navbar({ nav, path, router }: NavbarProps): React.JSX.El
     <div className={styles.navbar_wrapper}>
       <nav className={styles.navbar}>
         <section className={styles.logo}>
-          <Link href={"/"} onClick={() => router.refresh()}>
+          <a href={"/"}>
             <Logo fillColor={logoColor} />
-          </Link>
+          </a>
         </section>
         <section className={styles.navbar_right}>
           <ul
-            className={`${styles.redirects} ${active ? styles.activeDropdown : ""
-              }`}
+            className={`${styles.redirects} ${
+              active ? styles.activeDropdown : ""
+            }`}
           >
             {nav.map((item, index) => (
               <li
                 key={item.name}
                 className={`${active ? styles.slideText : ""}`}
                 style={{
-                  transitionDelay: `calc(0.3s / 3 * ${active ? index + 1 : nav.length - index - 1
-                    })`,
+                  transitionDelay: `calc(0.3s / 3 * ${
+                    active ? index + 1 : nav.length - index - 1
+                  })`,
                 }}
               >
-                <Link href={`/${item.path}`} onClick={() => router.refresh()}>
+                <a href={`/${item.path}`}>
                   <span
-                    className={`p-details ${color} ${active ? styles.fadeInText : ""
-                      }`}
+                    className={`p-details ${color} ${
+                      active ? styles.fadeInText : ""
+                    }`}
                   >
                     {item.name.toLowerCase()}
                   </span>
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
