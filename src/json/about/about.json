@@ -1,0 +1,36 @@
+{
+  "intro": {
+    "header": "A community of students driving positive change with technology",
+    "description": [
+      "We are a ",
+      "student-run organization",
+      " at ",
+      "UC Davis",
+      " that builds websites and mobile apps for local organizations in the Sacramento and Davis community."
+    ]
+  },
+
+  "purpose": {
+    "mission": [
+      "Our mission is to ",
+      "design and develop for social good",
+      " and promote technological growth for our clients."
+    ],
+    "benefits": [
+      "Through our projects, UCD students get ",
+      "real-world opportunities",
+      " to expand their design, technical, teamwork, and communication skills."
+    ],
+    "goals": "Impressive products for clients, portfolio gems for our members."
+  },
+
+  "board": {
+    "header": "Meet the Team",
+    "description": "Board"
+  },
+
+  "future": {
+    "header": "From the classroom to the office",
+    "description": " After gaining valuable real-world exposure, member of #include have secured internships and full-time positions in diverse fields, paving the way for their professional growth."
+  }
+}
