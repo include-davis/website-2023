@@ -61,10 +61,10 @@
     width: min-content;
     height: fit-content;
     padding-bottom: 12px;
+    overflow: scroll;
 
     @include mixins.phone {
         width: 100%;
-        overflow: scroll;
     }
 }
 
