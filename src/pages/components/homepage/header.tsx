@@ -1,6 +1,6 @@
-import { ReactElement } from 'react';
+import { ReactElement } from "react";
 import InfiniteSlider from "@/components/infiniteSlider/infiniteSlider";
-import styles from '../../../styles/homepage/header.module.scss';
+import styles from "../../../styles/homepage/header.module.scss";
 
 let companies = [
   "Riot",
@@ -40,18 +40,18 @@ export default function Header(): ReactElement {
           </h1>
         </div>
         <img className={styles.mobile} src="/homepage/header/header2.png" />
-        <p className={styles.description}>We are a UC Davis community of web developers and designers dedicated to fostering collaboration, growth and the creation of creative digital solutions.</p>
+        <p className={styles.description}>
+          We are a UC Davis community of web developers and designers dedicated
+          to fostering collaboration, growth and the creation of creative
+          digital solutions.
+        </p>
         <button className={styles.join}>Join the community</button>
       </div>
 
       <div className={styles.footer}>
         <p>Where we've gone</p>
-        <InfiniteSlider durationInMs={4000}>
-          {companiesContent}
-        </InfiniteSlider>
+        <InfiniteSlider durationInMs={4000}>{companiesContent}</InfiniteSlider>
       </div>
-
     </div>
   );
-
 }

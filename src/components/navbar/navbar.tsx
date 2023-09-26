@@ -22,11 +22,16 @@ function getTheme(path: string) {
   }
 }
 
-export default function Navbar({ nav, path, router }: NavbarProps): React.JSX.Element {
+export default function Navbar({
+  nav,
+  path,
+  router,
+}: NavbarProps): React.JSX.Element {
   const [active, setActive] = useState(false);
 
   const theme = getTheme(path);
-  const logoColor = theme === "light" ? "var(--text-white)" : "var(--include-purple)";
+  const logoColor =
+    theme === "light" ? "var(--text-white)" : "var(--include-purple)";
   const color = theme === "light" ? styles.light : styles.dark;
 
   const toggleMenu = () => {
@@ -43,22 +48,25 @@ export default function Navbar({ nav, path, router }: NavbarProps): React.JSX.El
         </section>
         <section className={styles.navbar_right}>
           <ul
-            className={`${styles.redirects} ${active ? styles.activeDropdown : ""
-              }`}
+            className={`${styles.redirects} ${
+              active ? styles.activeDropdown : ""
+            }`}
           >
             {nav.map((item, index) => (
               <li
                 key={item.name}
                 className={`${active ? styles.slideText : ""}`}
                 style={{
-                  transitionDelay: `calc(0.3s / 3 * ${active ? index + 1 : nav.length - index - 1
-                    })`,
+                  transitionDelay: `calc(0.3s / 3 * ${
+                    active ? index + 1 : nav.length - index - 1
+                  })`,
                 }}
               >
                 <Link href={`/${item.path}`} onClick={() => router.refresh()}>
                   <span
-                    className={`p-details ${color} ${active ? styles.fadeInText : ""
-                      }`}
+                    className={`p-details ${color} ${
+                      active ? styles.fadeInText : ""
+                    }`}
                   >
                     {item.name.toLowerCase()}
                   </span>

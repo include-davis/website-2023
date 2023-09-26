@@ -1,13 +1,13 @@
 /* eslint-disable react/jsx-pascal-case */
-import { ReactElement } from 'react';
-import { motion } from 'framer-motion';
-import styles from '../styles/services/services.module.scss';
+import { ReactElement } from "react";
+import { motion } from "framer-motion";
+import styles from "../styles/services/services.module.scss";
 
-import FAQ from './components/services/faq';
-import ContactForm from './components/services/form';
+import FAQ from "./components/services/faq";
+import ContactForm from "./components/services/form";
 
-import FAQS from '../json/services/faqs.json';
-import PHASES from '../json/services/process_phases.json';
+import FAQS from "../json/services/faqs.json";
+import PHASES from "../json/services/process_phases.json";
 
 const faqs_col1 = FAQS.col1;
 const faqs_col2 = FAQS.col2;

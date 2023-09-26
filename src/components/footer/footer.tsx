@@ -17,9 +17,14 @@ function getTheme(path: string) {
   }
 }
 
-export default function Footer({ nav, path, router }: FooterProps): React.JSX.Element {
+export default function Footer({
+  nav,
+  path,
+  router,
+}: FooterProps): React.JSX.Element {
   const theme = getTheme(path);
-  const logoColor = theme === "light" ? "var(--text-white)" : "var(--include-purple)";
+  const logoColor =
+    theme === "light" ? "var(--text-white)" : "var(--include-purple)";
   const color = theme === "light" ? styles.light : styles.dark;
 
   return (
@@ -35,7 +40,9 @@ export default function Footer({ nav, path, router }: FooterProps): React.JSX.El
             {nav.map((link) => (
               <li key={link.path}>
                 <Link href={`/${link.path}`} onClick={() => router.refresh()}>
-                  <span className={`p-details ${color}`}>{link.name.toLowerCase()}</span>
+                  <span className={`p-details ${color}`}>
+                    {link.name.toLowerCase()}
+                  </span>
                 </Link>
               </li>
             ))}

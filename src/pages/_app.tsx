@@ -7,15 +7,15 @@ import Footer from "@/components/footer/footer";
 import "../styles/globals.scss";
 
 const inter = Inter({
-  weight: ['400', '700'],
-  subsets: ['latin'],
-  variable: '--font-inter',
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 const navLinks = [
-  { name: 'About', path: 'about' },
-  { name: 'Projects', path: 'projects' },
-  { name: 'Get Involved', path: 'get-involved' },
+  { name: "About", path: "about" },
+  { name: "Projects", path: "projects" },
+  { name: "Get Involved", path: "get-involved" },
 ];
 
 export default function App({ Component, pageProps }: AppProps): ReactElement {

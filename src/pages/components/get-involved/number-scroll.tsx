@@ -1,11 +1,11 @@
-import { ReactElement } from 'react';
-import dynamic from 'next/dynamic';
-import { motion } from 'framer-motion';
-import styles from '../../../styles/get-involved/number-scroll.module.scss';
-import data from '../../../json/get-involved.json';
-import CountUp from 'react-countup';
+import { ReactElement } from "react";
+import dynamic from "next/dynamic";
+import { motion } from "framer-motion";
+import styles from "../../../styles/get-involved/number-scroll.module.scss";
+import data from "../../../json/get-involved.json";
+import CountUp from "react-countup";
 
-const AnimatedNumbers = dynamic(() => import('react-animated-numbers'), {
+const AnimatedNumbers = dynamic(() => import("react-animated-numbers"), {
   ssr: false,
 });
 
@@ -20,22 +20,29 @@ export default function NumberScroll(): ReactElement {
         return (
           <div className={styles.card} key={index}>
             <div className={styles.numBox}>
-                {card.number !== 1 && <CountUp
-                start={0}
-                end={card.number}
-                duration={4}
-                suffix='+'
-                className={styles.animatedNum}
-                enableScrollSpy
-                scrollSpyOnce
-                scrollSpyDelay={1} ></CountUp> || card.number == 1 && <CountUp
-                start={0}
-                end={card.number}
-                duration={4}
-                className={styles.animatedNum}
-                enableScrollSpy
-                scrollSpyOnce
-                scrollSpyDelay={1}></CountUp>}
+              {(card.number !== 1 && (
+                <CountUp
+                  start={0}
+                  end={card.number}
+                  duration={4}
+                  suffix="+"
+                  className={styles.animatedNum}
+                  enableScrollSpy
+                  scrollSpyOnce
+                  scrollSpyDelay={1}
+                ></CountUp>
+              )) ||
+                (card.number == 1 && (
+                  <CountUp
+                    start={0}
+                    end={card.number}
+                    duration={4}
+                    className={styles.animatedNum}
+                    enableScrollSpy
+                    scrollSpyOnce
+                    scrollSpyDelay={1}
+                  ></CountUp>
+                ))}
             </div>
             <p className={`${styles.title} p-details`}>{card.title}</p>
           </div>

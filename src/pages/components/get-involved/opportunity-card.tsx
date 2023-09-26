@@ -1,6 +1,6 @@
-import { ReactElement } from 'react';
-import Image from 'next/image';
-import styles from '../../../styles/get-involved/opportunity-card.module.scss';
+import { ReactElement } from "react";
+import Image from "next/image";
+import styles from "../../../styles/get-involved/opportunity-card.module.scss";
 
 interface OpportunityCardProps {
   name: string;
