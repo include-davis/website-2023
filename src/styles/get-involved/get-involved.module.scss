@@ -115,6 +115,7 @@
   align-items: center;
   justify-content: center;
   column-gap: 217px;
+
   @include mixins.tablet {
     flex-direction: column-reverse; 
   }
@@ -138,6 +139,7 @@
   @include mixins.phone {
     > h2 {
       font-size: 3rem;
+      text-wrap: wrap;
     }
     > p {
       font-size: 1.5rem;
