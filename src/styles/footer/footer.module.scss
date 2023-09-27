@@ -32,9 +32,10 @@
         text-wrap: nowrap;
         gap: 30px;
 
-        > li {
+        >li {
           list-style-type: none;
-          > a {
+
+          >a {
             text-decoration: none;
           }
         }
@@ -44,18 +45,14 @@
 
   @include mixins.tablet {
     bottom: var(--footer-spacer-tablet);
+
     .footer {
       width: calc(100% - 2 * var(--edge-spacer) * 0.3);
     }
   }
 
-  @include mixins.phone {
-    .footer {
-      width: calc(100% - 2 * var(--edge-spacer) * 0.2);
-    }
-  }
 
-  @include mixins.sm-phone {
+  @include mixins.phone {
     height: var(--footer-height-mobile);
     bottom: var(--footer-spacer-mobile);
 
@@ -68,6 +65,7 @@
 
       .footer_right {
         width: 100%;
+
         .footer_redirects {
           width: 100%;
           justify-content: space-evenly;

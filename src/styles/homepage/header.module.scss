@@ -3,7 +3,7 @@
 .homepage {
     display: flex;
     flex-direction: column;
-    padding: 0 24px;
+    padding-top: 100px;
     background: var(--purple-gradient);
     justify-content: space-between;
     overflow: hidden;
@@ -23,6 +23,7 @@
     align-items: center;
     gap: 62px;
     height: auto;
+    padding: 0 24px;
     padding-top: 174px;
 
     @include mixins.tablet {
@@ -55,8 +56,6 @@
 .title {
     >h1 {
         display: flex;
-        width: auto;
-        height: auto;
         gap: 20px;
         justify-content: center;
         align-items: center;
@@ -77,9 +76,13 @@
     flex-direction: column;
 
     @include mixins.tablet {
-        font-size: 4rem;
+        font-size: 5rem;
         transform: rotate(45deg);
         padding-bottom: 36px;
+    }
+
+    @include mixins.sm-phone {
+        font-size: 3.25rem;
     }
 }
 
@@ -131,9 +134,13 @@
     color: var(--text-white);
     text-align: center;
 
+    >p {
+        padding: 0 24px;
+    }
+
+
     @include mixins.tablet {
         margin-top: 100px;
         text-align: left;
     }
 }
-
