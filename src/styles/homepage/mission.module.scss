@@ -29,6 +29,7 @@
         object-fit: cover;
         transform: translateY(-50%);
         border-radius: 20px;
+        max-width: 900px;
 
         @include mixins.phone {
             width: calc(100% - 48px);
