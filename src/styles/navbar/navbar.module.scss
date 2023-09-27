@@ -65,6 +65,7 @@
 
   @include mixins.sm-phone {
     top: var(--navbar-spacer-mobile);
+    touch-action: none;
 
     .navbar {
       width: calc(100% - 2 * var(--edge-spacer) * 0.1);
