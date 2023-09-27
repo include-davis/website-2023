@@ -19,6 +19,7 @@
         text-align: center;
         gap: 10rem;
         padding: var(--edge-spacer);
+        padding-top: 0;
 
         @include mixins.sm-desktop {
             padding: 48px;
