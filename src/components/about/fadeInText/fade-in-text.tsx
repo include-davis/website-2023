@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 const delay = 0.1;
 
@@ -8,11 +8,12 @@ export default function FadeInText({
   index,
 }: {
   children: React.ReactNode;
+  // eslint-disable-next-line react/require-default-props
   index?: number;
 }): React.JSX.Element {
   const container = useRef(null);
   const isInView = useInView(container, {
-    amount: "all",
+    amount: 'all',
     once: true,
   });
 

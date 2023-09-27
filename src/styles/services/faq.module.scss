@@ -1,0 +1,22 @@
+@use 'src/styles/mixins';
+
+.faqbox{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8.8vh;
+
+    @include mixins.phone {
+        gap: 4vh;
+    }
+    
+    .faq {
+        flex-direction: column;
+        gap: 3.3vh;
+    
+        p {
+            font-weight: 700;
+        }
+    }    
+}

@@ -1,22 +1,24 @@
-import React from "react";
-import Image from "next/image";
-import InfiniteSlider from "@/components/infiniteSlider/infiniteSlider";
-import FadeInText from "@/components/about/fadeInText/fadeInText";
-import Avatar from "@/components/about/avatar/avatar";
-import { motion } from "framer-motion";
-import data from "@/json/about/about.json";
-import board from "@/json/about/board.json";
-import styles from "../styles/about/about.module.scss";
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable @next/next/no-img-element */
+import React from 'react';
+import Image from 'next/image';
+import InfiniteSlider from '@/components/infiniteSlider/infinite-slider';
+import FadeInText from '@/components/about/fadeInText/fade-in-text';
+import Avatar from '@/components/about/avatar/avatar';
+import { motion } from 'framer-motion';
+import data from '@/json/about/about.json';
+import board from '@/json/about/board.json';
+import styles from '../styles/about/about.module.scss';
 
 // Have navbar be fixed & inherit background color from page
 let companies = [
-  "Riot",
-  "Apple",
-  "Amazon",
-  "Microsoft",
-  "LinkedIn",
-  "Visa",
-  "Netflix",
+  'Riot',
+  'Apple',
+  'Amazon',
+  'Microsoft',
+  'LinkedIn',
+  'Visa',
+  'Netflix',
 ];
 
 companies = companies.concat(companies.slice(0));
@@ -32,24 +34,23 @@ const companiesContent = companies.map((company, index) => {
 });
  
 const blurs = {
-  blue: "/about/svgs/blurBlue.svg",
-  purple: "/about/svgs/blurPurple.svg",
+  blue: '/about/svgs/blurBlue.svg',
+  purple: '/about/svgs/blurPurple.svg',
 };
 
-let websites = ["bv", "ielc", "brkbar"];
-websites = websites.concat(websites.slice(0));
+let websites = ['bv', 'ielc', 'brkbar'];
 
-const websitesContent = websites.map((website, index) => {
-  return (
-    <img
-      src={`/about/images/${website}.jpg`}
-      className={styles.website_img}
-      loading="eager"
-      key={`${website} ${index}`}
-      alt=""
-    />
-  );
-});
+websites = [...websites, ...websites];
+
+const websitesContent = websites.map((website, index) => (
+  <img
+    src={`/about/images/${website}.jpg`}
+    className={styles.website_img}
+    loading="eager"
+    key={`${website} ${index}`}
+    alt=""
+  />
+));
 
 export default function About(): React.JSX.Element {
   return (
@@ -58,7 +59,7 @@ export default function About(): React.JSX.Element {
         <img
           className={styles.blur}
           src={blurs.blue}
-          style={{ position: "absolute", top: "0", right: "0" }}
+          style={{ position: 'absolute', top: '0', right: '0' }}
           alt=""
         />
         <section className={styles.header}>
@@ -79,13 +80,13 @@ export default function About(): React.JSX.Element {
         </section>
 
         <section className={styles.desc}>
-          <h2 style={{ textAlign: "left", lineHeight: "112.903%" }}>
+          <h2 style={{ textAlign: 'left', lineHeight: '112.903%' }}>
             {data.intro.description[0]}
-            <span style={{ color: "var(--include-purple)" }}>
+            <span style={{ color: 'var(--include-purple)' }}>
               {data.intro.description[1]}
             </span>
             {data.intro.description[2]}
-            <span style={{ color: "var(--include-purple)" }}>
+            <span style={{ color: 'var(--include-purple)' }}>
               {data.intro.description[3]}
             </span>
             {data.intro.description[4]}
@@ -98,7 +99,7 @@ export default function About(): React.JSX.Element {
               ease: [0, 0.71, 0.2, 1.01],
             }}
             viewport={{ once: true }}
-            style={{ width: "100%" }}
+            style={{ width: '100%' }}
           >
             <Image
               src="/about/images/descPic.jpg"
@@ -106,10 +107,10 @@ export default function About(): React.JSX.Element {
               height={960}
               alt=""
               style={{
-                width: "100%",
-                height: "auto",
-                objectFit: "contain",
-                borderRadius: "20px",
+                width: '100%',
+                height: 'auto',
+                objectFit: 'contain',
+                borderRadius: '20px',
               }}
             />
           </motion.section>
@@ -117,7 +118,7 @@ export default function About(): React.JSX.Element {
         <img
           className={styles.blur}
           src={blurs.purple}
-          style={{ position: "absolute", top: "0", left: "0" }}
+          style={{ position: 'absolute', top: '0', left: '0' }}
           alt=""
         />
       </article>
@@ -150,29 +151,27 @@ export default function About(): React.JSX.Element {
 
       <article className={styles.board}>
         <section className={styles.board_text}>
-          <h1 style={{ lineHeight: "112.903%" }}>{data.board.header}</h1>
-          <div className="p-small" style={{ padding: "10px 20px" }}>
+          <h1 style={{ lineHeight: '112.903%' }}>{data.board.header}</h1>
+          <div className="p-small" style={{ padding: '10px 20px' }}>
             {data.board.description}
           </div>
         </section>
         <section className={styles.board_members}>
-          {board.members.map((mem) => {
-            return (
-              <Avatar
-                name={mem.name}
-                title={mem.title}
-                image={mem.imageSrc}
-                key={mem.name}
-              />
-            );
-          })}
+          {board.members.map((mem) => (
+            <Avatar
+              name={mem.name}
+              title={mem.title}
+              image={mem.imageSrc}
+              key={mem.name}
+            />
+          ))}
         </section>
       </article>
 
       <article className={styles.future}>
         <section className={styles.future_text}>
-          <h1 style={{ lineHeight: "120.833%" }}>{data.future.header}</h1>
-          <p style={{ color: "var(--text-white)" }}>
+          <h1 style={{ lineHeight: '120.833%' }}>{data.future.header}</h1>
+          <p style={{ color: 'var(--text-white)' }}>
             {data.future.description}
           </p>
         </section>

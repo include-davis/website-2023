@@ -1,11 +1,12 @@
-import React from "react";
-import styles from "../../styles/infiniteSlider/infiniteSlider.module.scss";
+/* eslint-disable react/require-default-props */
+import React from 'react';
+import styles from '../../styles/infiniteSlider/infiniteSlider.module.scss';
 
-type InfiniteSliderProps = {
+interface InfiniteSliderProps {
   children: React.ReactNode;
   durationInMs?: number;
   start?: number;
-};
+}
 
 export default function InfiniteSlider({
   children,
