@@ -65,6 +65,7 @@
 
   @include mixins.sm-phone {
     top: var(--navbar-spacer-mobile);
+    position: sticky;
     touch-action: none;
 
     .navbar {
