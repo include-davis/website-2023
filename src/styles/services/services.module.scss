@@ -201,11 +201,10 @@
         }
 
         .form_box {
-            max-width: 100%;
-            ;
+            max-width: 100%;;
 
-            h4 {
-                border: 1px solid var(--text-grey);
+            .loader {
+                display: none;
             }
         }
     }

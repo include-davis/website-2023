@@ -4,7 +4,11 @@
 import { ReactElement } from 'react';
 import styles from '../../../styles/services/form.module.scss';
 
-export default function ContactForm(onSubmitHandler: any): ReactElement {
+export default function ContactForm({
+  onSubmitHandler,
+}: {
+  onSubmitHandler: (event: React.FormEvent<HTMLFormElement>) => Promise<void>;
+}): ReactElement {
   return (
     <form className={styles.form_container} onSubmit={onSubmitHandler}>
       <div className={styles.block1}>
