@@ -15,6 +15,7 @@ const inter = Inter({
 const navLinks = [
   { name: 'About', path: 'about' },
   { name: 'Projects', path: 'projects' },
+  { name: 'Services', path: 'services'},
   { name: 'Get Involved', path: 'get-involved' },
 ];
 
@@ -22,10 +23,10 @@ export default function App({ Component, pageProps }: AppProps): ReactElement {
   const router = useRouter();
 
   return (
-    <div className={`${inter.variable}`} style={{ position: 'relative' }}>
-      <Navbar nav={navLinks} path={router.pathname} router={router} />
+    <div className={`${inter.variable}`} style={{ position: "relative" }}>
+      <Navbar nav={navLinks} path={router.pathname} />
       <Component {...pageProps} />
-      <Footer nav={navLinks} path={router.pathname} router={router} />
+      <Footer nav={navLinks} path={router.pathname} />
     </div>
   );
 }

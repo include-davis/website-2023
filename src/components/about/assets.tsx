@@ -1,10 +1,10 @@
-import amazon from '../../../public/about/svgs/amazon.svg';
-import apple from '../../../public/about/svgs/apple.svg';
-import linkedin from '../../../public/about/svgs/linkedin.svg';
-import microsoft from '../../../public/about/svgs/microsoft.svg';
-import netflix from '../../../public/about/svgs/netflix.svg';
-import riot from '../../../public/about/svgs/riot.svg';
-import visa from '../../../public/about/svgs/visa.svg';
+import amazon from "@/about/svgs/amazon.svg";
+import apple from "@/about/svgs/apple.svg";
+import linkedin from "@/about/svgs/linkedin.svg";
+import microsoft from "@/about/svgs/microsoft.svg";
+import netflix from "@/about/svgs/netflix.svg";
+import riot from "@/about/svgs/riot.svg";
+import visa from "@/about/svgs/visa.svg";
 
 const assets = [amazon, apple, linkedin, microsoft, netflix, riot, visa];
 
