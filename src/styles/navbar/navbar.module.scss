@@ -84,11 +84,11 @@
           flex-direction: column;
           align-items: flex-start;
           justify-content: center;
-          // gap: calc(var(--navbar-height) * 0.1);
 
-          max-height: 0;
+          // max-height: 0;
+          transform: translateX(-100%);
+          transition: transform 0.75s ease-in-out;
           overflow: hidden;
-          transition: max-height 0.75s ease-in-out;
 
           >li {
             width: 100%;
@@ -115,7 +115,8 @@
         }
 
         .activeDropdown {
-          max-height: calc(100vh - var(--navbar-height) - 2 * var(--navbar-spacer-mobile));
+          // max-height: calc(100vh - var(--navbar-height) - 2 * var(--navbar-spacer-mobile));
+          transform: translateX(0);
         }
 
         .dropdown {
