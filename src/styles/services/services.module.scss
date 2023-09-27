@@ -1,0 +1,252 @@
+@use 'src/styles/mixins';
+
+.page {
+    padding-top: 250px;
+    padding-bottom: 200px;
+
+    //variables for process animation
+    --phase-height-desktop: 50vh;
+    --phase-height-mobile: 320px;
+
+    @include mixins.phone {
+        padding-top: 200px;
+    }
+
+    .main_content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10rem;
+        padding: var(--edge-spacer);
+
+        @include mixins.sm-desktop {
+            padding: 48px;
+        }
+
+        @include mixins.phone {
+            padding: 24px;
+            gap: 5rem;
+        }
+
+        //Start a Project section
+        .start_box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2.5rem;
+
+            width: 100%;
+
+            .text {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: center;
+                width: fit-content;
+
+                p {
+                    color: var(--text-black-light);
+                }
+
+                h1 {
+                    color: var(--include-purple);
+                }
+            }
+
+            button {
+                display: flex;
+                padding: 1.25rem 3.125rem;
+                align-items: flex-start;
+                gap: 0.625rem;
+
+                border-radius: 0.625rem;
+                border: 1px solid var(--include-purple);
+                background: var(--include-purple);
+
+                p {
+                    color: var(--text-white);
+                    text-align: center;
+                }
+            }
+        }
+
+        //Process section
+        .process_box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            width: 100%;
+
+            img {
+                width: 5rem;
+                height: 5rem;
+            }
+
+            h2 {
+                color: var(--text-black-light);
+            }
+
+            .timeline {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+
+                //adapted from sam's code
+                .scrollLine {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding-top: 2.5rem;
+
+                    /*
+                    @include mixins.phone {
+                        display: none;
+                    }
+*/
+                    .line {
+                        width: 2px;
+                        height: var(--phase-height-desktop);
+                        background-color: var(--include-purple);
+
+                        @include mixins.phone {
+                            margin: auto;
+                            height: var(--phase-height-mobile);
+                        }
+                    }
+
+                    .innerCircle {
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 100%;
+                        background: var(--purple-gradient);
+
+                    }
+
+                    .outerCircle {
+                        width: 50px;
+                        height: 50px;
+                        border: 2px solid var(--include-purple);
+                        border-radius: 100%;
+                        box-shadow: 0px 0px 75px 0px rgba(60, 37, 126, 0.60);
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+
+                .phases {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 2.25rem;
+                    align-self: stretch;
+
+                    padding: 0 3rem;
+
+                    @include mixins.phone {
+                        gap: 3rem;
+                        padding: 0 1rem;
+                    }
+
+                    .phase {
+                        width: 100%;
+                        height: calc(var(--phase-height-desktop) + 0.9rem);
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+
+                        align-self: center;
+                        text-align: left;
+
+                        @include mixins.phone {
+                            height: fit-content;
+
+                            flex-direction: column-reverse;
+                            align-items: center;
+                            justify-content: none;
+                        }
+
+
+                        .text {
+                            width: 60%;
+
+                            @include mixins.phone {
+                                width: 100%;
+                                text-align: center;
+                            }
+
+                            h3 {
+                                @include mixins.phone {
+                                    font-size: 2.625rem;
+                                }
+                            }
+                        }
+
+                        img {
+                            width: 21.875rem;
+                            height: 14.58331rem;
+                            border-radius: 1.25rem;
+
+                            @include mixins.phone {
+                                width: 10.9375rem;
+                                height: 7.291655rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .form_box {
+            max-width: 100%;
+            ;
+
+            h4 {
+                border: 1px solid var(--text-grey);
+            }
+        }
+    }
+
+    .faq_box {
+        background-color: var(--grey-background);
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.25rem;
+        flex-shrink: 0;
+
+        padding: var(--edge-spacer);
+        padding-bottom: 10rem;
+
+        @include mixins.sm-desktop {
+            padding: 48px;
+        }
+
+        @include mixins.phone {
+            padding: 24px;
+            padding-bottom: 8rem;
+        }
+
+        .content {
+            border-radius: 1.25rem;
+            background: var(--text-white);
+
+            display: flex;
+            flex-direction: row;
+            gap: 5%;
+
+            width: 100%;
+            padding: 5%;
+
+            @include mixins.phone {
+                flex-direction: column;
+                gap: 4vh;
+            }
+        }
+    }
+}

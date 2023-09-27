@@ -1,0 +1,195 @@
+@use 'src/styles/mixins';
+
+.form_container {
+    .block1 {
+        margin-bottom: 8.8vh;
+
+        p {
+            margin-bottom: 5vh;
+        }
+
+        .form_inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 3.3vh;
+
+            .name_input {
+                display: flex;
+                flex-direction: row;
+                gap: 2vw;
+
+                .input {
+                    height: 3rem;
+                    border: none;
+                    border-bottom: 1px solid var(--text-black-light);
+                }
+            }
+
+            .input {
+                width: 100%;
+                height: 3rem;
+                border: none;
+                border-bottom: 1px solid var(--text-black-light);
+                font-size: 1.5rem;
+                font-family: 'Inter';
+                padding: 1rem;
+            }
+
+            .input::placeholder {
+                color: var(--text-black-light);
+                vertical-align: bottom;
+
+                color: var(--Black, #414141);
+                font-family: var(--font-inter);
+                font-size: 1.5rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+
+                @include mixins.phone {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+
+    .block2 {
+        margin-bottom: 8.8vh;
+
+        h3 {
+            margin-bottom: 2.5vh;
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 5.2vh;
+            text-align: center;
+        }
+
+        .options {
+            border: 1px solid var(--text-black-light);
+            border-radius: 1.25rem;
+
+            display: flex;
+            flex-wrap: wrap;
+
+            .help_options1,
+            .help_options2,
+            .help_options3,
+            .help_options4,
+            .help_options5,
+            .help_options6 {
+                width: 50%;
+                padding: 1.25rem 0.625rem;
+
+                display: flex;
+                gap: 2vw;
+
+                input {
+                    width: 1.875rem;
+                    height: 1.875rem;
+                    flex-shrink: 0;
+
+                    border: 1px solid var(--text-black-dark);
+                }
+
+                @include mixins.phone {
+                    width: 100%;
+                }
+            }
+
+            .help_options1,
+            .help_options3,
+            .help_options5 {
+                border-right: 1px solid var(--text-black-dark);
+            }
+
+            .help_options1,
+            .help_options2,
+            .help_options3,
+            .help_options4 {
+                border-bottom: 1px solid var(--text-black-dark);
+            }
+
+            @include mixins.phone {
+                .help_options5 {
+                    border-bottom: 1px solid var(--text-black-dark);
+                }
+
+                .help_options1,
+                .help_options3,
+                .help_options5 {
+                    border-right: none;
+                }
+            }
+
+            label {
+                color: var(--text-black-dark);
+
+                font-family: var(--font-inter);
+                font-size: 1.5rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+
+    }
+
+    .block3 {
+        margin-bottom: 8.8vh;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+            margin-bottom: 2.5vh;
+            text-align: center;
+        }
+
+        .textarea {
+            display: flex;
+            width: 75rem;
+            max-width: 100%;
+            height: 15.625rem;
+            padding: 1rem;
+            align-items: flex-start;
+            gap: 0.625rem;
+
+            border-radius: 1.25rem;
+            border: 1px solid var(--text-black-light);
+            font-size: 1.5rem;
+            font-family: 'Inter';
+        }
+
+        .textarea::placeholder {
+            color: var(--text-black-light);
+            vertical-align: bottom;
+
+            font-family: var(--font-inter);
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+    }
+
+    .submit_button {
+        margin-top: 8.8vh;
+
+        padding: 1.25rem 3.125rem;
+        gap: 0.625rem;
+
+        border-radius: 0.625rem;
+        border: 1px solid var(--include-purple);
+        background: var(--include-purple);
+
+        color: var(--text-white);
+        text-align: center;
+
+        font-family: var(--font-inter);
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}

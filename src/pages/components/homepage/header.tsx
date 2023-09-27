@@ -1,28 +1,31 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable react/no-array-index-key */
 import { ReactElement } from 'react';
-import InfiniteSlider from "@/components/infiniteSlider/infiniteSlider";
+import InfiniteSlider from '@/components/infiniteSlider/infinite-slider';
 import styles from '../../../styles/homepage/header.module.scss';
 
 let companies = [
-  "Riot",
-  "Apple",
-  "Amazon",
-  "Microsoft",
-  "LinkedIn",
-  "Visa",
-  "Netflix",
+  'Riot',
+  'Apple',
+  'Amazon',
+  'Microsoft',
+  'LinkedIn',
+  'Visa',
+  'Netflix',
 ];
 
-companies = companies.concat(companies.slice(0));
-const companiesContent = companies.map((company, index) => {
-  return (
-    <img
-      src={`/about/svgs/${company}.svg`}
-      loading="eager"
-      alt=""
-      key={`${company} ${index}`}
-    />
-  );
-});
+companies = [...companies, ...companies];
+const companiesContent = companies.map((company, index) => (
+  <img
+    src={`/about/svgs/${company}.svg`}
+    loading="eager"
+    alt=""
+    key={`${company} ${index}`}
+  />
+));
+
 export default function Header(): ReactElement {
   return (
     <div className={styles.homepage}>
@@ -40,18 +43,20 @@ export default function Header(): ReactElement {
           </h1>
         </div>
         <img className={styles.mobile} src="/homepage/header/header2.png" />
-        <p className={styles.description}>We are a UC Davis community of web developers and designers dedicated to fostering collaboration, growth and the creation of creative digital solutions.</p>
-        <button className={styles.join}>Join the community</button>
+        <p className={styles.description}>
+          We are a UC Davis community of web developers and designers dedicated
+          to fostering collaboration, growth and the creation of creative
+          digital solutions.
+        </p>
+        <button type="button" className={styles.join}>
+          Join the community
+        </button>
       </div>
 
       <div className={styles.footer}>
         <p>Where we've gone</p>
-        <InfiniteSlider durationInMs={4000}>
-          {companiesContent}
-        </InfiniteSlider>
+        <InfiniteSlider durationInMs={4000}>{companiesContent}</InfiniteSlider>
       </div>
-
     </div>
   );
-
 }
