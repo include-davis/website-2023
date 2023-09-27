@@ -1,19 +1,32 @@
 @use 'src/styles/mixins';
 
 // HEADER //
-.header, .opportunityContainer, .mainFooter {
+.header {
+  padding: 200px var(--edge-spacer) 200px;
+
+  @include mixins.tablet {
+    padding: 150px var(--med-edge-spacer) 100px;
+  }
+  @include mixins.phone {
+    padding: 100px var(--small-edge-spacer) 50px;
+  }
+}
+.mainFooter {
   padding: 200px var(--edge-spacer);
 
   @include mixins.tablet {
-    padding: 100px var(--med-edge-spacer);
+    padding: 100px var(--med-edge-spacer)
+    200px;
   }
   @include mixins.phone {
-    padding: 50px var(--small-edge-spacer);
+    padding: 50px var(--small-edge-spacer) 200px;
   }
 }
 .header {
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .meshLeft {
@@ -24,10 +37,10 @@
   filter: blur(7px);
 
   @include mixins.tablet {
-    transform: translate(-30%, -20%) scale(0.8);
+    transform: translate(-30%, -10%) scale(0.8);
   }
   @include mixins.phone {
-    transform: translate(-45%, -35%) scale(0.5);
+    transform: translate(-45%, -25%) scale(0.5);
   }
 
 }
@@ -102,6 +115,7 @@
   align-items: center;
   justify-content: center;
   column-gap: 217px;
+
   @include mixins.tablet {
     flex-direction: column-reverse; 
   }
@@ -113,6 +127,10 @@
 .recruitmentText {
   display: flex;
   flex-direction: column;
+  >h2 {
+    text-wrap: nowrap;
+  }
+
   @include mixins.tablet {
     > h2 {
       font-size: 4.5rem;
@@ -121,6 +139,7 @@
   @include mixins.phone {
     > h2 {
       font-size: 3rem;
+      text-wrap: wrap;
     }
     > p {
       font-size: 1.5rem;
@@ -193,6 +212,8 @@
 
 .opportunityContainer {
   background: var(--purple-gradient);
+  padding: 200px 50px;
+
   
 }
 //OPPORTUNITIES//
@@ -243,11 +264,12 @@
 .whiteBg {
   padding-top: 300px;
   position: relative;
+
   @include mixins.tablet {
     padding: 250px 0px 100px;
   }
   @include mixins.phone {
-    padding: 150px 0px 50px;
+    padding: 200px 0px 50px;
   }
 }
 .purpleBg, .innerCircle, .line {
@@ -263,7 +285,7 @@
     padding: 92px var(--med-edge-spacer) 350px;
   }
   @include mixins.phone {
-    padding: 50px var(--small-edge-spacer) 150px;
+    padding: 50px var(--small-edge-spacer) 200px;
     font-size: 2.75rem;
   }
 }
@@ -276,6 +298,7 @@
 .line {
   width: 2px;
   height: 232px;
+
   @include mixins.phone {
     margin: auto;
   }
@@ -303,6 +326,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   @include mixins.phone {
     display: none;
   }
@@ -327,6 +351,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @include mixins.tablet {
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
   @include mixins.phone {
     display: block;
   }
@@ -334,6 +364,7 @@
 }
 .phone {
   display: none;
+
   @include mixins.phone {
     display: contents;
   }
