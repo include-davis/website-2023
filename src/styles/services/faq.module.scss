@@ -1,3 +1,5 @@
+@use 'src/styles/mixins';
+
 .faqbox{
     width: 100%;
 
@@ -5,6 +7,10 @@
     flex-direction: column;
     gap: 8.8vh;
 
+    @include mixins.phone {
+        gap: 4vh;
+    }
+    
     .faq {
         flex-direction: column;
         gap: 3.3vh;

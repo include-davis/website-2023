@@ -50,8 +50,10 @@ export default function Services(): ReactElement {
     <div className={styles.page}>
       <div className={styles.main_content}>
         <div className={styles.start_box}>
-          <p>OUR SERVICES</p>
-          <h1>Start a project</h1>
+          <div className={styles.text}>
+            <p>OUR SERVICES</p>
+            <h1>Start a project</h1>
+          </div>
           <button type="button">
             <p>Start a project</p>
           </button>
@@ -80,9 +82,7 @@ export default function Services(): ReactElement {
                     <h3>{phase.title}</h3>
                     <p className="p-small">{phase.desc}</p>
                   </div>
-                  <div className={styles.img_wrapper}>
-                    <img src={phase.img} />
-                  </div>
+                  <img src={phase.img} />
                 </div>
               ))}
             </div>
