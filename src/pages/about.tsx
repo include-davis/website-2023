@@ -21,18 +21,16 @@ let companies = [
   'Netflix',
 ];
 
-companies = companies.concat(companies.slice(0));
-const companiesContent = companies.map((company, index) => {
-  return (
-    <img
-      src={`/about/svgs/${company}.svg`}
-      loading="eager"
-      alt=""
-      key={`${company} ${index}`}
-    />
-  );
-});
- 
+companies = [...companies, ...companies];
+const companiesContent = companies.map((company, index) => (
+  <img
+    src={`/about/svgs/${company}.svg`}
+    loading="eager"
+    alt=""
+    key={`${company} ${index}`}
+  />
+));
+
 const blurs = {
   blue: '/about/svgs/blurBlue.svg',
   purple: '/about/svgs/blurPurple.svg',
