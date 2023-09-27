@@ -55,7 +55,7 @@ export default function Header(): ReactElement {
 
       <div className={styles.footer}>
         <p>Where we've gone</p>
-        <InfiniteSlider durationInMs={4000}>{companiesContent}</InfiniteSlider>
+        <InfiniteSlider durationInMs={2000}>{companiesContent}</InfiniteSlider>
       </div>
     </div>
   );
