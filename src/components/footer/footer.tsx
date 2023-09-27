@@ -1,18 +1,21 @@
-import React from "react";
-import styles from "../../styles/footer/footer.module.scss";
-import Logo from "../branding/logo";
+/* eslint-disable @next/next/no-html-link-for-pages */
+/* eslint-disable func-style */
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+import React from 'react';
+import styles from '../../styles/footer/footer.module.scss';
+import Logo from '../branding/logo';
 
 interface FooterProps {
   nav: { name: string; path: string }[];
   path: string;
-};
+}
 
 function getTheme(path: string) {
-  if (path === "/" || path === "/about" || path === "/get-involved") {
-    return "light";
-  } else {
-    return "dark";
+  if (path === '/' || path === '/about' || path === '/get-involved') {
+    return 'light';
   }
+
+  return 'dark';
 }
 
 export default function Footer({ nav, path }: FooterProps): React.JSX.Element {
@@ -25,7 +28,7 @@ export default function Footer({ nav, path }: FooterProps): React.JSX.Element {
     <div className={styles.footer_wrapper}>
       <footer className={styles.footer}>
         <section className={styles.logo}>
-          <a href={"/"}>
+          <a href="/">
             <Logo fillColor={logoColor} />
           </a>
         </section>
@@ -34,7 +37,9 @@ export default function Footer({ nav, path }: FooterProps): React.JSX.Element {
             {nav.map((link) => (
               <li key={link.path}>
                 <a href={`/${link.path}`}>
-                  <span className={`p-details ${color}`}>{link.name.toLowerCase()}</span>
+                  <span className={`p-details ${color}`}>
+                    {link.name.toLowerCase()}
+                  </span>
                 </a>
               </li>
             ))}
