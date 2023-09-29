@@ -3,7 +3,7 @@ import { ReactElement } from 'react';
 import dynamic from 'next/dynamic';
 import CountUp from 'react-countup';
 import styles from '../../../styles/get-involved/number-scroll.module.scss';
-import data from '../../../json/get-involved.json';
+import data from '../../../json/get-involved/get-involved.json';
 
 const AnimatedNumbers = dynamic(() => import('react-animated-numbers'), {
   ssr: false,

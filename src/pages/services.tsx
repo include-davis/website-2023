@@ -1,9 +1,11 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-pascal-case */
-import { ReactElement, useState } from 'react';
+import { ReactElement, useRef, RefObject } from 'react';
 import { motion } from 'framer-motion';
+import Head from 'next/head';
 import styles from '../styles/services/services.module.scss';
 
 import FAQ from './components/services/faq';
@@ -24,47 +26,7 @@ export default function Services(): ReactElement {
     </div>
   );
 
-  // Handles form submission
-  const [resPending, setResPending] = useState<boolean>(false);
-  const [response, setResponse] = useState<string | null>(null);
-
-  const onSubmitHandler = async (
-    event: React.FormEvent<HTMLFormElement>
-  ): Promise<void> => {
-    event.preventDefault();
-
-    setResPending(true);
-
-    // Getting form entries
-    const data = new FormData(event.currentTarget);
-    const values: { [key: string]: FormDataEntryValue } = Object.fromEntries(
-      data.entries()
-    );
-
-    try {
-      // POST request to Nodemailer API
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        body: JSON.stringify(values),
-      });
-
-      // Response from the API
-      if (res.ok) {
-        setResponse('Email sent successfully!');
-        window.alert('Email sent successfully!');
-      } else {
-        setResponse('Failed to send email. Please try again.');
-      }
-    } catch (error) {
-      console.error('Error sending email:', error);
-      setResponse('Failed to send email. Please try again.');
-      window.alert('Failed to send email. Please try again.');
-    } finally {
-      // Re-enabled form submission after processing
-      setResPending(false);
-      window.location.reload();
-    }
-  };
+  const formRef = useRef<HTMLInputElement>(null);
 
   // adapted from sam's code for the scroll line:
   const boxVariant = {
@@ -88,58 +50,72 @@ export default function Services(): ReactElement {
     </motion.div>
   );
 
+  // eslint-disable-next-line unicorn/consistent-function-scoping
+  const handleScroll = (ref: RefObject<HTMLInputElement>) => {
+    if (ref.current)
+      window.scrollTo({
+        top: ref.current.offsetTop,
+        left: 0,
+        behavior: 'smooth',
+      });
+  };
+
   return (
-    <div className={styles.page}>
-      <div className={styles.main_content}>
-        <div className={styles.start_box}>
-          <div className={styles.text}>
-            <p>OUR SERVICES</p>
-            <h1>Start a project</h1>
-          </div>
-          <button type="button">
-            <p>Start a project</p>
-          </button>
-        </div>
-        <div className={styles.process_box}>
-          <img src="/assets/services/process.png" alt="process" />
-          <h2>Process</h2>
-          <div className={styles.timeline}>
-            <div className={styles.scrollLine}>
-              {bullet}
-              {line}
-              {bullet}
-              {line}
-              {bullet}
-              {line}
-              {bullet}
-              {line}
-              {bullet}
-              {line}
-              {bullet}
+    <>
+      <Head>
+        <title>Our Services</title>
+        <meta name="description" content="What we can do for you" />
+      </Head>
+      <div className={styles.page}>
+        <div className={styles.main_content}>
+          <div className={styles.start_box}>
+            <div className={styles.text}>
+              <p>OUR SERVICES</p>
+              <h1>Start a project</h1>
             </div>
-            <div className={styles.phases}>
-              {phaseList?.map((phase, index) => (
-                <div key={index} className={styles.phase}>
-                  <div className={styles.text}>
-                    <h3>{phase.title}</h3>
-                    <p className="p-small">{phase.desc}</p>
+            <button type="button" onClick={(): void => handleScroll(formRef)}>
+              <p>Start a project</p>
+            </button>
+          </div>
+          <div className={styles.process_box}>
+            <img src="/assets/services/process.png" alt="process" />
+            <h2>Process</h2>
+            <div className={styles.timeline}>
+              <div className={styles.scrollLine}>
+                {bullet}
+                {line}
+                {bullet}
+                {line}
+                {bullet}
+                {line}
+                {bullet}
+                {line}
+                {bullet}
+                {line}
+                {bullet}
+              </div>
+              <div className={styles.phases}>
+                {phaseList?.map((phase, index) => (
+                  <div key={index} className={styles.phase}>
+                    <div className={styles.text}>
+                      <h3>{phase.title}</h3>
+                      <p className="p-small">{phase.desc}</p>
+                    </div>
+                    <img src={phase.img} />
                   </div>
-                  <img src={phase.img} />
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
+          <div className={styles.form_box}>
+            <ContactForm formRef={formRef} />
+          </div>
         </div>
-        <div className={styles.form_box}>
-          <ContactForm onSubmitHandler={onSubmitHandler} />
-          {resPending && <div className={styles.loader}></div>}
-          {response && <div className={styles.loader}></div>}
+        <div className={styles.faq_box}>
+          <h2>Frequently Asked Questions</h2>
+          {faqs}
         </div>
       </div>
-      <div className={styles.faq_box}>
-        <h2>Frequently Asked Questions</h2>
-        {faqs}
-      </div>
-    </div>
+    </>
   );
 }

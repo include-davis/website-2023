@@ -1,4 +1,5 @@
 import { ReactElement } from 'react';
+import Head from 'next/head';
 import HomeHeader from './components/homepage/header';
 import Grow from './components/homepage/grow';
 
@@ -11,28 +12,33 @@ import styles from '../styles/homepage/homepage.module.scss';
 
 export default function Home(): ReactElement {
   return (
-    <div className={styles.homepage}>
-      <div className={styles.header}>
-        <HomeHeader />
-      </div>
-      <div className={styles.grow}>
-        <Grow />
-      </div>
+    <>
+      <Head>
+        <title>Include at Davis</title>
+      </Head>
+      <div className={styles.homepage}>
+        <div className={styles.header}>
+          <HomeHeader />
+        </div>
+        <div className={styles.grow}>
+          <Grow />
+        </div>
 
-      <div className={styles.purple}>
-        <div className={styles.mission}>
-          <Mission />
-        </div>
-        <div className={styles.work}>
-          <RecentWork />
-        </div>
-        <div className={styles.pillars}>
-          <Pillars />
-        </div>
-        <div className={styles.footer}>
-          <HomeFooter />
+        <div className={styles.purple}>
+          <div className={styles.mission}>
+            <Mission />
+          </div>
+          <div className={styles.work}>
+            <RecentWork />
+          </div>
+          <div className={styles.pillars}>
+            <Pillars />
+          </div>
+          <div className={styles.footer}>
+            <HomeFooter />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

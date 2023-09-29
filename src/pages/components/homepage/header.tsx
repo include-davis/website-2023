@@ -4,6 +4,7 @@
 /* eslint-disable react/no-array-index-key */
 import { ReactElement } from 'react';
 import InfiniteSlider from '@/components/infiniteSlider/infinite-slider';
+import Link from 'next/link';
 import styles from '../../../styles/homepage/header.module.scss';
 
 let companies = [
@@ -48,9 +49,11 @@ export default function Header(): ReactElement {
           to fostering collaboration, growth and the creation of creative
           digital solutions.
         </p>
-        <button type="button" className={styles.join}>
-          Join the community
-        </button>
+        <Link href="/get-involved">
+          <button type="button" className={styles.join}>
+            Join the community
+          </button>
+        </Link>
       </div>
 
       <div className={styles.footer}>

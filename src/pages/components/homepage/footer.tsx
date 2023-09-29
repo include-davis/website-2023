@@ -1,4 +1,5 @@
 import { ReactElement } from 'react';
+import Link from 'next/link';
 import styles from '../../../styles/homepage/footer.module.scss';
 
 export default function Footer(): ReactElement {
@@ -14,12 +15,16 @@ export default function Footer(): ReactElement {
       </div>
 
       <div className={styles.buttons}>
-        <button type="button" className={styles.companies}>
-          Companies
-        </button>
-        <button type="button" className={styles.students}>
-          Students
-        </button>
+        <Link href="/services">
+          <button type="button" className={styles.companies}>
+            Companies
+          </button>
+        </Link>
+        <Link href="/get-involved">
+          <button type="button" className={styles.students}>
+            Students
+          </button>
+        </Link>
       </div>
     </div>
   );
