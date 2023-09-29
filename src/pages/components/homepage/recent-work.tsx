@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
 import WorkCard from './work-card';
-import data from '../../../json/recent-work.json';
+import data from '../../../json/homepage/recent-work.json';
 import styles from '../../../styles/homepage/work.module.scss';
 
 export default function Work(): React.JSX.Element {
@@ -15,6 +15,7 @@ export default function Work(): React.JSX.Element {
         date={card.date}
         header={card.header}
         description={card.description}
+        url={card.url}
       />
     );
   });

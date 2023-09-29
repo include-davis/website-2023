@@ -6,11 +6,17 @@ import styles from '../../../styles/services/form.module.scss';
 
 export default function ContactForm({
   onSubmitHandler,
+  formRef,
 }: {
   onSubmitHandler: (event: React.FormEvent<HTMLFormElement>) => Promise<void>;
+  formRef: any;
 }): ReactElement {
   return (
-    <form className={styles.form_container} onSubmit={onSubmitHandler}>
+    <form
+      ref={formRef}
+      className={styles.form_container}
+      onSubmit={onSubmitHandler}
+    >
       <div className={styles.block1}>
         <p>
           Thank you for your interest in working with us. Please fill out the

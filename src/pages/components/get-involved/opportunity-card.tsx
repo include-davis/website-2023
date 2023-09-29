@@ -1,17 +1,20 @@
 import { ReactElement } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../../../styles/get-involved/opportunity-card.module.scss';
 
 interface OpportunityCardProps {
   name: string;
   alt: string;
   description: string;
+  url: string;
 }
 
 export default function OpportunityCard({
   name,
   alt,
   description,
+  url,
 }: OpportunityCardProps): ReactElement {
   return (
     <div className={styles.cardContainer}>
@@ -24,9 +27,11 @@ export default function OpportunityCard({
       />
       <h4 className={styles.header}>{name}</h4>
       <p className={` ${styles.p} p-small`}>{description}</p>
-      <button type="button" className={styles.button}>
-        LEARN MORE
-      </button>
+      <Link href={url}>
+        <button type="button" className={styles.button}>
+          LEARN MORE
+        </button>
+      </Link>
     </div>
   );
 }
