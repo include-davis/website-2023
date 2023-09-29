@@ -24,7 +24,7 @@ export default function WorkCard({
       <hr></hr>
       <h4 className={styles.header}>{header}</h4>
       <p className={styles.desc}>{description}</p>
-      <Link href={url} target="_blank">
+      <Link href={url || '/'} target="_blank">
         <button type="button" className={styles.button}>
           <span className={styles.dot}>&#9679;</span> VISIT SITE
         </button>
