@@ -27,7 +27,7 @@ export default function OpportunityCard({
       />
       <h4 className={styles.header}>{name}</h4>
       <p className={` ${styles.p} p-small`}>{description}</p>
-      <Link href={url}>
+      <Link href={url || '/'}>
         <button type="button" className={styles.button}>
           LEARN MORE
         </button>
