@@ -3,7 +3,7 @@
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-pascal-case */
-import { ReactElement, useState, useRef, RefObject } from 'react';
+import { ReactElement, useRef, RefObject } from 'react';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import styles from '../styles/services/services.module.scss';
@@ -27,48 +27,6 @@ export default function Services(): ReactElement {
   );
 
   const formRef = useRef<HTMLInputElement>(null);
-
-  // Handles form submission
-  const [resPending, setResPending] = useState<boolean>(false);
-  const [response, setResponse] = useState<string | null>(null);
-
-  const onSubmitHandler = async (
-    event: React.FormEvent<HTMLFormElement>
-  ): Promise<void> => {
-    event.preventDefault();
-
-    setResPending(true);
-
-    // Getting form entries
-    const data = new FormData(event.currentTarget);
-    const values: { [key: string]: FormDataEntryValue } = Object.fromEntries(
-      data.entries()
-    );
-
-    try {
-      // POST request to Nodemailer API
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        body: JSON.stringify(values),
-      });
-
-      // Response from the API
-      if (res.ok) {
-        setResponse('Email sent successfully!');
-        window.alert('Email sent successfully!');
-      } else {
-        setResponse('Failed to send email. Please try again.');
-      }
-    } catch (error) {
-      console.error('Error sending email:', error);
-      setResponse('Failed to send email. Please try again.');
-      window.alert('Failed to send email. Please try again.');
-    } finally {
-      // Re-enabled form submission after processing
-      setResPending(false);
-      window.location.reload();
-    }
-  };
 
   // adapted from sam's code for the scroll line:
   const boxVariant = {
@@ -150,9 +108,7 @@ export default function Services(): ReactElement {
             </div>
           </div>
           <div className={styles.form_box}>
-            <ContactForm onSubmitHandler={onSubmitHandler} formRef={formRef} />
-            {resPending && <div className={styles.loader}></div>}
-            {response && <div className={styles.loader}></div>}
+            <ContactForm formRef={formRef} />
           </div>
         </div>
         <div className={styles.faq_box}>

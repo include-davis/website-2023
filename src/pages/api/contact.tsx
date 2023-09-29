@@ -9,9 +9,7 @@ export default async function handler(
     try {
       // transporter:
       const transporter = nodemailer.createTransport({
-        // service: 'gmail',
-        host: 'smtp.ethereal.email',
-        port: 587,
+        service: 'gmail',
         auth: {
           user: process.env.SENDER_EMAIL,
           pass: process.env.SENDER_PASSWORD,
@@ -38,18 +36,24 @@ export default async function handler(
 
       // mail format
       const mailOption = {
-        from: `${email}`,
+        from: `${fname} ${lname} [${email}] <${process.env.GMAIL_USER}>`,
         to: process.env.RECEIVER_EMAIL as string,
-        subject: `Contact Form - ${fname} ${lname}`,
+        replyTo: email,
+        subject: `Contact Form - ${fname} ${lname}: ${projectDeets.slice(
+          0,
+          10
+        )}...`,
         html: `<div class="mail-container">
                   <h4>Name: ${fname} ${lname}</h4>
-                  <h4>Company: ${company ?? '-'} <br/> website link: ${
-          websiteLink ?? '-'
-        }</h4>
+                  <h4>Company: ${company ?? '-'} <br/> website link: 
+                    ${websiteLink ?? '-'}
+                  </h4>
                   <h4>Contact details: ${email}, ${phno}</h4>
-                  <p>Services requested: ${WebDev ?? ''}, ${WebDesign ?? ''}, ${
-          EComm ?? ''
-        }, ${AppDesign ?? ''}, ${Branding ?? ''}, ${Other ?? ''}</p>
+                  <p>
+                    Services requested: ${WebDev ?? ''}, ${WebDesign ?? ''}, 
+                    ${EComm ?? ''}, ${AppDesign ?? ''}, ${Branding ?? ''}, 
+                    ${Other ?? ''}
+                  </p>
                   <p>Further details: ${projectDeets}</p>
                 </div>`,
       };
