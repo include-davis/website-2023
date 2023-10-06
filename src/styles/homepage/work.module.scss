@@ -5,6 +5,11 @@
     display: flex;
     flex-direction: column;
 
+    @include mixins.phone {
+        padding-top: 100px;
+    }
+
+
     >p {
         margin: 32px 0;
         color: var(--text-grey);
