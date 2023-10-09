@@ -17,7 +17,7 @@ export default function Avatar(props: AvatarProps): React.JSX.Element {
         width={235}
         height={208}
         style={{
-          objectFit: 'contain',
+          objectFit: 'cover',
           aspectRatio: '16/9',
         }}
         alt="Avatar"
