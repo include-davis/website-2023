@@ -7,6 +7,7 @@
     //variables for process animation
     --phase-height-desktop: 50vh;
     --phase-height-mobile: 320px;
+    --phase-height-sm-mobile: 400px;
 
     @include mixins.phone {
         padding-top: 200px;
@@ -114,6 +115,11 @@
                         @include mixins.phone {
                             margin: auto;
                             height: var(--phase-height-mobile);
+                        }
+
+                        @include mixins.sm-phone {
+                            margin: auto;
+                            height: var(--phase-height-sm-mobile);
                         }
                     }
 
