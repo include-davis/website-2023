@@ -1,74 +1,89 @@
 {
   "members": [
     {
-      "name": "Alec Atienza",
-      "title": "Co-President",
-      "imageSrc": "alec.png"
+      "name": "Nandhini Sridhar",
+      "title": "President",
+      "imageSrc": "nandhini.jpg"
     },
     {
-      "name": "Alec Atienza2",
-      "title": "Co-President",
-      "imageSrc": "alec.png"
+      "name": "Austin Shih",
+      "title": "VP of Tech",
+      "imageSrc": "austin.jpg"
     },
     {
-      "name": "Alec Atienza3",
-      "title": "Co-President",
-      "imageSrc": "alec.png"
+      "name": "Sechan Kim",
+      "title": "VP of Design",
+      "imageSrc": "sechan.jpg"
     },
     {
-      "name": "Alec Atienza4",
-      "title": "Co-President",
-      "imageSrc": "alec.png"
+      "name": "Angel Nguyen",
+      "title": "VP of Membership",
+      "imageSrc": "angel.jpg"
     },
     {
-      "name": "Alec Atienza5",
-      "title": "Co-President",
-      "imageSrc": "alec.png"
+      "name": "Amy Yu",
+      "title": "Marketing Director",
+      "imageSrc": "amy.jpg"
     },
     {
-      "name": "Alec Atienza6",
-      "title": "Co-President",
-      "imageSrc": "alec.png"
+      "name": "Annabelle Wu",
+      "title": "Visual Designer",
+      "imageSrc": "annabelle.jpg"
     },
     {
-      "name": "Alec Atienza7",
-      "title": "Co-President",
-      "imageSrc": "alec.png"
+      "name": "Kaitlyn Wong",
+      "title": "Visual Designer",
+      "imageSrc": "kaitlyn.jpg"
     },
     {
-      "name": "Alec Atienza8",
-      "title": "Co-President",
-      "imageSrc": "alec.png"
+      "name": "Shannon Ikemiya",
+      "title": "Outreach Director",
+      "imageSrc": "shannon.jpg"
     },
     {
-      "name": "Alec Atienza9",
-      "title": "Co-President",
-      "imageSrc": "alec.png"
+      "name": "Kahee Chan",
+      "title": "Treasurer",
+      "imageSrc": "kahee.jpg"
     },
     {
-      "name": "Alec Atienza10",
-      "title": "Co-President",
-      "imageSrc": "alec.png"
+      "name": "Jess Fong",
+      "title": "Design Lead",
+      "imageSrc": "jess.jpg"
     },
     {
-      "name": "Alec Atienza11",
-      "title": "Co-President",
-      "imageSrc": "alec.png"
+      "name": "Michelle Liu",
+      "title": "Design Lead",
+      "imageSrc": "michelle.jpg"
     },
     {
-      "name": "Alec Atienza12",
-      "title": "Co-President",
-      "imageSrc": "alec.png"
+      "name": "Sruthi Ramesh",
+      "title": "Design Lead",
+      "imageSrc": "sruthi.jpg"
     },
     {
-      "name": "Yugandhar Retharekar",
-      "title": "Co-President",
-      "imageSrc": "alec.png"
+      "name": "Johnson Ou",
+      "title": "Design Lead",
+      "imageSrc": "johnson.jpg"
     },
     {
-      "name": "Julia Alyssa Alberto",
-      "title": "Co-President",
-      "imageSrc": "alec.png"
+      "name": "Samantha Iraheta",
+      "title": "Tech Lead",
+      "imageSrc": "sam.jpg"
+    },
+    {
+      "name": "Ryan Yu",
+      "title": "Tech Lead",
+      "imageSrc": "ryan.jpg"
+    },
+    {
+      "name": "Anjali Jain",
+      "title": "Tech Lead",
+      "imageSrc": "jay.jpg"
+    },
+    {
+      "name": "Emily Ng",
+      "title": "Tech Lead",
+      "imageSrc": "emily.jpg"
     }
   ]
 }
