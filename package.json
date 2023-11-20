@@ -42,7 +42,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-unicorn": ">=48.0.1",
-    "netlify-cli": "^16.4.2",
+    "netlify-cli": "^17.5.3",
     "prettier": "^2.8.8"
   }
 }
