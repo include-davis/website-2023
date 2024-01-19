@@ -7,6 +7,10 @@
     align-items: center;
     gap: 250px;
 
+    @include mixins.tablet {
+        gap: 100px;
+    }
+
     >h2 {
         text-align: center;
         width: 60%;
@@ -14,6 +18,7 @@
         @include mixins.tablet {
             width: 100%;
             padding: 0 24px;
+
         }
     }
 }

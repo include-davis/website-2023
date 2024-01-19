@@ -28,7 +28,7 @@
 
     @include mixins.tablet {
         gap: 0px;
-        padding-top: 72px;
+        padding-top: 0px;
     }
 }
 
@@ -140,7 +140,6 @@
 
 
     @include mixins.tablet {
-        margin-top: 100px;
         text-align: left;
     }
 }
