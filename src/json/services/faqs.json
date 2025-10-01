@@ -2,7 +2,7 @@
     "col1" : [
         {
             "q" : "What are the prerequisites or requirements to join a cohort?",
-            "a" : "Being enthusiastic and passionate to learn. You are not required to have programming or design experience to apply, however applicants with prior experience have a higher change of being accepted."
+            "a" : "Being enthusiastic and passionate to learn. You are not required to have programming or design experience to apply, however applicants that have shown previous willingness to learn have a higher change of being accepted."
         },
         {
             "q" : "What kinds of projects cohort members work on?",
@@ -21,23 +21,23 @@
     "col2" : [
         {
             "q" : "Can students from any major apply?",
-            "a" : "Yes. We are open to accept applicant from all majors."
+            "a" : "Yes. We are open to accept applicants from all majors."
         },
         {
             "q" : "What is the expected time commitment?",
-            "a" : "Weekly time commitment is highly influence on the project or stage that you are working on. Usually cohort member could spend anywhere between 5-10+ hours per week."
+            "a" : "Weekly time commitment is highly influenced by the project or stage that you are working on. Usually cohort member could spend anywhere between 5-10+ hours per week."
         },
         {
             "q" : "What is the cost of membership?",
-            "a" : "$15 per quarter. Membership dues help us to pay for our technological services, host events and production of marketing materials."
+            "a" : "$10 per quarter. Membership dues help us to pay for our technological services, host events and production of marketing materials."
         },
         {
             "q" : "Are there opportunities for advancement within the club?",
-            "a" : "Yes. High performer members are often consider for leadership position after the completion of their cohort project."
+            "a" : "Yes. High performer members are often considered for leadership position after the completion of their cohort project."
         },
         {
             "q" : "How can #include help me professionally?",
-            "a" : "As part of #include you will gain real-world experience, expand your skills, network with professionals, enhance your portfolio, and develop leadership abilities. All of which contribute to your professional growth and open doors to exciting career opportunities."
+            "a" : "As part of #include you will gain real-world experience, expand your skills, network with professionals, enhance your portfolio, and develop leadership abilities. All of which contribute to your professional growth and can open doors to exciting career opportunities."
         }
     ]
 }
